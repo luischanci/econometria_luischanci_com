@@ -1,3 +1,4 @@
-# Notas en Econometria, profesor Luis Chancí
+# Notas en Econometría
+## Profesor Luis Chancí
 
 Econometría
