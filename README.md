@@ -3,4 +3,4 @@
 
 Econometría
 
-(econometria.luischanci.com)[econometria.luischanci.com]
+[http://econometria.luischanci.com/](http://econometria.luischanci.com/)
