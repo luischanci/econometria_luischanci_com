@@ -1,8 +1,55 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
+parts:
+  - caption: Journey of this project
+    chapters:
+    - file: contents/To Do List
+  - caption: Statistics
+    chapters:
+    - file: contents/Statistics/Probability Basics
+    - file: contents/Statistics/Probability Distribution
+    - file: contents/Statistics/Central Limit Theorem
+    - file: contents/Statistics/Bayesian vs Frequentist Reasoning
+    - file: contents/Statistics/Hypothesis Testing
+  - caption: Data
+    chapters:
+    - file: contents/Data/Scaling
+    - file: contents/Data/Missing Value
+    - file: contents/Data/Outlier
+  - caption: Algorithms
+    chapters:
+    - file: contents/Algorithms/Regression
+    - file: contents/Algorithms/Generative VS Discriminative Models
+    - file: contents/Algorithms/Classification
+    - file: contents/Algorithms/Tree based approaches
+    - file: contents/Algorithms/Time Series Analysis
+    - file: contents/Algorithms/Anomaly Detection
+  - caption: NLP
+    chapters:
+    - file: contents/NLP/Lexical Processing
+    - file: contents/NLP/Syntactic Processing
+  - caption: Python
+    chapters:
+    - file: contents/Python/Basics
+    - file: contents/Python/Data Manipulation
+    - file: contents/Python/Statistics
+  - caption: SQL
+    chapters:
+    - file: contents/SQL/Select
+    - file: contents/SQL/Joins
+    - file: contents/SQL/Temporary Datasets
+    - file: contents/SQL/Windows Functions
+    - file: contents/SQL/Time
+    - file: contents/SQL/Functions
+    - file: contents/SQL/Problems
+  - caption: Excel
+    chapters:
+    - file: contents/Excel/Excel Basics
+  - caption: Tensorflow
+    chapters:
+    - file: contents/Tensorflow/Basics
+  - caption: Analytical Thinking
+    chapters:
+    - file: contents/Analytical Thinking/Business Scenarios
+    - file: contents/Analytical Thinking/Industry Application
+
