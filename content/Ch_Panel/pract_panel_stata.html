@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rincón de Práctica Stata &#8212;  </title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch_Panel/pract_panel_stata.html" />
+    <link rel="shortcut icon" href="../../_static/icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GMM" href="../Ch_GMM/GMM.html" />
+    <link rel="prev" title="Rincón de Práctica R" href="pract_panel_r.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-136801897-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title"> </h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Bienvenida
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Intro. Series de Tiempo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ch_TS/Estacionarias.html">
+   Series Estacionarias
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ch_TS/VAR.html">
+   VAR
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Panel
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Panel.html">
+   Datos en Panel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pract_panel_r.html">
+   Rincón de Práctica R
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Rincón de Práctica Stata
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Método G. de Momentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ch_GMM/GMM.html">
+   GMM
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Intro. Inferencia Causal
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ch_IV/IV.html">
+   IV
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ch_DifinDif/DifinDif.html">
+   Dif-in-Dif
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ch_RDD/RDD.html">
+   RDD
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Referencias
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../zbibliography.html">
+   Bibliografía
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/Ch_Panel/pract_panel_stata.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datos-panel-usando-stata">
+   Datos Panel usando Stata
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-fe">
+     Modelo FE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-re">
+     Modelo RE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-two-way-fe">
+     Modelo Two-way FE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#panel-dinamico">
+     Panel Dinámico
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Rincón de Práctica Stata</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datos-panel-usando-stata">
+   Datos Panel usando Stata
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-fe">
+     Modelo FE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-re">
+     Modelo RE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-two-way-fe">
+     Modelo Two-way FE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#panel-dinamico">
+     Panel Dinámico
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="rincon-de-practica-stata">
+<h1>Rincón de Práctica Stata<a class="headerlink" href="#rincon-de-practica-stata" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="datos-panel-usando-stata">
+<h2>Datos Panel usando Stata<a class="headerlink" href="#datos-panel-usando-stata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="data">
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipystata</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  import delimited http://www-eio.upc.edu/~pau/cms/rdata/csv/Ecdat/Cigar.csv, clear
+  xtset state year
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10 vars, 1,380 obs)
+
+       panel variable:  state (strongly balanced)
+        time variable:  year, 63 to 92
+                delta:  1 unit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  xtline sales if state&gt;4&amp;state&lt;10
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/pract_panel_stata_4_0.png" src="../../_images/pract_panel_stata_4_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="modelo-fe">
+<h3>Modelo FE<a class="headerlink" href="#modelo-fe" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[sales_{it}=\alpha_i+x'_{it}\beta+u_{it}\]</div>
+<p>con <span class="math notranslate nohighlight">\(\alpha_i\)</span> efecto fijo asociado al estado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  xtreg sales price pop pop16 ndi, fe r
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fixed-effects (within) regression               Number of obs     =      1,380
+Group variable: state                           Number of groups  =         46
+
+R-sq:                                           Obs per group:
+     within  = 0.2844                                         min =         30
+     between = 0.2740                                         avg =       30.0
+     overall = 0.1558                                         max =         30
+
+                                                F(4,45)           =      32.69
+corr(u_i, Xb)  = 0.1106                         Prob &gt; F          =     0.0000
+
+                                 (Std. Err. adjusted for 46 clusters in state)
+------------------------------------------------------------------------------
+             |               Robust
+       sales |      Coef.   Std. Err.      t    P&gt;|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.3513145   .1682916    -2.09   0.043    -.6902711   -.0123579
+         pop |  -.0087096   .0059391    -1.47   0.149    -.0206716    .0032523
+       pop16 |   .0112986   .0092271     1.22   0.227    -.0072858    .0298831
+         ndi |   .0010731   .0020565     0.52   0.604    -.0030689    .0052152
+       _cons |   141.4895   6.238091    22.68   0.000     128.9253    154.0536
+-------------+----------------------------------------------------------------
+     sigma_u |  24.842588
+     sigma_e |  14.898338
+         rho |  .73548253   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modelo-re">
+<h3>Modelo RE<a class="headerlink" href="#modelo-re" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  xtreg sales price pop pop16 ndi, re r
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random-effects GLS regression                   Number of obs     =      1,380
+Group variable: state                           Number of groups  =         46
+
+R-sq:                                           Obs per group:
+     within  = 0.2842                                         min =         30
+     between = 0.2384                                         avg =       30.0
+     overall = 0.1624                                         max =         30
+
+                                                Wald chi2(4)      =     123.33
+corr(u_i, X)   = 0 (assumed)                    Prob &gt; chi2       =     0.0000
+
+                                 (Std. Err. adjusted for 46 clusters in state)
+------------------------------------------------------------------------------
+             |               Robust
+       sales |      Coef.   Std. Err.      z    P&gt;|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.3676653   .1650456    -2.23   0.026    -.6911487   -.0441818
+         pop |  -.0087648   .0069247    -1.27   0.206     -.022337    .0048073
+       pop16 |   .0111637   .0099851     1.12   0.264    -.0084067    .0307342
+         ndi |   .0012399   .0020123     0.62   0.538    -.0027041    .0051839
+       _cons |   142.0622   7.412126    19.17   0.000     127.5347    156.5897
+-------------+----------------------------------------------------------------
+     sigma_u |  21.045538
+     sigma_e |  14.898338
+         rho |  .66616216   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modelo-two-way-fe">
+<h3>Modelo Two-way FE<a class="headerlink" href="#modelo-two-way-fe" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[sales_{it}=\mu_i+\mu_t+x'_{it}\beta+u_{it}\]</div>
+<p>con <span class="math notranslate nohighlight">\(\alpha_i\)</span> efecto fijo asociado al estado y <span class="math notranslate nohighlight">\(\mu_t\)</span> efecto fijo asociado al año.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  reghdfe sales price pop pop16 ndi, absorb(state year) vce(r)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(MWFE estimator converged in 2 iterations)
+
+HDFE Linear regression                            Number of obs   =      1,380
+Absorbing 2 HDFE groups                           F(   4,   1301) =      47.62
+                                                  Prob &gt; F        =     0.0000
+                                                  R-squared       =     0.8467
+                                                  Adj R-squared   =     0.8375
+                                                  Within R-sq.    =     0.2304
+                                                  Root MSE        =    12.4910
+
+------------------------------------------------------------------------------
+             |               Robust
+       sales |      Coef.   Std. Err.      t    P&gt;|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.8296836   .0894201    -9.28   0.000    -1.005107   -.6542602
+         pop |  -.0025949   .0019491    -1.33   0.183    -.0064187    .0012288
+       pop16 |   .0040946   .0025701     1.59   0.111    -.0009475    .0091366
+         ndi |  -.0057015   .0008145    -7.00   0.000    -.0072994   -.0041037
+       _cons |    221.843   7.428401    29.86   0.000     207.2701     236.416
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+       state |        46           0          46     |
+        year |        30           1          29     |
+-----------------------------------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="panel-dinamico">
+<h3>Panel Dinámico<a class="headerlink" href="#panel-dinamico" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[sales_{i,t}=sales_{i,t-1}+\mu_i+x'_{i,t}\beta+u_{i,t}\]</div>
+<p>con <span class="math notranslate nohighlight">\(\alpha_i\)</span> efecto fijo asociado al estado</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  xtabond sales price pop pop16 ndi, vce(robust)
+  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Arellano-Bond dynamic panel-data estimation     Number of obs     =      1,288
+Group variable: state                           Number of groups  =         46
+Time variable: year
+                                                Obs per group:
+                                                              min =         28
+                                                              avg =         28
+                                                              max =         28
+
+Number of instruments =    411                  Wald chi2(5)      =   15775.72
+                                                Prob &gt; chi2       =     0.0000
+One-step results
+                                  (Std. Err. adjusted for clustering on state)
+------------------------------------------------------------------------------
+             |               Robust
+       sales |      Coef.   Std. Err.      z    P&gt;|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       sales |
+         L1. |   .8646417   .0236058    36.63   0.000     .8183752    .9109082
+             |
+       price |  -.0661191   .0353343    -1.87   0.061    -.1353731    .0031348
+         pop |  -.0046988   .0030159    -1.56   0.119    -.0106099    .0012122
+       pop16 |   .0056149   .0036481     1.54   0.124    -.0015352     .012765
+         ndi |  -.0000592   .0003699    -0.16   0.873    -.0007841    .0006658
+       _cons |   23.41488   3.986634     5.87   0.000     15.60122    31.22854
+------------------------------------------------------------------------------
+Instruments for differenced equation
+        GMM-type: L(2/.).sales
+        Standard: D.price D.pop D.pop16 D.ndi
+Instruments for level equation
+        Standard: _cons
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content\Ch_Panel"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="pract_panel_r.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Rincón de Práctica R</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Ch_GMM/GMM.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GMM</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Luis Chancí<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
