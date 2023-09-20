@@ -63,13 +63,15 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1PK9F28LTP"></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-1PK9F28LTP');
-                </script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', '309142678', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
 
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -105,52 +107,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
    Bienvenida
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introducción
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Introduccion.html">
-   Introducción al curso
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Repaso MCO (OLS)
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ch_OLS/OLS.html">
-   OLS/MCO - A Review
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  VDL
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ch_LDV/Intro_LDV.html">
-   Modelos con Variable Dependiente Limitada
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ch_LDV/MLE.html">
-   Estimador de Máxima Verosimilitud
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Ch_LDV/Logit_Probit.html">
-   Modelos LP, Logit y Probit
   </a>
  </li>
 </ul>
