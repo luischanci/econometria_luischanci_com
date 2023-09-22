@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -69,6 +68,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch_LDV/MLE';</script>
     <link rel="canonical" href="http://econometria.luischanci.com/content/Ch_LDV/MLE.html" />
     <link rel="shortcut icon" href="../../_static/icon.png"/>
@@ -86,15 +87,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -321,10 +313,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -332,7 +324,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -380,8 +372,73 @@ document.write(`
 <h2>( <em>Maximum Likelihood Estimation</em> - MLE)<a class="headerlink" href="#maximum-likelihood-estimation-mle" title="Permalink to this heading">#</a></h2>
 <section id="introduccion">
 <h3>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h3>
-<center><img src="under_construction.jpg" alt="cover" width="50%" height="50%"style="margin: 15px 0 0 0"></center>
+<p>Como vimos, el estimador (o técnica) <em>OLS</em> / MCO como un estimador extremo permitía recuperar los parámetros de interés (en una relación entre variables, idealmente, establecida usando teoría económica), a partir de minimizar una función de perdida compuesta del cuadrado de residuales. Ahora revisaremos otro estimador que también se basa en optimizar una función. Sin embargo, a diferencia de OLS, este estimador emplea una función de probabilidad (en vez de una función de pérdida) y el proceso de optimización consiste en maximizar (en vez de minimizar).</p>
+<p><strong>Estimador de Máxima Verosimilitud (MLE):</strong> Dado un conjunto de datos, <span class="math notranslate nohighlight">\(\{w_i\}_{i=1}^n\)</span>, se busca el vector de parámetros <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span> que generen la mayor probabilidad de haber observado ese conjunto particular de datos. Es decir, el <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span> que haga más <strong>verosímil</strong> (‘con apariencia de verdadero’) el resultado que hemos obtenido.</p>
+<p>En particular, la especificación del estimador consta de:</p>
+<ul class="simple">
+<li><p>Una muestra (aleatoria): <span class="math notranslate nohighlight">\(\{w_i\}_{i=1}^n\)</span></p></li>
+<li><p>Una función de probabilidad (f.d.p.) <span class="math notranslate nohighlight">\(f(w_1,…,w_n; \boldsymbol{\theta})=f(\boldsymbol{w};\boldsymbol{\theta})\)</span> (asociada a la muestra)</p></li>
+</ul>
+<p>Diremos entonces que el modelo esta correctamente especificado si el vector de parámetros que se emplea es el verdadero (<span class="math notranslate nohighlight">\(\theta_0\)</span>): <span class="math notranslate nohighlight">\(f(w_1,…,w_n; \theta_0)\)</span>. A su vez, llamaremos a <span class="math notranslate nohighlight">\(\theta\)</span> como un vector candidato o vector hipotético al vector de parámetros, y por ende, <span class="math notranslate nohighlight">\(f(w_1,…,w_n; \theta)\)</span> será una densidad hipotética.</p>
+<p>La anterior función de distribución conjunta es empleada en ML para obtener los estimadores. La idea es encontrar el vector candidato que genere la mayor probabilidad. Se denomina a dicha función de probabilidad conjunta como función de verosimilitud ( <em>likelihood function</em> ) y la denotaremos por
+$<span class="math notranslate nohighlight">\(\mathcal{L}_n(\theta)=f(w;\theta)\)</span>$</p>
+<p>Es de notar que, dados los datos, esta es una función que dependerá del vector de parámetros (y está afectada por <span class="math notranslate nohighlight">\(n\)</span>). Es decir, la verosimilitud es básicamente la probabilidad conjunta de los datos, evaluada en la muestra observada y vista como una función de los parámetros. Es de notar también que mientras en <em>OLS</em> la función objetivo era una función de perdida, en ML la función objetivo será la de verosimilitud (estimador extremo).</p>
+<p>Por ende, la intuición detrás de MLE de ‘querer buscar parámetros que den la mayor probabilidad’ se traduce en términos matemáticos en querer maximizar la función de verosimilitud. Ahora, es de anotar que dicha función de verosimilitud puede eventualmente ser fuertemente no lineal (es la distribución de probabilidad conjunta de <span class="math notranslate nohighlight">\(n\)</span> observaciones independientes), lo que puede implicar desafíos en términos numéricos (computacionales). Por ende, para ayudar en este aspecto, se emplea una transformación monótona que facilite el proceso de optimización. En particular, se toma ventaja de que la función logarítmica realiza transformaciones monótonas (e.g., para <span class="math notranslate nohighlight">\(z_1&gt;z_2\)</span>, se tiene que <span class="math notranslate nohighlight">\(ln(z_1)&gt;ln(z_2)\)</span> con <span class="math notranslate nohighlight">\((z_1,z_2)\in\mathbb{R}^{+}\)</span>). Por ende, se emplea como función objetivo a optimizar el logaritmo de la función de verosimilitud, <span class="math notranslate nohighlight">\(\mathcal{l}_n(\boldsymbol{\theta})=ln(\mathcal{L}_n(\boldsymbol{\theta}))\)</span> ya que el vector de parámetros que maximiza el logaritmo de la función de verosimilitud es el mismo que maximiza la la función de verosimilitud. Por ende, el vector de parámetros MLE estará dado por</p>
+<div class="math notranslate nohighlight">
+\[\hat{\boldsymbol{\theta}}_{MLE}=\text{arg max}_{\boldsymbol{\theta}}\,ln(f(\boldsymbol{w};\boldsymbol{\theta}))\]</div>
+<p>Para despejar o resolver la expresión anterior, y encontrar el vector de parámetros estimados, se obtiene primero la función <em>Score</em> . Esta función es básicamente el gradiente de la log-likelihood (es decir, las condiciones necesarias de primer orden - <em>F.O.C.</em> ):</p>
+<div class="math notranslate nohighlight">
+\[S(\boldsymbol{\theta})=\frac{\partial ln(\mathcal{L}_n(\boldsymbol{\theta}))}{\partial \boldsymbol{\theta}}\]</div>
+<p>Finalmente, para obtener los errores estándar se emplean las segundas derivadas. Partimos por definir la matriz de información <span class="math notranslate nohighlight">\(I(\boldsymbol{\theta})\)</span> (o, específicamente, Matriz de Información de Fisher - <em>Fisher Information</em> ) como el producto interno del vector <em>score</em></p>
+<div class="math notranslate nohighlight">
+\[I(\boldsymbol{\theta})=\mathbb{E}\left\{S(\boldsymbol{\theta})\,S(\boldsymbol{\theta})'\right\}\]</div>
+<p>Así, altos valores en <span class="math notranslate nohighlight">\(I\)</span> se asocian con que pequeños cambios en <span class="math notranslate nohighlight">\(\theta\)</span> conllevan a grandes cambios en la log-likelihood, lo que significa que hay información considerable sobre <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p>Una igualdad relevante asociada a la anterior definición es la Igualdad de la Matriz de Información, en la cual</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{E}_f\left\{S(\boldsymbol{\theta})\,S(\boldsymbol{\theta})'|_{\boldsymbol{\theta}_0}\right\}=-\mathbb{E}_f\left\{H|_{\boldsymbol{\theta}_0}\right\}\]</div>
+<p>en donde <span class="math notranslate nohighlight">\(H\)</span> es la matriz hessiana que organiza todas las derivadas parciales de segundo orden,</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{H}=\frac{\partial^2\mathcal{L}_n(\boldsymbol{\theta})}{\partial \boldsymbol{\theta} \partial \boldsymbol{\theta}'}\]</div>
+<p>finalmente, bajo algunas condiciones de regularidad (que definiremos adelante), se puede obtener un estimador de la matriz de varianza y covarianza mediante la matriz hessiana evaluada en los parámetros MLE:</p>
+<div class="math notranslate nohighlight">
+\[\text{Var}_H(\hat{\boldsymbol{\theta}})=-\boldsymbol{H}(\hat{\boldsymbol{\theta}})^{-1}\]</div>
+<p>alternativamente, empleando la matriz de información,</p>
+<div class="math notranslate nohighlight">
+\[\text{Var}(\hat{\boldsymbol{\theta}})=I(\hat{\boldsymbol{\theta}})^{-1}\]</div>
+<p><strong>Distribución asintótica.</strong> Bajo los siguientes supuestos (o condiciones)</p>
+<ul class="simple">
+<li><p>El proceso generador de los datos es la densidad condicional <span class="math notranslate nohighlight">\(f(\cdot)\)</span> empleada para definir la función de verosimilitud.</p></li>
+<li><p>la función de densidad satisface <span class="math notranslate nohighlight">\(f(w_i,\boldsymbol{\theta}^{(1)})=f(w_i,\boldsymbol{\theta}^{(2)})\)</span> si y solo si <span class="math notranslate nohighlight">\(\boldsymbol{\theta}^{(1)}=\boldsymbol{\theta}^{(2)}\)</span>.</p></li>
+<li><p>La matriz $<span class="math notranslate nohighlight">\(\text{plim }n^{-1} H(\boldsymbol{\theta})\)</span>$
+existe y es no singular.</p></li>
+<li><p>Las operaciones de diferenciación e integración de la función (log) verosimilitud son reversibles.</p></li>
+</ul>
+<p>entonces,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{\boldsymbol{\theta}}\)</span> es un estimadores consistente de <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span>.</p></li>
+<li><p>converge a tasa <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> a una distribución normal</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\hat{\boldsymbol{\theta}}\sim\mathbb{N}\left(\boldsymbol{\theta},-\boldsymbol{H}(\boldsymbol{\theta})^{-1} \right)\]</div>
+<p></br></br></p>
+<p><strong>Ejemplo 1 (sobre la notación vista).</strong> Supongamos <span class="math notranslate nohighlight">\(z_i\sim i.i.d.\,\mathbb{N}(\mu,1)\)</span> para <span class="math notranslate nohighlight">\(i=1,...,n\)</span>. De forma equivalente, diremos que la distribución de probabilidad es <span class="math notranslate nohighlight">\(\phi(w_i)\)</span>, para <span class="math notranslate nohighlight">\(w_i=(z_i-\mu)\)</span> y <span class="math notranslate nohighlight">\(\phi(w_i)=(2\pi)^{-1/2}exp(-w_i^2/2)\)</span> ; es decir, la distribución normal estándar (distribución gaussiana). Por ende, en este caso, la notación que empleamos correspondería a:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta=\mu\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(\boldsymbol{w};\boldsymbol{\theta})=f(w_1,...,w_n;\mu)=\Pi_{i=1}^n{\phi(w_i)}\)</span></p></li>
+</ul>
+<p>así, el estimador máximo verosímil (ML) estará dado por</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mu}_{MLE}=\text{arg max}_{\mu}\,\left(\sum_{i=1}^n{log\,\phi(z_i-\mu)}\right)=\text{arg max}_{\mu}\,\left(-\frac{n\cdot log(2\pi)}{2}-\sum_{i=1}^n{\frac{(z_i-\mu)^2}{2}}\right)\]</div>
+<p>al resolver,</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mu}_{MLE}=\bar{z}=\frac{\sum_i z_i}{n}\]</div>
 </br>
+<p><strong>Ejemplo 2.</strong> Supongamos el modelo de regresión lineal visto en <em>OLS</em> . El conjunto de datos es <span class="math notranslate nohighlight">\(w_i=(Y_i,X_i)\)</span> para <span class="math notranslate nohighlight">\(i=1,...,n\)</span> y el vector de parámetros es <span class="math notranslate nohighlight">\(\boldsymbol{\theta}=(\boldsymbol{\beta},\sigma^2)=(\beta_1,...,\beta_k,\sigma^2)\)</span>. Bajo el supuesto que <span class="math notranslate nohighlight">\((Y-X\boldsymbol{\beta})=u\sim\,\mathbb{N}(0,\sigma^2I_n)\)</span>, los estimadores ML están definidos por</p>
+<div class="math notranslate nohighlight">
+\[(\hat{\boldsymbol{\beta}},\hat{\sigma}^2)_{MLE}=\text{arg max}_{(\boldsymbol{\beta}\in\mathbb{R}^k,\sigma^2&gt;0)}\,\left(-\frac{n\cdot log(2\pi\sigma^2)}{2}-\frac{(Y-X\boldsymbol{\beta})'(Y-X\boldsymbol{\beta})}{2\sigma^2}\right)\]</div>
+<p>al resolver,</p>
+<div class="math notranslate nohighlight">
+\[\hat{\boldsymbol{\beta}}_{MLE}=(X'X)^{-1}(X'Y) \hspace{0.5cm};\hspace{0.5cm}\hat{\sigma}^2_{MLE}=(Y-X\hat{\boldsymbol{\beta}})'(Y-X\hat{\boldsymbol{\beta}})n^{-1}\]</div>
 </section>
 </section>
 </section>
@@ -411,10 +468,11 @@ document.write(`
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Intro_LDV.html"
@@ -434,7 +492,10 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -507,8 +568,8 @@ By Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
