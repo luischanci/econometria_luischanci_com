@@ -90,3 +90,9 @@ al resolver,
 
 $$\hat{\boldsymbol{\beta}}_{MLE}=(X'X)^{-1}(X'Y) \hspace{0.5cm};\hspace{0.5cm}\hat{\sigma}^2_{MLE}=(Y-X\hat{\boldsymbol{\beta}})'(Y-X\hat{\boldsymbol{\beta}})n^{-1}$$
 
+
+
+</br></br>
+
+<center><img src="under_construction.jpg" alt="cover" width="30%" height="30%"style="margin: 15px 0 0 0"></center>
+</br>

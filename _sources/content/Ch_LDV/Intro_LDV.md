@@ -20,6 +20,7 @@ Dependiendo de la aplicación práctica, los modelos lineales aún logran provee
 
 Finalmente, considerando que en la mayoría de estos modelos la forma de obtener estimadores recae en la técnica de Máxima Verosimilitud, partiremos primero por realizar una breve revisión de este método.
 
+
 ```python
 
 ```
