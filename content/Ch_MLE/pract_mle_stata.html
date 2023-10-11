@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Series Estacionarias &#8212;  </title>
+    <title>Rincón de Práctica Stata &#8212;  </title>
   
   
   
@@ -68,13 +68,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch_TS/Estacionarias';</script>
-    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch_TS/Estacionarias.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch_MLE/pract_mle_stata';</script>
+    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch_MLE/pract_mle_stata.html" />
     <link rel="shortcut icon" href="../../_static/icon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="VAR" href="VAR.html" />
-    <link rel="prev" title="Modelos LP, Logit y Probit" href="../Ch_LDV/Logit_Probit.html" />
+    <link rel="next" title="Modelos con Variable Dependiente Limitada" href="../Ch_LDV/Intro_LDV.html" />
+    <link rel="prev" title="Rincón de Práctica R" href="pract_mle_r.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,10 +176,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Ch_OLS/OLS.html">OLS/MCO - A Review</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">MLE</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch_MLE/MLE.html">Estimador de Máxima Verosimilitud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch_MLE/pract_mle_r.html">Rincón de Práctica R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch_MLE/pract_mle_stata.html">Rincón de Práctica Stata</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="MLE.html">Estimador de Máxima Verosimilitud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pract_mle_r.html">Rincón de Práctica R</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Rincón de Práctica Stata</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">VDL</span></p>
 <ul class="nav bd-sidenav">
@@ -185,9 +187,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Ch_LDV/Logit_Probit.html">Modelos LP, Logit y Probit</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro. Series de Tiempo</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Series Estacionarias</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VAR.html">VAR</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch_TS/Estacionarias.html">Series Estacionarias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch_TS/VAR.html">VAR</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Panel</span></p>
 <ul class="nav bd-sidenav">
@@ -262,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/Ch_TS/Estacionarias.md" target="_blank"
+      <li><a href="../../_sources/content/Ch_MLE/pract_mle_stata.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -344,7 +346,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Series Estacionarias</h1>
+    <h1>Rincón de Práctica Stata</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -354,7 +356,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mle-usando-stata">MLE usando Stata</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1">Ejemplo 1.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2">Ejemplo 2.</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -366,12 +372,219 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="series-estacionarias">
-<h1>Series Estacionarias<a class="headerlink" href="#series-estacionarias" title="Permalink to this heading">#</a></h1>
-<section id="introduccion">
-<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
-<center><img src="under_construction.jpg" alt="cover" width="50%" height="50%"style="margin: 15px 0 0 0"></center>
+  <section class="tex2jax_ignore mathjax_ignore" id="rincon-de-practica-stata">
+<h1>Rincón de Práctica Stata<a class="headerlink" href="#rincon-de-practica-stata" title="Permalink to this heading">#</a></h1>
+<section id="mle-usando-stata">
+<h2>MLE usando Stata<a class="headerlink" href="#mle-usando-stata" title="Permalink to this heading">#</a></h2>
+<hr>
+<section id="ejemplo-1">
+<h3>Ejemplo 1.<a class="headerlink" href="#ejemplo-1" title="Permalink to this heading">#</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(\epsilon_i\sim i.i.d.\, N(\mu,\sigma^2)\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Planear la función log-verosimilitud.</p></li>
+<li><p>Realizar en el computador simulación de 100 datos con <span class="math notranslate nohighlight">\(\mathbb{N}(\mu_0,\sigma_0^2)=\mathbb{N}(1.7,3^2)\)</span> y estimación ML.</p></li>
+</ol>
+<p><strong>Respuesta propuesta.</strong>
+Como vimos, la log-likelihood function estará dada por</p>
+<div class="math notranslate nohighlight">
+\[\ell(\boldsymbol{\theta})=-\frac{n\cdot log(2\pi)}{2}-\frac{n\cdot log(\sigma^2)}{2}-\sum_{i=1}^N{\frac{(\epsilon_i-\mu)^2}{2\cdot \sigma^2}}\]</div>
+<p>Así, una propuesta a la parte computacional en Stata sería la siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">ipystata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terminated 1 unattached Stata session(s).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  * 1. Simular datos 
+  set    seed 123
+  set    obs  100
+  scalar mu    = 1.7
+  scalar sigma = 3
+  
+  gen eps = rnormal(mu,sigma)
+  sum eps
+
+  * 2. Escribir la función log-likelihood
+  cap prog drop my_mle
+  pro def my_mle
+	  args lnf mu sigma
+	  quie replace `lnf&#39; = -0.5*ln(2*_pi*`sigma&#39;^2)-($ML_y1 - `mu&#39;)^2/(2*`sigma&#39;^2)
+  end
+  
+  * 3. Optimizar la log-likelihood
+  ml model lf my_mle (mu: eps=)(sigma: eps=)
+  ml max
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of observations (_N) was 100, now 100.
+
+variable eps already defined
+r(110);
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+         eps |        100    1.516204    3.095611  -12.11381    8.02918
+
+  1.   args lnf mu sigma
+  2.   quie replace `lnf&#39; = -0.5*ln(2*_pi*`sigma&#39;^2)-($ML_y1 - `mu&#39;)^2/(2*`sigma&#39;^2)
+  3.   end
+
+initial:       log likelihood =     -&lt;inf&gt;  (could not be evaluated)
+feasible:      log likelihood = -2126.5089
+rescale:       log likelihood = -279.44898
+rescale eq:    log likelihood = -260.90153
+Iteration 0:   log likelihood = -260.90153  
+Iteration 1:   log likelihood = -254.80682  
+Iteration 2:   log likelihood = -254.39028  
+Iteration 3:   log likelihood = -254.38986  
+Iteration 4:   log likelihood = -254.38986  
+
+                                                           Number of obs = 100
+                                                           Wald chi2(0)  =   .
+Log likelihood = -254.38986                                Prob &gt; chi2   =   .
+
+------------------------------------------------------------------------------
+             | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+mu           |
+       _cons |   1.516204   .3080094     4.92   0.000     .9125165    2.119891
+-------------+----------------------------------------------------------------
+sigma        |
+       _cons |   3.080094   .2177955    14.14   0.000     2.653223    3.506965
+------------------------------------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
 </br>
+<hr>
+</section>
+<section id="ejemplo-2">
+<h3>Ejemplo 2.<a class="headerlink" href="#ejemplo-2" title="Permalink to this heading">#</a></h3>
+<p><strong>Bajo normalidad, MLE y OLS dan el mismo vector estimado de parámetros para el modelo lineal.</strong></p>
+<p>Sea,</p>
+<div class="math notranslate nohighlight">
+\[Y=\boldsymbol{X}\boldsymbol{\beta}+u \hspace{0.5cm};\hspace{0.5cm}u_i\sim N(0,\sigma^2)\]</div>
+<ol class="arabic simple">
+<li><p>Planear la función log-verosimilitud</p></li>
+<li><p>Encontrar <span class="math notranslate nohighlight">\(\hat{\boldsymbol{\theta}}_{MLE}=(\hat{\boldsymbol{\beta}},\hat{\sigma}^2)\)</span></p></li>
+<li><p>Encontrar la matriz de información</p></li>
+<li><p>Realizar en el computador simulación de 100 datos para <span class="math notranslate nohighlight">\(y_i=\beta_0+\beta_1x_{1i}+\beta_2x_{2i}+u_i\)</span>, donde <span class="math notranslate nohighlight">\(x_1\sim U[0,10]\)</span>, <span class="math notranslate nohighlight">\(x_2\sim\chi^2_1\)</span>, <span class="math notranslate nohighlight">\(u_i\sim\mathbb{N}(0,\sigma^2=3^2)\)</span> y <span class="math notranslate nohighlight">\(\boldsymbol{\beta}'=(\beta_0,\beta_1,\beta_2)'=(1,0.75,3.2)\)</span>. Realizar estimación ML de los parámetros y comparar con OLS.</p></li>
+</ol>
+<p><strong>Respuesta sugerida.</strong></p>
+<p>Como vimos, para <span class="math notranslate nohighlight">\(\boldsymbol{x}=(1,X_1,x_2)'\)</span> y <span class="math notranslate nohighlight">\(u_i=y_i-\boldsymbol{x}_i'\boldsymbol{\beta}\)</span> con <span class="math notranslate nohighlight">\(\boldsymbol{\beta}'=(\beta_0,\beta_1,\beta_2)'\)</span> se tiene que</p>
+<div class="math notranslate nohighlight">
+\[\ell(\boldsymbol{\theta})=-\frac{n\cdot log(2\pi\sigma^2)}{2}-\frac{(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})'(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})}{2\sigma^2}\]</div>
+<p>y a partir de las condiciones de primer orden (<em>F.O.C.</em>) evaluadas en el estimador ML, se obtiene:
+$<span class="math notranslate nohighlight">\(\hat{\boldsymbol{\beta}}_{MLE}=(X'X)^{-1}(X'Y)\hspace{0.5cm},\hspace{0.5cm}\hat{\sigma}^2_{MLE}=(Y-X\hat{\beta})'(Y-X\hat{\beta})\cdot n^{-1}\)</span>$</p>
+<p>Notar que la expresión para <span class="math notranslate nohighlight">\(\beta\)</span> corresponde a la misma que se obtiene por OLS.</p>
+<p>Además, después de resolver, se obtiene la siguiente matriz de información</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I(\boldsymbol{\beta}_0)=
+\left[\begin{array}{cc}
+\frac{1}{\sigma_0^2}(X'X) &amp; 0\\
+0 &amp; \frac{N}{2\sigma_0^4}
+\end{array}\right]\end{split}\]</div>
+<p>Así, una propuesta para el código de programación en Stata es la siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
+  * 1. Simular datos 
+    set seed 123
+    set obs  100
+
+    scalar sigma = 3
+
+    gen x1 = runiform(0,10)
+    gen x2 = rchi2(1)
+    gen u  = rnormal(0,sigma)
+
+    gen y = 1 + 0.75*x1 + 3.2*x2 + u
+
+  * 2. Escribir la función log-likelihood
+    cap prog drop my_ols
+    pro def my_ols
+	    args lnf Xb sigma
+	    quie replace `lnf&#39; = ln(normalden($ML_y1,`Xb&#39;,`sigma&#39;))
+    end
+
+  * 3. Optimizar la log-likelihood
+    ml model lf my_ols (xb: y = x1 x2)(sigma:)
+    ml max
+  
+  * 4. Comparación con OLS
+    reg y x1 x2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please note: session main was no longer active and is restarted.
+
+Number of observations (_N) was 0, now 100.
+
+  1.     args lnf Xb sigma
+  2.     quie replace `lnf&#39; = ln(normalden($ML_y1,`Xb&#39;,`sigma&#39;))
+  3.     end
+
+initial:       log likelihood =     -&lt;inf&gt;  (could not be evaluated)
+feasible:      log likelihood = -822.51142
+rescale:       log likelihood =  -348.3095
+rescale eq:    log likelihood =  -348.3095
+Iteration 0:   log likelihood =  -348.3095  (not concave)
+Iteration 1:   log likelihood = -305.30761  
+Iteration 2:   log likelihood = -272.72806  
+Iteration 3:   log likelihood = -251.69736  
+Iteration 4:   log likelihood = -251.33146  
+Iteration 5:   log likelihood = -251.33126  
+Iteration 6:   log likelihood = -251.33126  
+
+                                                        Number of obs =    100
+                                                        Wald chi2(2)  = 445.22
+Log likelihood = -251.33126                             Prob &gt; chi2   = 0.0000
+
+------------------------------------------------------------------------------
+           y | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+xb           |
+          x1 |   .8781539   .1068187     8.22   0.000     .6687931    1.087515
+          x2 |   3.229557   .1698408    19.02   0.000     2.896675    3.562439
+       _cons |   .2802955   .6265632     0.45   0.655    -.9477458    1.508337
+-------------+----------------------------------------------------------------
+sigma        |
+       _cons |   2.987312   .2112349    14.14   0.000       2.5733    3.401325
+------------------------------------------------------------------------------
+
+      Source |       SS           df       MS      Number of obs   =       100
+-------------+----------------------------------   F(2, 97)        =    215.93
+       Model |  3973.17594         2  1986.58797   Prob &gt; F        =    0.0000
+    Residual |  892.403429        97  9.20003535   R-squared       =    0.8166
+-------------+----------------------------------   Adj R-squared   =    0.8128
+       Total |  4865.57937        99  49.1472664   Root MSE        =    3.0332
+
+------------------------------------------------------------------------------
+           y | Coefficient  Std. err.      t    P&gt;|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+          x1 |   .8781539   .1084579     8.10   0.000     .6628949    1.093413
+          x2 |   3.229557   .1724472    18.73   0.000     2.887297    3.571817
+       _cons |   .2802955   .6361785     0.44   0.660    -.9823427    1.542934
+------------------------------------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -388,7 +601,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Ch_TS"
+            path: "./content\Ch_MLE"
         },
         predefinedOutput: true
     }
@@ -407,20 +620,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Ch_LDV/Logit_Probit.html"
+       href="pract_mle_r.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Modelos LP, Logit y Probit</p>
+        <p class="prev-next-title">Rincón de Práctica R</p>
       </div>
     </a>
     <a class="right-next"
-       href="VAR.html"
+       href="../Ch_LDV/Intro_LDV.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">VAR</p>
+        <p class="prev-next-title">Modelos con Variable Dependiente Limitada</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -442,7 +655,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mle-usando-stata">MLE usando Stata</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1">Ejemplo 1.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2">Ejemplo 2.</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
