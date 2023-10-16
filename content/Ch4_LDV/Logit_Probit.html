@@ -1,0 +1,558 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Modelos LP, Logit y Probit &#8212;  </title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1PK9F28LTP"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-1PK9F28LTP');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/Logit_Probit';</script>
+    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/Logit_Probit.html" />
+    <link rel="shortcut icon" href="../../_static/icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Variables Instrumentales" href="../Ch5_IV/IV.html" />
+    <link rel="prev" title="Variable Dependiente Limitada" href="Intro_LDV.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bienvenida
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Introduccion.html">Introducción al curso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OLS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">Mínimos Cuadrados Ordinarios - Repaso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MLE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/MLE.html">Estimador de Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/pract_mle_r.html">Rincón de Práctica R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/pract_mle_stata.html">Rincón de Práctica Stata</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LDVs</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Intro_LDV.html">Variable Dependiente Limitada</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelos LP, Logit y Probit</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">IV</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch5_IV/IV.html">Variables Instrumentales</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GMM</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch6_GMM/GMM.html">Método Generalizado de Momentos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">Series de Tiempo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Panel</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Panel.html">Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/pract_panel_r.html">Rincón de Práctica R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/pract_panel_stata.html">Rincón de Práctica Stata</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Causal Inf.</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">Inferencia Causal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Dif-in-Dif</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Referencias</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../zbibliography.html">Bibliografía</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/Ch4_LDV/Logit_Probit.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modelos LP, Logit y Probit</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-dependiente-binaria">Variable dependiente binaria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-probabilidad-lineal">Modelo de Probabilidad Lineal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-probit-y-logit">Modelos Probit y Logit</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modelos-lp-logit-y-probit">
+<h1>Modelos LP, Logit y Probit<a class="headerlink" href="#modelos-lp-logit-y-probit" title="Permalink to this heading">#</a></h1>
+<section id="variable-dependiente-binaria">
+<h2>Variable dependiente binaria<a class="headerlink" href="#variable-dependiente-binaria" title="Permalink to this heading">#</a></h2>
+<p>Supongamos que la variable dependiente observada toma valores discretos como los siguientes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccl}
+Y=1&amp; &amp; \text{Si se cumple cierta condición}\\ 
+Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\ 
+\end{array}\end{split}\]</div>
+<p>En este caso la variable dependiente <span class="math notranslate nohighlight">\(Y\)</span>, al tomar solo los dos valores (0,1), corresponde a un ensayo de Bernoulli: se cumple o no una condición, con cierta probabilidad. Sea <span class="math notranslate nohighlight">\(p\)</span> la probabilidad de que la variable tome el valor de 1. Así, la probabilidad de <span class="math notranslate nohighlight">\(Y=1\)</span> estará dada por la función de expectativa condicional: <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)\)</span>.</p>
+<p>En esta subsección abordaremos tres modelos de econometría para este tipo de variable dependiente. El nombre particular que adopta el modelo de econometría cambia según la función particular que se emplee para modelar la probabilidad. En particular, estudiaremos los siguientes modelos:</p>
+<ul class="simple">
+<li><p>Modelo de Probabilidad lineal ( <em>Linear Probability</em> - LP ): Emplea una función lineal ( <em>OLS</em> ).</p></li>
+<li><p>Modelo Probit: Modela la probabilidad empleando una f.d.p. normal.</p></li>
+<li><p>Modelo Logit: Modela la probabilidad empleando una f.d.p. logística.</p></li>
+</ul>
+<p></br></br></p>
+</section>
+<section id="modelo-de-probabilidad-lineal">
+<h2>Modelo de Probabilidad Lineal<a class="headerlink" href="#modelo-de-probabilidad-lineal" title="Permalink to this heading">#</a></h2>
+<p>La probabilidad se encuentra dada por <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)=X\beta\)</span> y por ende el modelo de econometría a emplear es el de <em>OLS</em> ya visto:</p>
+<div class="math notranslate nohighlight">
+\[Y=X\beta + u\]</div>
+<p>En textos tradicionales de econometría se argumenta que una desventaja del MPL se encuentra en el hecho de predecir probabilidades fuera del intervalo <span class="math notranslate nohighlight">\([0,1]\)</span>. Sin embargo, en muchas aplicaciones prácticas el modelo PL representa una razonable aproximación ya que es lineal y se puede estimar de manera sencilla, además, no recae sobre supuestos fuertes asociados a especificar una función de distribución de probabilidad.</p>
+</section>
+<section id="modelos-probit-y-logit">
+<h2>Modelos Probit y Logit<a class="headerlink" href="#modelos-probit-y-logit" title="Permalink to this heading">#</a></h2>
+<p>En resumen, en el modelo <strong>Probit</strong> y <strong>logit</strong> la probabilidad <span class="math notranslate nohighlight">\(p\)</span> esta dada por funciones de distribución de probabilidad. Mientras que en el probit <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)=\Phi(X\beta)\)</span>, donde <span class="math notranslate nohighlight">\(\Phi(\cdot)\)</span> es la función de distribución acumulada de la distribución normal estándar, en el logit <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)=\Lambda(X\beta)=(1+exp(-X\beta))^{-1}\)</span>.</p>
+<p>Pero de forma más general, para determinar el anterior resultado, se puede partir de la motivación típica en el modelo Probit (o Logit): el supuesto de que la participación (por ejemplo, la decisión de participar en el mercado laborar) se encuentra determinada por una variable latente <span class="math notranslate nohighlight">\(Y^{*}\)</span> (no observada) que es la que satisface</p>
+<div class="math notranslate nohighlight">
+\[Y^*=X\beta+u\]</div>
+<p>Esta variable latente presenta ‘mayor libertad’, en el sentido que puede ser no negativa y/o continua. En el caso particular de tomar valores en una dirección específica (por ejemplo, valores positivos), su contra parte observada (por el investigador) tomaría el valor de 1. Es decir, <span class="math notranslate nohighlight">\(Y=\mathbf{1}[Y^*&gt;0]\)</span>.</p>
+<p>Así, bajo el supuesto de que <span class="math notranslate nohighlight">\(u\sim\mathbb{N}(0,1)\)</span>, la probabilidad <span class="math notranslate nohighlight">\(p\)</span> estaría dada por la expresión antes mencionada:</p>
+<div class="math notranslate nohighlight">
+\[p=\mathbb{E}(Y|X)=P[Y=1|X]=P[u&lt;X\beta]=\Phi(X\beta)\]</div>
+<p><strong>Estimación:</strong> Dados los supuestos sobre distribución de probabilidad, se puede emplear <strong>MLE</strong> como técnica para estimar los parámetros. En particular, al considerar que <span class="math notranslate nohighlight">\(Y\)</span> corresponde a un ensayo Bernoulli con probabilidad <span class="math notranslate nohighlight">\(p\)</span>, la función de probabilidad para una observación particular <span class="math notranslate nohighlight">\(i\)</span> estará dada por</p>
+<div class="math notranslate nohighlight">
+\[p_i^{Y_i}(1-p_i)^{1-Y_i}\]</div>
+<p>en donde se reemplaza la probabilidad <span class="math notranslate nohighlight">\(p_i\)</span> por la f.d.p. normal <span class="math notranslate nohighlight">\(\Phi(X_i'\beta)\)</span> para el caso del Probit o por la f.d.p. logística <span class="math notranslate nohighlight">\(\Lambda(X_i'\beta)\)</span> para el caso del Logit. Por ende, el vector de parámetros estimados se puede obtener a partir de (el logaritmo de) la función de verosimilitud ( <em>log-likelihood</em> ):</p>
+<div class="math notranslate nohighlight">
+\[\hat{\beta}=\text{arg max}_\beta\,\sum_{i}^n{\left( Y_i\cdot\text{Ln}(p_i) + (1-Y_i)\cdot\text{Ln}(1-p_i)\right)}\]</div>
+<p></br></br></p>
+<center><img src="under_construction.jpg" alt="cover" width="30%" height="30%"style="margin: 15px 0 0 0"></center>
+</br></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\Ch4_LDV"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Intro_LDV.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Variable Dependiente Limitada</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Ch5_IV/IV.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Variables Instrumentales</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-dependiente-binaria">Variable dependiente binaria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-probabilidad-lineal">Modelo de Probabilidad Lineal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-probit-y-logit">Modelos Probit y Logit</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Luis Chancí
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
