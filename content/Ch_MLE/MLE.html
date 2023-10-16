@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -87,6 +88,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -318,10 +328,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -329,7 +339,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -356,14 +366,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-likelihood-estimation-mle">( <em>Maximum Likelihood Estimation</em> - MLE)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador">Estimador</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-estandar-distribucion-asintotica">Errores estándar (distribución asintótica)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inferencia">Inferencia.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">Ejemplos.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador">Estimador</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-estandar-distribucion-asintotica">Errores estándar (distribución asintótica)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inferencia">Inferencia.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">Ejemplos.</a></li>
 </ul>
             </nav>
         </div>
@@ -376,11 +383,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="estimador-de-maxima-verosimilitud">
-<h1>Estimador de Máxima Verosimilitud<a class="headerlink" href="#estimador-de-maxima-verosimilitud" title="Permalink to this heading">#</a></h1>
-<section id="maximum-likelihood-estimation-mle">
-<h2>( <em>Maximum Likelihood Estimation</em> - MLE)<a class="headerlink" href="#maximum-likelihood-estimation-mle" title="Permalink to this heading">#</a></h2>
+<span id="ch-mle"></span><h1>Estimador de Máxima Verosimilitud<a class="headerlink" href="#estimador-de-maxima-verosimilitud" title="Permalink to this heading">#</a></h1>
+<p><strong>MLE: <em>Maximum Likelihood Estimation</em></strong></p>
 <section id="introduccion">
-<h3>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h3>
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
 <p>Como vimos, el estimador (o técnica) <em>OLS</em> / MCO como un estimador extremo permitía recuperar los parámetros de interés (en una relación entre variables, idealmente, establecida usando teoría económica), a partir de minimizar una función de perdida compuesta del cuadrado de residuales. Ahora revisaremos otro estimador que también se basa en optimizar una función. Sin embargo, a diferencia de OLS, este estimador emplea una función de probabilidad (en vez de una función de pérdida) y el proceso de optimización consiste en maximizar (en vez de minimizar).</p>
 <div id   ="Container"
      style="padding-bottom:50.25%; position:relative; display:block; width: 100%">
@@ -396,7 +402,7 @@ document.write(`
 </br>
 </section>
 <section id="estimador">
-<h3>Estimador<a class="headerlink" href="#estimador" title="Permalink to this heading">#</a></h3>
+<h2>Estimador<a class="headerlink" href="#estimador" title="Permalink to this heading">#</a></h2>
 <p><strong>Estimador de Máxima Verosimilitud (MLE):</strong> Dado un conjunto de datos, <span class="math notranslate nohighlight">\(\{w_i\}_{i=1}^n\)</span>, se busca el vector de parámetros <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span> que generen la mayor probabilidad de haber observado ese conjunto particular de datos. Es decir, el <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span> que haga más <strong>verosímil</strong> (‘con apariencia de verdadero’) el resultado que hemos obtenido.</p>
 <p>En particular, la especificación del estimador consta de:</p>
 <ul class="simple">
@@ -419,7 +425,7 @@ document.write(`
 \[S(\boldsymbol{\theta})=\frac{\partial ln(\mathcal{L}_n(\boldsymbol{\theta}))}{\partial \boldsymbol{\theta}}\]</div>
 </section>
 <section id="errores-estandar-distribucion-asintotica">
-<h3>Errores estándar (distribución asintótica)<a class="headerlink" href="#errores-estandar-distribucion-asintotica" title="Permalink to this heading">#</a></h3>
+<h2>Errores estándar (distribución asintótica)<a class="headerlink" href="#errores-estandar-distribucion-asintotica" title="Permalink to this heading">#</a></h2>
 <p>Definimos la matriz de información <span class="math notranslate nohighlight">\(I(\boldsymbol{\theta})\)</span> (o, específicamente, Matriz de Información de Fisher - <em>Fisher Information</em> ) como el producto interno del vector <em>score</em></p>
 <div class="math notranslate nohighlight">
 \[I(\boldsymbol{\theta})=\mathbb{E}\left\{S(\boldsymbol{\theta})\,S(\boldsymbol{\theta})'\right\}\]</div>
@@ -464,7 +470,7 @@ document.write(`
 </ul>
 </section>
 <section id="inferencia">
-<h3>Inferencia.<a class="headerlink" href="#inferencia" title="Permalink to this heading">#</a></h3>
+<h2>Inferencia.<a class="headerlink" href="#inferencia" title="Permalink to this heading">#</a></h2>
 <p>Consideramos ahora un test o prueba para inferencia estadística en el contexto de ML. Si bien bajo la premisa que la función de verosimilitud es conocida se pueden emplear varios test, algunos de ellos asintóticamente equivalentes, nos enfocaremos en el test de razón de versimilitud ( <em>Likelihood Ratio TEST</em> ) ya que en muchos casos es fácil de calcular.</p>
 <p>Sea <span class="math notranslate nohighlight">\(\hat{\theta}_{u}\)</span> el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sin la restricción impuesta en la hipótesis nula, <span class="math notranslate nohighlight">\(\text{ln }L(\theta)\)</span>. Sea <span class="math notranslate nohighlight">\(\widetilde{\theta}_{r}\)</span> el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sujeta a la restricción (por ejemplo, <span class="math notranslate nohighlight">\(\widetilde{\theta}_{r}-\lambda'(r-R\beta)\)</span>). El estadístico Razón de Verosimilitudes (LR) estará definido por
 $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-\ell(\hat{\theta}_{u})]\sim\chi^2_q\)</span>$</p>
@@ -475,7 +481,7 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
 <hr>
 </section>
 <section id="ejemplos">
-<h3>Ejemplos.<a class="headerlink" href="#ejemplos" title="Permalink to this heading">#</a></h3>
+<h2>Ejemplos.<a class="headerlink" href="#ejemplos" title="Permalink to this heading">#</a></h2>
 </br>
 <p><strong>Ejemplo 1 (sobre la notación vista).</strong> Supongamos <span class="math notranslate nohighlight">\(z_i\sim i.i.d.\,\mathbb{N}(\mu,1)\)</span> para <span class="math notranslate nohighlight">\(i=1,...,n\)</span>. De forma equivalente, diremos que la distribución de probabilidad es <span class="math notranslate nohighlight">\(\phi(w_i)\)</span>, para <span class="math notranslate nohighlight">\(w_i=(z_i-\mu)\)</span> y <span class="math notranslate nohighlight">\(\phi(w_i)=(2\pi)^{-1/2}exp(-w_i^2/2)\)</span> ; es decir, la distribución normal estándar (distribución gaussiana). Por ende, en este caso, la notación que empleamos correspondería a:</p>
 <ul class="simple">
@@ -513,7 +519,6 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
 <p></br></br></p>
 </section>
 </section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -540,11 +545,10 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Ch_OLS/OLS.html"
@@ -564,10 +568,7 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -582,14 +583,11 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-likelihood-estimation-mle">( <em>Maximum Likelihood Estimation</em> - MLE)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador">Estimador</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-estandar-distribucion-asintotica">Errores estándar (distribución asintótica)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inferencia">Inferencia.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">Ejemplos.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador">Estimador</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-estandar-distribucion-asintotica">Errores estándar (distribución asintótica)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inferencia">Inferencia.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">Ejemplos.</a></li>
 </ul>
   </nav></div>
 
@@ -644,8 +642,8 @@ By Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

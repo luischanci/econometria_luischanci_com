@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -87,6 +88,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -318,10 +328,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -329,7 +339,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -356,7 +366,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-dependent-variables-ldvs">( <em>Limited Dependent Variables</em> - LDVs)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ldvs-limited-dependent-variables">LDVs: <em>Limited Dependent Variables</em></a></li>
 </ul>
             </nav>
         </div>
@@ -370,15 +380,16 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelos-con-variable-dependiente-limitada">
 <h1>Modelos con Variable Dependiente Limitada<a class="headerlink" href="#modelos-con-variable-dependiente-limitada" title="Permalink to this heading">#</a></h1>
-<section id="limited-dependent-variables-ldvs">
-<h2>( <em>Limited Dependent Variables</em> - LDVs)<a class="headerlink" href="#limited-dependent-variables-ldvs" title="Permalink to this heading">#</a></h2>
+<section id="ldvs-limited-dependent-variables">
+<h2>LDVs: <em>Limited Dependent Variables</em><a class="headerlink" href="#ldvs-limited-dependent-variables" title="Permalink to this heading">#</a></h2>
 <p>En esta sección revisaremos algunos modelos para abordar la estimación cuando la variable dependiente <span class="math notranslate nohighlight">\(y\)</span> presenta algún tipo de limitación en los valores que puede adoptar. Un ejemplo sencillo sería pensar en que el interés del investigador se encuentra en modelar la decisión de una mujer de participar en el mercado laboral o no después de haber tenido un/a hijo/a. Podemos notar que en este caso la variable dependiente es discreta (elección binaria o cualitativa) y se puede representar de la siguiente forma:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccl}
-Y=1&amp; &amp; \text{Si participa en el mercado laboral}\\ 
-Y=0&amp; &amp; \text{Si no participa en el mercado laboral}\\ 
-\end{array}\end{split}\]</div>
-<p>Dependiendo de la aplicación práctica, los modelos lineales aún logran proveer una aproximación razonable cuando la variable dependiente es discreta (como en el ejemplo anterior). Pero considerando que otros tipos de limitaciones, la cuales son abordadas con modelos canónicos cubiertos en los textos de econometría, revisaremos una serie de modelos alternativos. Estos modelos no son lineales y emplean supuestos sobre la distribución de probabilidad. De forma más específica, algunos de los modelos que revisaremos son:</p>
+\[\begin{split}Y=\left\{
+\begin{array}{ccl}
+1&amp; &amp; \text{Si participa en el mercado laboral}\\ 
+0&amp; &amp; \text{Si no participa en el mercado laboral}\\ 
+\end{array}\right.\end{split}\]</div>
+<p>Dependiendo de la aplicación práctica, el modelo de regresión lineal podría servir para obtener una aproximación razonable de los efectos marginales cuando la variable dependiente es discreta (como en el ejemplo anterior). Sin embargo, en esta sección iremos un poco más allá del modelo lineal y de variables dependientes dicotómicas. Es decir, consideraremos modelos no lineales y casos con otros tipos de limitaciones en la variable dependiente. Varios de los modelos que revisaremos son canónicos en el sentido que son cubiertos en los textos de econometría. Específicamente, algunos de los modelos que revisaremos son:</p>
 <ul class="simple">
 <li><p>Probabilidad Lineal para elección binaria (respuesta cualitativa).</p></li>
 <li><p>Probit - Logit, también conocido como regresión logística para elección binaria.</p></li>
@@ -386,10 +397,9 @@ Y=0&amp; &amp; \text{Si no participa en el mercado laboral}\\
 <li><p>Modelos Tobit y Heckman.</p></li>
 <li><p>Modelo Poisson para datos de recuento.</p></li>
 </ul>
-<p>Finalmente, considerando que en la mayoría de estos modelos la forma de obtener estimadores recae en la técnica de Máxima Verosimilitud, partiremos primero por realizar una breve revisión de este método.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<p>Finalmente, es de anotar que en la mayoría de estos modelos se emplean supuestos sobre la distribución de probabilidad y por ende la técnica para obtener los parámetros estimados es el <a class="reference internal" href="../Ch_MLE/MLE.html#ch-mle"><span class="std std-ref">Estimador de Máxima Verosimilitud</span></a>. Así, la idea central será construir la función de verosimilitud (específicamente, la función <em>log-likelihood</em> ).</p>
+</br>
+<hr>
 </section>
 </section>
 
@@ -418,11 +428,10 @@ Y=0&amp; &amp; \text{Si no participa en el mercado laboral}\\
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Ch_MLE/pract_mle_stata.html"
@@ -442,10 +451,7 @@ Y=0&amp; &amp; \text{Si no participa en el mercado laboral}\\
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -460,7 +466,7 @@ Y=0&amp; &amp; \text{Si no participa en el mercado laboral}\\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-dependent-variables-ldvs">( <em>Limited Dependent Variables</em> - LDVs)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ldvs-limited-dependent-variables">LDVs: <em>Limited Dependent Variables</em></a></li>
 </ul>
   </nav></div>
 
@@ -515,8 +521,8 @@ By Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

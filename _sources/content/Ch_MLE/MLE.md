@@ -1,14 +1,16 @@
+(Ch_MLE)=
+
 # Estimador de Máxima Verosimilitud
 
-## ( _Maximum Likelihood Estimation_ - MLE) 
+**MLE: _Maximum Likelihood Estimation_**
 
-### Introducción
+## Introducción
 
 Como vimos, el estimador (o técnica) _OLS_ / MCO como un estimador extremo permitía recuperar los parámetros de interés (en una relación entre variables, idealmente, establecida usando teoría económica), a partir de minimizar una función de perdida compuesta del cuadrado de residuales. Ahora revisaremos otro estimador que también se basa en optimizar una función. Sin embargo, a diferencia de OLS, este estimador emplea una función de probabilidad (en vez de una función de pérdida) y el proceso de optimización consiste en maximizar (en vez de minimizar).
 
 <div id   ="Container"
      style="padding-bottom:50.25%; position:relative; display:block; width: 100%">
-     <iframe id                 ="html_fig_ll"
+     <iframe id                 ="log_lik"
              width              ="85%"
              height             ="100%"
              src                ="log_lik.html"
@@ -17,13 +19,9 @@ Como vimos, el estimador (o técnica) _OLS_ / MCO como un estimador extremo perm
              style              ="position:absolute; top:5%; left: 5%">
      </iframe>
 </div>
-
-```{figure} 
-Figura: (log) de verosimilitud usando R (plotly) y datos en ejemplo 1.
-```
 </br>
 
-### Estimador 
+## Estimador 
 
 **Estimador de Máxima Verosimilitud (MLE):** Dado un conjunto de datos, $\{w_i\}_{i=1}^n$, se busca el vector de parámetros $\boldsymbol{\theta}$ que generen la mayor probabilidad de haber observado ese conjunto particular de datos. Es decir, el $\boldsymbol{\theta}$ que haga más **verosímil** ('con apariencia de verdadero') el resultado que hemos obtenido.
 
@@ -51,7 +49,7 @@ Para despejar o resolver la expresión anterior, y encontrar el vector de parám
 
 $$S(\boldsymbol{\theta})=\frac{\partial ln(\mathcal{L}_n(\boldsymbol{\theta}))}{\partial \boldsymbol{\theta}}$$
 
-### Errores estándar (distribución asintótica)
+## Errores estándar (distribución asintótica)
 
 Definimos la matriz de información $I(\boldsymbol{\theta})$ (o, específicamente, Matriz de Información de Fisher - _Fisher Information_ ) como el producto interno del vector _score_
 
@@ -102,7 +100,7 @@ A partir de lo anterior, dos propiedades a resaltar del MLE son:
 
 - **Invarianza.** Si $\gamma=g(\boldsymbol{\theta})$, se tiene que $\hat{\gamma}=g(\hat{\boldsymbol{\theta}})$, para $g(\cdot)$ continua y diferenciable.
 
-### Inferencia. 
+## Inferencia. 
 
 Consideramos ahora un test o prueba para inferencia estadística en el contexto de ML. Si bien bajo la premisa que la función de verosimilitud es conocida se pueden emplear varios test, algunos de ellos asintóticamente equivalentes, nos enfocaremos en el test de razón de versimilitud ( _Likelihood Ratio TEST_ ) ya que en muchos casos es fácil de calcular. 
 
@@ -118,7 +116,7 @@ La idea del test es que si la hipótesis nula es verdadera, $\ell(\widetilde{\th
 </br>
 <hr>
 
-### Ejemplos.
+## Ejemplos.
 
 </br>
 
