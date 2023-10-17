@@ -1,6 +1,17 @@
-# Series Estacionarias
+# Modelo de Conteo
 
 ## Introducción
+
+Regresión Poisson
+
+
+.
+
+.
+
+.
+
+
 
 </br>
 <center><figure>
@@ -8,3 +19,5 @@
     <figcaption>(Digitalización de apuntes en progreso) </figcaption>
 </figure></center>
 </br>
+
+<hr>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Modelos LP, Logit y Probit &#8212;  </title>
+    <title>8. Datos en Panel &#8212;  </title>
   
   
   
@@ -68,15 +68,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/Logit_Probit';</script>
-    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/Logit_Probit.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch8_Panel/Intro_Panel';</script>
+    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch8_Panel/Intro_Panel.html" />
     <link rel="shortcut icon" href="../../_static/icon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Variables Instrumentales" href="../Ch5_IV/IV.html" />
-    <link rel="prev" title="Variable Dependiente Limitada" href="Intro_LDV.html" />
+    <link rel="next" title="Teoría Modelos para Datos en Panel" href="Panel.html" />
+    <link rel="prev" title="VAR" href="../Ch7_TS/VAR.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,54 +166,60 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Introduccion.html">Introducción al curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro_Curso.html">1. Introducción al Curso</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">OLS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">Mínimos Cuadrados Ordinarios - Repaso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">2. Mínimos Cuadrados - Repaso</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">MLE</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/MLE.html">Estimador de Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/pract_mle_r.html">Rincón de Práctica R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/pract_mle_stata.html">Rincón de Práctica Stata</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/MLE.html">Teoría MLE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_r.html">Práctica R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_stata.html">Práctica Stata</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">LDVs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch4_LDV/Intro_LDV.html">4. Variable Dependiente Limitada</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Ch4_LDV/Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Ch4_LDV/Binaria/pract_ldv_r.html">Práctica R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Ch4_LDV/Binaria/pract_ldv_stata.html">Práctica Stata</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/Multinomial.html">Modelos de Elección Múltiple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/Conteo.html">Modelo de Conteo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/CensuraTrunc.html">Modelos de Censura y Truncamiento</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch5_GMM/GMM.html">5. Método de Momentos</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch6_IV/IV.html">6. Variables Instrumentales</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
+</ul>
+</li>
+</ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Intro_LDV.html">Variable Dependiente Limitada</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelos LP, Logit y Probit</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">IV</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch5_IV/IV.html">Variables Instrumentales</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">GMM</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch6_GMM/GMM.html">Método Generalizado de Momentos</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">TS</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">Series de Tiempo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Panel</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Panel.html">Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/pract_panel_r.html">Rincón de Práctica R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/pract_panel_stata.html">Rincón de Práctica Stata</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">8. Datos en Panel</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Panel.html">Teoría Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer/pract_panel_r.html">Práctica R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer/pract_panel_stata.html">Práctica Stata</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Causal Inf.</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">Inferencia Causal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Dif-in-Dif</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Diff-in-Diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Referencias</span></p>
+</li>
+</ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../zbibliography.html">Bibliografía</a></li>
 </ul>
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/Ch4_LDV/Logit_Probit.ipynb" target="_blank"
+      <li><a href="../../_sources/content/Ch8_Panel/Intro_Panel.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -282,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -354,7 +358,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Modelos LP, Logit y Probit</h1>
+    <h1>8. Datos en Panel</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,9 +368,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-dependiente-binaria">Variable dependiente binaria</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-probabilidad-lineal">Modelo de Probabilidad Lineal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-probit-y-logit">Modelos Probit y Logit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 </ul>
             </nav>
         </div>
@@ -378,51 +380,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="modelos-lp-logit-y-probit">
-<h1>Modelos LP, Logit y Probit<a class="headerlink" href="#modelos-lp-logit-y-probit" title="Permalink to this heading">#</a></h1>
-<section id="variable-dependiente-binaria">
-<h2>Variable dependiente binaria<a class="headerlink" href="#variable-dependiente-binaria" title="Permalink to this heading">#</a></h2>
-<p>Supongamos que la variable dependiente observada toma valores discretos como los siguientes:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccl}
-Y=1&amp; &amp; \text{Si se cumple cierta condición}\\ 
-Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\ 
-\end{array}\end{split}\]</div>
-<p>En este caso la variable dependiente <span class="math notranslate nohighlight">\(Y\)</span>, al tomar solo los dos valores (0,1), corresponde a un ensayo de Bernoulli: se cumple o no una condición, con cierta probabilidad. Sea <span class="math notranslate nohighlight">\(p\)</span> la probabilidad de que la variable tome el valor de 1. Así, la probabilidad de <span class="math notranslate nohighlight">\(Y=1\)</span> estará dada por la función de expectativa condicional: <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)\)</span>.</p>
-<p>En esta subsección abordaremos tres modelos de econometría para este tipo de variable dependiente. El nombre particular que adopta el modelo de econometría cambia según la función particular que se emplee para modelar la probabilidad. En particular, estudiaremos los siguientes modelos:</p>
-<ul class="simple">
-<li><p>Modelo de Probabilidad lineal ( <em>Linear Probability</em> - LP ): Emplea una función lineal ( <em>OLS</em> ).</p></li>
-<li><p>Modelo Probit: Modela la probabilidad empleando una f.d.p. normal.</p></li>
-<li><p>Modelo Logit: Modela la probabilidad empleando una f.d.p. logística.</p></li>
-</ul>
-<p></br></br></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="datos-en-panel">
+<span id="ch-mle"></span><h1>8. Datos en Panel<a class="headerlink" href="#datos-en-panel" title="Permalink to this heading">#</a></h1>
+<p><strong>Panel: <em>Panel Data Models</em></strong></p>
+<section id="introduccion">
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
+<p>En esta sección revisaremos modelos para datos en panel. Primero revisaremos la teoría y luego veremos unos ejemplos prácticos en el computador.</p>
 </section>
-<section id="modelo-de-probabilidad-lineal">
-<h2>Modelo de Probabilidad Lineal<a class="headerlink" href="#modelo-de-probabilidad-lineal" title="Permalink to this heading">#</a></h2>
-<p>La probabilidad se encuentra dada por <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)=X\beta\)</span> y por ende el modelo de econometría a emplear es el de <em>OLS</em> ya visto:</p>
-<div class="math notranslate nohighlight">
-\[Y=X\beta + u\]</div>
-<p>En textos tradicionales de econometría se argumenta que una desventaja del MPL se encuentra en el hecho de predecir probabilidades fuera del intervalo <span class="math notranslate nohighlight">\([0,1]\)</span>. Sin embargo, en muchas aplicaciones prácticas el modelo PL representa una razonable aproximación ya que es lineal y se puede estimar de manera sencilla, además, no recae sobre supuestos fuertes asociados a especificar una función de distribución de probabilidad.</p>
-</section>
-<section id="modelos-probit-y-logit">
-<h2>Modelos Probit y Logit<a class="headerlink" href="#modelos-probit-y-logit" title="Permalink to this heading">#</a></h2>
-<p>En resumen, en el modelo <strong>Probit</strong> y <strong>logit</strong> la probabilidad <span class="math notranslate nohighlight">\(p\)</span> esta dada por funciones de distribución de probabilidad. Mientras que en el probit <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)=\Phi(X\beta)\)</span>, donde <span class="math notranslate nohighlight">\(\Phi(\cdot)\)</span> es la función de distribución acumulada de la distribución normal estándar, en el logit <span class="math notranslate nohighlight">\(p=\mathbb{E}(Y|X)=\Lambda(X\beta)=(1+exp(-X\beta))^{-1}\)</span>.</p>
-<p>Pero de forma más general, para determinar el anterior resultado, se puede partir de la motivación típica en el modelo Probit (o Logit): el supuesto de que la participación (por ejemplo, la decisión de participar en el mercado laborar) se encuentra determinada por una variable latente <span class="math notranslate nohighlight">\(Y^{*}\)</span> (no observada) que es la que satisface</p>
-<div class="math notranslate nohighlight">
-\[Y^*=X\beta+u\]</div>
-<p>Esta variable latente presenta ‘mayor libertad’, en el sentido que puede ser no negativa y/o continua. En el caso particular de tomar valores en una dirección específica (por ejemplo, valores positivos), su contra parte observada (por el investigador) tomaría el valor de 1. Es decir, <span class="math notranslate nohighlight">\(Y=\mathbf{1}[Y^*&gt;0]\)</span>.</p>
-<p>Así, bajo el supuesto de que <span class="math notranslate nohighlight">\(u\sim\mathbb{N}(0,1)\)</span>, la probabilidad <span class="math notranslate nohighlight">\(p\)</span> estaría dada por la expresión antes mencionada:</p>
-<div class="math notranslate nohighlight">
-\[p=\mathbb{E}(Y|X)=P[Y=1|X]=P[u&lt;X\beta]=\Phi(X\beta)\]</div>
-<p><strong>Estimación:</strong> Dados los supuestos sobre distribución de probabilidad, se puede emplear <strong>MLE</strong> como técnica para estimar los parámetros. En particular, al considerar que <span class="math notranslate nohighlight">\(Y\)</span> corresponde a un ensayo Bernoulli con probabilidad <span class="math notranslate nohighlight">\(p\)</span>, la función de probabilidad para una observación particular <span class="math notranslate nohighlight">\(i\)</span> estará dada por</p>
-<div class="math notranslate nohighlight">
-\[p_i^{Y_i}(1-p_i)^{1-Y_i}\]</div>
-<p>en donde se reemplaza la probabilidad <span class="math notranslate nohighlight">\(p_i\)</span> por la f.d.p. normal <span class="math notranslate nohighlight">\(\Phi(X_i'\beta)\)</span> para el caso del Probit o por la f.d.p. logística <span class="math notranslate nohighlight">\(\Lambda(X_i'\beta)\)</span> para el caso del Logit. Por ende, el vector de parámetros estimados se puede obtener a partir de (el logaritmo de) la función de verosimilitud ( <em>log-likelihood</em> ):</p>
-<div class="math notranslate nohighlight">
-\[\hat{\beta}=\text{arg max}_\beta\,\sum_{i}^n{\left( Y_i\cdot\text{Ln}(p_i) + (1-Y_i)\cdot\text{Ln}(1-p_i)\right)}\]</div>
-<p></br></br></p>
-<center><img src="under_construction.jpg" alt="cover" width="30%" height="30%"style="margin: 15px 0 0 0"></center>
-</br></section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -438,7 +404,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Ch4_LDV"
+            path: "./content\Ch8_Panel"
         },
         predefinedOutput: true
     }
@@ -457,20 +423,20 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Intro_LDV.html"
+       href="../Ch7_TS/VAR.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Variable Dependiente Limitada</p>
+        <p class="prev-next-title">VAR</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Ch5_IV/IV.html"
+       href="Panel.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Variables Instrumentales</p>
+        <p class="prev-next-title">Teoría Modelos para Datos en Panel</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -492,9 +458,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-dependiente-binaria">Variable dependiente binaria</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-probabilidad-lineal">Modelo de Probabilidad Lineal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-probit-y-logit">Modelos Probit y Logit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 </ul>
   </nav></div>
 

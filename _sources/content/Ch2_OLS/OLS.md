@@ -1,11 +1,6 @@
----
-title: "OLS"
-weight: 1
-pre: "<b>2. </b>"
-chapter: true
----
+(Ch_OLS)=
 
-# Mínimos Cuadrados Ordinarios - Repaso
+# 2. Mínimos Cuadrados - Repaso
 
 **OLS: _Ordinary Least Squares_**
 
@@ -13,7 +8,7 @@ chapter: true
 
 #### Diapositivas
 
-A continuación se incluyen las diapositivas empleadas en la primera sesión de motivación al curso. Para avanzar hacer click sobre la diapositiva y luego usar las flechas del teclado.
+A continuación se incluyen las diapositivas empleadas. Para avanzar hacer click sobre la diapositiva y luego usar las flechas del teclado.
 
 Nota: puede tomar unos segundos en aparecer el material.
 

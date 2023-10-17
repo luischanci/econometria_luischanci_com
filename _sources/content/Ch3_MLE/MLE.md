@@ -1,29 +1,17 @@
-(Ch_MLE)=
-
-# Estimador de Máxima Verosimilitud
+# Teoría Máxima Verosimilitud
 
 **MLE: _Maximum Likelihood Estimation_**
-
-## Introducción
-
-Como vimos, el estimador (o técnica) _OLS_ / MCO como un estimador extremo permitía recuperar los parámetros de interés (en una relación entre variables, idealmente, establecida usando teoría económica), a partir de minimizar una función de perdida compuesta del cuadrado de residuales. Ahora revisaremos otro estimador que también se basa en optimizar una función. Sin embargo, a diferencia de OLS, este estimador emplea una función de probabilidad (en vez de una función de pérdida) y el proceso de optimización consiste en maximizar (en vez de minimizar).
-
-<div id   ="Container"
-     style="padding-bottom:50.25%; position:relative; display:block; width: 100%">
-     <iframe id                 ="log_lik"
-             width              ="85%"
-             height             ="100%"
-             src                ="log_lik.html"
-             frameborder        ="0"
-             allowfullscreen    ="1"
-             style              ="position:absolute; top:5%; left: 5%">
-     </iframe>
-</div>
-</br>
 
 ## Estimador 
 
 **Estimador de Máxima Verosimilitud (MLE):** Dado un conjunto de datos, $\{w_i\}_{i=1}^n$, se busca el vector de parámetros $\boldsymbol{\theta}$ que generen la mayor probabilidad de haber observado ese conjunto particular de datos. Es decir, el $\boldsymbol{\theta}$ que haga más **verosímil** ('con apariencia de verdadero') el resultado que hemos obtenido.
+
+</br>
+<center><figure>
+    <img alt="../../_images/distributions.png" src="../../_images/distributions.png" width="50%" height="50%"style="margin: 15px 0 0 0">
+    <figcaption>Figura: Ilustración de dos f.d.p. Fuente: Contrucción en R con datos simulados.</figcaption>
+</figure></center>
+</br>
 
 En particular, la especificación del estimador consta de:
 * Una muestra (aleatoria): $\{w_i\}_{i=1}^n$
@@ -105,14 +93,18 @@ A partir de lo anterior, dos propiedades a resaltar del MLE son:
 Consideramos ahora un test o prueba para inferencia estadística en el contexto de ML. Si bien bajo la premisa que la función de verosimilitud es conocida se pueden emplear varios test, algunos de ellos asintóticamente equivalentes, nos enfocaremos en el test de razón de versimilitud ( _Likelihood Ratio TEST_ ) ya que en muchos casos es fácil de calcular. 
 
 Sea $\hat{\theta}_{u}$ el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sin la restricción impuesta en la hipótesis nula, $\text{ln }L(\theta)$. Sea $\widetilde{\theta}_{r}$ el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sujeta a la restricción (por ejemplo, $\widetilde{\theta}_{r}-\lambda'(r-R\beta)$). El estadístico Razón de Verosimilitudes (LR) estará definido por
-$$LR=2[\ell(\widetilde{\theta}_{r})-\ell(\hat{\theta}_{u})]\sim\chi^2_q$$
+
+$$LR=-2[\ell(\widetilde{\theta}_{r})-\ell(\hat{\theta}_{u})]\sim\chi^2_q$$
 
 La idea del test es que si la hipótesis nula es verdadera, $\ell(\widetilde{\theta}_{r})$ y $\ell(\hat{\theta}_{u})$ deberían ser iguales. En otras palabras, se evalúa si la diferencia entre ambas log-likelihood functions es significativa desde un punto de vista estadístico.
 
 
-<center><img src="LR.png" alt="cover" width="50%" height="50%"style="margin: 15px 0 0 0"></center>
 </br>
-
+<center><figure>
+    <img alt="../../_images/LR.png" src="../../_images/LR.png" width="60%" height="60%"style="margin: 15px 0 0 0">
+    <figcaption>Figura: Ilustración del test LR.</figcaption>
+</figure></center>
+</br>
 </br>
 <hr>
 
@@ -142,7 +134,7 @@ $$\hat{\mu}_{MLE}=\bar{z}=\frac{\sum_i z_i}{n}$$
 
 $$(\hat{\boldsymbol{\beta}},\hat{\sigma}^2)_{MLE}=\text{arg max}_{(\boldsymbol{\beta}\in\mathbb{R}^k,\sigma^2>0)}\,\left(-\frac{n\cdot log(2\pi\sigma^2)}{2}-\frac{(Y-X\boldsymbol{\beta})'(Y-X\boldsymbol{\beta})}{2\sigma^2}\right)$$
 
-es decir, la log-likelihhod es
+es decir, la log-likelihood es
 
 $$\ell(\boldsymbol{\theta})=-\frac{n\cdot log(2\pi\sigma^2)}{2}-\frac{(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})'(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})}{2\sigma^2}$$
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Series Estacionarias &#8212;  </title>
+    <title>Modelos de Censura y Truncamiento &#8212;  </title>
   
   
   
@@ -68,13 +68,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch7_TS/Estacionarias';</script>
-    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch7_TS/Estacionarias.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/CensuraTrunc';</script>
+    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/CensuraTrunc.html" />
     <link rel="shortcut icon" href="../../_static/icon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="VAR" href="VAR.html" />
-    <link rel="prev" title="7. Series de Tiempo" href="Intro_TS.html" />
+    <link rel="next" title="5. Método de Momentos" href="../Ch5_GMM/GMM.html" />
+    <link rel="prev" title="Modelo de Conteo" href="Conteo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,16 +179,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch4_LDV/Intro_LDV.html">4. Variable Dependiente Limitada</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Ch4_LDV/Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Ch4_LDV/Binaria/pract_ldv_r.html">Práctica R</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Ch4_LDV/Binaria/pract_ldv_stata.html">Práctica Stata</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_ldv_r.html">Práctica R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_ldv_stata.html">Práctica Stata</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/Multinomial.html">Modelos de Elección Múltiple</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/Conteo.html">Modelo de Conteo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/CensuraTrunc.html">Modelos de Censura y Truncamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Multinomial.html">Modelos de Elección Múltiple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conteo.html">Modelo de Conteo</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Modelos de Censura y Truncamiento</a></li>
 </ul>
 </li>
 </ul>
@@ -198,10 +198,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Ch6_IV/IV.html">6. Variables Instrumentales</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_TS.html">7. Series de Tiempo</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Series Estacionarias</a></li>
-<li class="toctree-l2"><a class="reference internal" href="VAR.html">VAR</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
 </ul>
 </li>
 </ul>
@@ -276,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/Ch7_TS/Estacionarias.md" target="_blank"
+      <li><a href="../../_sources/content/Ch4_LDV/CensuraTrunc.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -358,7 +358,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Series Estacionarias</h1>
+    <h1>Modelos de Censura y Truncamiento</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,16 +380,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="series-estacionarias">
-<h1>Series Estacionarias<a class="headerlink" href="#series-estacionarias" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="modelos-de-censura-y-truncamiento">
+<h1>Modelos de Censura y Truncamiento<a class="headerlink" href="#modelos-de-censura-y-truncamiento" title="Permalink to this heading">#</a></h1>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
+<p><strong>Truncamiento:</strong> Observaciones sistemáticamente excluidas.</p>
+<p><strong>Censura:</strong> Observaciones son todas incluidas, pero la variable dependiente presenta un umbral. Por ejemplo, si es negativa, se reemplaza por valores cero. Un caso relacionado en términos de la representación probabilistica, es la solución de esquina.</p>
+<p><strong>Truncamiento incidental y sesgo de selección.</strong></p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
 </br>
 <center><figure>
     <img alt="../../_images/under_construction.jpg" src="../../_images/under_construction.jpg" width="30%" height="30%"style="margin: 15px 0 0 0">
     <figcaption>(Digitalización de apuntes en progreso) </figcaption>
 </figure></center>
-</br></section>
+</br>
+<hr>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -405,7 +413,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Ch7_TS"
+            path: "./content\Ch4_LDV"
         },
         predefinedOutput: true
     }
@@ -424,20 +432,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Intro_TS.html"
+       href="Conteo.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">7. Series de Tiempo</p>
+        <p class="prev-next-title">Modelo de Conteo</p>
       </div>
     </a>
     <a class="right-next"
-       href="VAR.html"
+       href="../Ch5_GMM/GMM.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">VAR</p>
+        <p class="prev-next-title">5. Método de Momentos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -1,11 +1,4 @@
----
-title: "Introducción"
-weight: 1
-pre: "<b>2. </b>"
-chapter: true
----
-
-# Introducción al curso
+# 1. Introducción al Curso
 
 &nbsp;
 

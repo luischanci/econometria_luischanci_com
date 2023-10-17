@@ -1,4 +1,6 @@
-# Variable Dependiente Limitada 
+(Ch_LDV)=
+
+# 4. Variable Dependiente Limitada 
 
 **LDVs: _Limited Dependent Variables_**
 

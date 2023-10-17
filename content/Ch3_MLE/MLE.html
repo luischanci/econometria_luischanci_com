@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Estimador de Máxima Verosimilitud &#8212;  </title>
+    <title>Teoría Máxima Verosimilitud &#8212;  </title>
   
   
   
@@ -75,8 +75,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/icon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Rincón de Práctica R" href="pract_mle_r.html" />
-    <link rel="prev" title="Mínimos Cuadrados Ordinarios - Repaso" href="../Ch2_OLS/OLS.html" />
+    <link rel="next" title="Rincón de Práctica R" href="computer/pract_mle_r.html" />
+    <link rel="prev" title="3. Máxima Verosimilitud" href="Intro_MLE.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,54 +168,60 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Introduccion.html">Introducción al curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro_Curso.html">1. Introducción al Curso</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">OLS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">Mínimos Cuadrados Ordinarios - Repaso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">2. Mínimos Cuadrados - Repaso</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">MLE</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Estimador de Máxima Verosimilitud</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="pract_mle_r.html">Rincón de Práctica R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pract_mle_stata.html">Rincón de Práctica Stata</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_MLE.html">3. Máxima Verosimilitud</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Teoría MLE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer/pract_mle_r.html">Práctica R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer/pract_mle_stata.html">Práctica Stata</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">LDVs</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch4_LDV/Intro_LDV.html">Variable Dependiente Limitada</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch4_LDV/Logit_Probit.html">Modelos LP, Logit y Probit</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch4_LDV/Intro_LDV.html">4. Variable Dependiente Limitada</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Ch4_LDV/Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Ch4_LDV/Binaria/pract_ldv_r.html">Práctica R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Ch4_LDV/Binaria/pract_ldv_stata.html">Práctica Stata</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">IV</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch5_IV/IV.html">Variables Instrumentales</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">GMM</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch6_GMM/GMM.html">Método Generalizado de Momentos</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">TS</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">Series de Tiempo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Panel</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Panel.html">Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/pract_panel_r.html">Rincón de Práctica R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/pract_panel_stata.html">Rincón de Práctica Stata</a></li>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/Multinomial.html">Modelos de Elección Múltiple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/Conteo.html">Modelo de Conteo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch4_LDV/CensuraTrunc.html">Modelos de Censura y Truncamiento</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Causal Inf.</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">Inferencia Causal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Dif-in-Dif</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch5_GMM/GMM.html">5. Método de Momentos</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Referencias</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Ch6_IV/IV.html">6. Variables Instrumentales</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/Panel.html">Teoría Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_r.html">Práctica R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_stata.html">Práctica Stata</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Diff-in-Diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
+</ul>
+</li>
+</ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../zbibliography.html">Bibliografía</a></li>
 </ul>
@@ -354,7 +360,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Estimador de Máxima Verosimilitud</h1>
+    <h1>Teoría Máxima Verosimilitud</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,7 +370,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador">Estimador</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-estandar-distribucion-asintotica">Errores estándar (distribución asintótica)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inferencia">Inferencia.</a></li>
@@ -380,28 +385,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="estimador-de-maxima-verosimilitud">
-<span id="ch-mle"></span><h1>Estimador de Máxima Verosimilitud<a class="headerlink" href="#estimador-de-maxima-verosimilitud" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="teoria-maxima-verosimilitud">
+<h1>Teoría Máxima Verosimilitud<a class="headerlink" href="#teoria-maxima-verosimilitud" title="Permalink to this heading">#</a></h1>
 <p><strong>MLE: <em>Maximum Likelihood Estimation</em></strong></p>
-<section id="introduccion">
-<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
-<p>Como vimos, el estimador (o técnica) <em>OLS</em> / MCO como un estimador extremo permitía recuperar los parámetros de interés (en una relación entre variables, idealmente, establecida usando teoría económica), a partir de minimizar una función de perdida compuesta del cuadrado de residuales. Ahora revisaremos otro estimador que también se basa en optimizar una función. Sin embargo, a diferencia de OLS, este estimador emplea una función de probabilidad (en vez de una función de pérdida) y el proceso de optimización consiste en maximizar (en vez de minimizar).</p>
-<div id   ="Container"
-     style="padding-bottom:50.25%; position:relative; display:block; width: 100%">
-     <iframe id                 ="log_lik"
-             width              ="85%"
-             height             ="100%"
-             src                ="log_lik.html"
-             frameborder        ="0"
-             allowfullscreen    ="1"
-             style              ="position:absolute; top:5%; left: 5%">
-     </iframe>
-</div>
-</br>
-</section>
 <section id="estimador">
 <h2>Estimador<a class="headerlink" href="#estimador" title="Permalink to this heading">#</a></h2>
 <p><strong>Estimador de Máxima Verosimilitud (MLE):</strong> Dado un conjunto de datos, <span class="math notranslate nohighlight">\(\{w_i\}_{i=1}^n\)</span>, se busca el vector de parámetros <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span> que generen la mayor probabilidad de haber observado ese conjunto particular de datos. Es decir, el <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span> que haga más <strong>verosímil</strong> (‘con apariencia de verdadero’) el resultado que hemos obtenido.</p>
+</br>
+<center><figure>
+    <img alt="../../_images/distributions.png" src="../../_images/distributions.png" width="50%" height="50%"style="margin: 15px 0 0 0">
+    <figcaption>Figura: Ilustración de dos f.d.p. Fuente: Contrucción en R con datos simulados.</figcaption>
+</figure></center>
+</br>
 <p>En particular, la especificación del estimador consta de:</p>
 <ul class="simple">
 <li><p>Una muestra (aleatoria): <span class="math notranslate nohighlight">\(\{w_i\}_{i=1}^n\)</span></p></li>
@@ -470,10 +465,15 @@ document.write(`
 <section id="inferencia">
 <h2>Inferencia.<a class="headerlink" href="#inferencia" title="Permalink to this heading">#</a></h2>
 <p>Consideramos ahora un test o prueba para inferencia estadística en el contexto de ML. Si bien bajo la premisa que la función de verosimilitud es conocida se pueden emplear varios test, algunos de ellos asintóticamente equivalentes, nos enfocaremos en el test de razón de versimilitud ( <em>Likelihood Ratio TEST</em> ) ya que en muchos casos es fácil de calcular.</p>
-<p>Sea <span class="math notranslate nohighlight">\(\hat{\theta}_{u}\)</span> el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sin la restricción impuesta en la hipótesis nula, <span class="math notranslate nohighlight">\(\text{ln }L(\theta)\)</span>. Sea <span class="math notranslate nohighlight">\(\widetilde{\theta}_{r}\)</span> el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sujeta a la restricción (por ejemplo, <span class="math notranslate nohighlight">\(\widetilde{\theta}_{r}-\lambda'(r-R\beta)\)</span>). El estadístico Razón de Verosimilitudes (LR) estará definido por
-$<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-\ell(\hat{\theta}_{u})]\sim\chi^2_q\)</span>$</p>
+<p>Sea <span class="math notranslate nohighlight">\(\hat{\theta}_{u}\)</span> el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sin la restricción impuesta en la hipótesis nula, <span class="math notranslate nohighlight">\(\text{ln }L(\theta)\)</span>. Sea <span class="math notranslate nohighlight">\(\widetilde{\theta}_{r}\)</span> el vector de parámetros que se obtendría al maximizar (el log de) la función de verosimilitud sujeta a la restricción (por ejemplo, <span class="math notranslate nohighlight">\(\widetilde{\theta}_{r}-\lambda'(r-R\beta)\)</span>). El estadístico Razón de Verosimilitudes (LR) estará definido por</p>
+<div class="math notranslate nohighlight">
+\[LR=-2[\ell(\widetilde{\theta}_{r})-\ell(\hat{\theta}_{u})]\sim\chi^2_q\]</div>
 <p>La idea del test es que si la hipótesis nula es verdadera, <span class="math notranslate nohighlight">\(\ell(\widetilde{\theta}_{r})\)</span> y <span class="math notranslate nohighlight">\(\ell(\hat{\theta}_{u})\)</span> deberían ser iguales. En otras palabras, se evalúa si la diferencia entre ambas log-likelihood functions es significativa desde un punto de vista estadístico.</p>
-<center><img src="LR.png" alt="cover" width="50%" height="50%"style="margin: 15px 0 0 0"></center>
+</br>
+<center><figure>
+    <img alt="../../_images/LR.png" src="../../_images/LR.png" width="60%" height="60%"style="margin: 15px 0 0 0">
+    <figcaption>Figura: Ilustración del test LR.</figcaption>
+</figure></center>
 </br>
 </br>
 <hr>
@@ -499,7 +499,7 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
 <p><strong>Ejemplo 2. NLRM ( <em>Normal Linear Regression Model</em> )</strong> Supongamos un modelo de regresión lineal como el visto en <em>OLS</em> : <span class="math notranslate nohighlight">\(Y=X\beta+u\)</span> . El conjunto de datos es <span class="math notranslate nohighlight">\(w_i=(Y_i,X_i)\)</span> para <span class="math notranslate nohighlight">\(i=1,...,n\)</span> y el vector de parámetros es <span class="math notranslate nohighlight">\(\boldsymbol{\theta}=(\boldsymbol{\beta},\sigma^2)=(\beta_1,...,\beta_k,\sigma^2)\)</span>. Bajo el supuesto que <span class="math notranslate nohighlight">\((Y-X\boldsymbol{\beta})=u\sim\,\mathbb{N}(0,\sigma^2I_n)\)</span>, los estimadores ML están definidos por</p>
 <div class="math notranslate nohighlight">
 \[(\hat{\boldsymbol{\beta}},\hat{\sigma}^2)_{MLE}=\text{arg max}_{(\boldsymbol{\beta}\in\mathbb{R}^k,\sigma^2&gt;0)}\,\left(-\frac{n\cdot log(2\pi\sigma^2)}{2}-\frac{(Y-X\boldsymbol{\beta})'(Y-X\boldsymbol{\beta})}{2\sigma^2}\right)\]</div>
-<p>es decir, la log-likelihhod es</p>
+<p>es decir, la log-likelihood es</p>
 <div class="math notranslate nohighlight">
 \[\ell(\boldsymbol{\theta})=-\frac{n\cdot log(2\pi\sigma^2)}{2}-\frac{(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})'(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})}{2\sigma^2}\]</div>
 <p>al resolver (es decir, a partir de las condiciones de primer orden <em>F.O.C.</em> evaluadas en el estimador ML),</p>
@@ -516,8 +516,6 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
 <p>Esta expresión es empleada para los errores estándar.</p>
 <p></br></br></p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,16 +550,16 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Ch2_OLS/OLS.html"
+       href="Intro_MLE.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Mínimos Cuadrados Ordinarios - Repaso</p>
+        <p class="prev-next-title">3. Máxima Verosimilitud</p>
       </div>
     </a>
     <a class="right-next"
-       href="pract_mle_r.html"
+       href="computer/pract_mle_r.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -587,7 +585,6 @@ $<span class="math notranslate nohighlight">\(LR=2[\ell(\widetilde{\theta}_{r})-
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador">Estimador</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-estandar-distribucion-asintotica">Errores estándar (distribución asintótica)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inferencia">Inferencia.</a></li>

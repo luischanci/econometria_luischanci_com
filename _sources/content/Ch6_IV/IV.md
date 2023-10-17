@@ -1,4 +1,6 @@
-# Variables Instrumentales
+(Ch_IV)=
+
+# 6. Variables Instrumentales
 
 **IV: _Instrumental Variables_**
 
@@ -15,7 +17,7 @@
 
 - El problema de la endogeneidad se produce cuando $Cov(x,u)\neq0$. El siguiente DAG (_Directed Acyclic Graph_) ilustra el caso:
 
-  <center><img src="DAG.png" alt="cover" width="40%" height="40%"style="margin: 15px 0 0 0"></center>
+  <center><img src="../../_images/DAG.png" alt="../../_images/DAG.png" width="40%" height="40%"style="margin: 15px 0 0 0"></center>
   </br>
 
 - Varias situaciones pueden llevar a endogeneidad. Una trivial es variables relevantes omitidas:
@@ -42,7 +44,7 @@ Formalmente, las propiedades esperadas de un instrumento son:
 
 Gráficamente,
 
-<center><img src="DAGIV.png" alt="cover" width="50%" height="50%"style="margin: 15px 0 0 0"></center>
+<center><img src="../../_images/DAGIV.png" alt="../../_images/DAGIV.png" width="50%" height="50%"style="margin: 15px 0 0 0"></center>
 </br>
 
 * Ejemplo:

@@ -1,6 +1,6 @@
-(Ch_MLE)=
+(Ch_GMM)=
 
-# Método Generalizado de Momentos
+# 5. Método de Momentos
 
 **GMM: _Generalized Method of Moments_**
 
