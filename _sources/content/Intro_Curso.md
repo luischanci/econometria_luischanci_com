@@ -2,7 +2,8 @@
 
 &nbsp;
 
-#### Diapositivas clase 1
+## Diapositivas clase 1
+
 A continuación se incluyen las diapositivas empleadas en la primera sesión de motivación al curso. Para avanzar hacer click sobre la diapositiva y luego usar las flechas del teclado.
 
 Nota: puede tomar unos segundos mientras aparece acá.

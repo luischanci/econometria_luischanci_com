@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="es" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Modelos LP, Logit y Probit &#8212;  </title>
+    <title>Modelos LP, Logit y Probit &#8212; Apuntes de Econometría</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -53,15 +54,10 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
+    <script data-domain="the-turing-way.netlify.app" defer="defer" src="https://plausible.io/js/script.js"></script>
+    <script src="../../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1PK9F28LTP"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-1PK9F28LTP');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -73,12 +69,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/Binaria';</script>
     <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/Binaria.html" />
     <link rel="shortcut icon" href="../../_static/icon.png"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="Rincón de Práctica R" href="Binaria/pract_ldv_r.html" />
     <link rel="prev" title="4. Variable Dependiente Limitada" href="Intro_LDV.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="es"/>
   </head>
   
   
@@ -86,7 +82,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -111,8 +116,8 @@ const thebe_selector_output = ".output, .cell_output"
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
+         placeholder="Search..."
+         aria-label="Search..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -159,14 +164,6 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../intro.html">
-                    Bienvenida
-                </a>
-            </li>
-        </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Intro_Curso.html">1. Introducción al Curso</a></li>
 </ul>
@@ -268,57 +265,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../_sources/content/Ch4_LDV/Binaria.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
+  title="Modo de pantalla completa"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -332,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -366,7 +315,7 @@ document.write(`
         <div id="jb-print-toc">
             
             <div>
-                <h2> Contents </h2>
+                <h2> Contenido </h2>
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -418,7 +367,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 <li><p><strong>heteroscedasticidad</strong>. Como <span class="math notranslate nohighlight">\(Y\)</span> sigue un ensayo Bernoulli, la varianza estaría dada por <span class="math notranslate nohighlight">\(p(1-p)=X\beta(\iota-X\beta)\)</span>, donde <span class="math notranslate nohighlight">\(\iota\)</span> es un vector de unos. Es decir, la varianza cambia con <span class="math notranslate nohighlight">\(X\)</span> (deja de ser contante).</p></li>
 </ul>
 <p>Respecto al segundo punto, si sabemos la forma de la heteroscedasticidad, podríamos aprovechar la consistencia de los estimaodres de <em>OLS</em> y emplear una especie de procedimiento en dos etapas para corregirla (GLS).</p>
-<p>Respecto al primer punto, en muchas aplicaciones prácticas (e.g., datos cercanos a la media), el modelo lineal puede generar una aproximación razonable. El modelo lineal se estima de forma sencilla, sin implicar supuestos “fuertes” por no especificar una función de distribución de probabilidad, y los efectos marginales son de fácil lectura/presentación (son solo los <span class="math notranslate nohighlight">\(\beta\)</span>’s).</p>
+<p>Respecto al primer punto, en muchas aplicaciones prácticas (e.g., datos cercanos a la media), el modelo lineal puede generar una aproximación razonable. El modelo lineal se estima de forma sencilla, sin implicar supuestos «fuertes» por no especificar una función de distribución de probabilidad, y los efectos marginales son de fácil lectura/presentación (son solo los <span class="math notranslate nohighlight">\(\beta\)</span>’s).</p>
 <p>Por ende, es común ver en investigaciones cientificas con variable dependiente binaria el uso del LPM.</p>
 </section>
 <section id="modelos-probit-y-logit">
@@ -427,7 +376,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 <p>De forma equivalente, se puede plantear el anterior resultado a partir de motivar los modelos logit/probit a partir de una variable latente (no observada). Es decir, en el caso del ejemplo de la participación laboral (la decisión de participar en el mercado laborar), supongamos que hay una variable latente <span class="math notranslate nohighlight">\(Y^{*}\)</span> (no observada) que satisface</p>
 <div class="math notranslate nohighlight">
 \[Y^*=X\beta+u\]</div>
-<p>Podemos pensar en esta variable latente como una variable con ‘mayor libertad’, en el sentido que puede ser no negativa y/o continua (“no limitada”). Así, en el caso particular de tomar valores en una dirección específica (por ejemplo, valores positivos), su contra parte observada (por el investigador) tomaría el valor de 1. Es decir, <span class="math notranslate nohighlight">\(Y=\mathbf{1}[Y^*&gt;0]\)</span>, en donde <span class="math notranslate nohighlight">\(\mathbf{1}\)</span> es una función indicador.</p>
+<p>Podemos pensar en esta variable latente como una variable con “mayor libertad”, en el sentido que puede ser no negativa y/o continua («no limitada»). Así, en el caso particular de tomar valores en una dirección específica (por ejemplo, valores positivos), su contra parte observada (por el investigador) tomaría el valor de 1. Es decir, <span class="math notranslate nohighlight">\(Y=\mathbf{1}[Y^*&gt;0]\)</span>, en donde <span class="math notranslate nohighlight">\(\mathbf{1}\)</span> es una función indicador.</p>
 <p>Por ende, bajo el supuesto de que <span class="math notranslate nohighlight">\(u\sim\mathbb{N}(0,1)\)</span>, la probabilidad <span class="math notranslate nohighlight">\(p\)</span> estaría dada por</p>
 <div class="math notranslate nohighlight">
 \[p=\mathbb{E}(Y|X)=P[Y=1|X]=P[u&lt;X\beta]=\Phi(X\beta)\]</div>
@@ -435,7 +384,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 <div class="math notranslate nohighlight">
 \[min_\beta\,(Y-\mathbb{E}(Y|X))'(Y-\mathbb{E}(Y|X))\]</div>
 <p>es decir, sería mínimos cuadrados no lineales (NLS). Desventajas adicionales de querer seguir con <em>OLS</em> se asocian a la eficiencia del estimador (ya no es <em>BLUE</em>) y complejidad computacional innecesaria.</p>
-<p>Por ende, dado que se planteó la función de distribución de probabilidad, se puede emplear un estimador eficiente (en términos de la cota de Cramér–Rao) y computacionalmente más fácil: <a class="reference internal" href="../Ch8_Panel/Intro_Panel.html#ch-mle"><span class="std std-ref">8. Datos en Panel</span></a>.</p>
+<p>Por ende, dado que se planteó la función de distribución de probabilidad, se puede emplear un estimador eficiente (en términos de la cota de Cramér–Rao) y computacionalmente más fácil: <span class="xref std std-ref">Ch_MLE</span>.</p>
 <p>En particular, al considerar que <span class="math notranslate nohighlight">\(Y\)</span> corresponde a un ensayo Bernoulli con probabilidad <span class="math notranslate nohighlight">\(p\)</span>, la función de probabilidad para una observación particular <span class="math notranslate nohighlight">\(i\)</span> estaría dada por</p>
 <div class="math notranslate nohighlight">
 \[p_i^{Y_i}(1-p_i)^{1-Y_i}\]</div>
@@ -512,34 +461,30 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Intro_LDV.html"
-       title="previous page">
+       title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-subtitle">anterior</p>
         <p class="prev-next-title">4. Variable Dependiente Limitada</p>
       </div>
     </a>
     <a class="right-next"
        href="Binaria/pract_ldv_r.html"
-       title="next page">
+       title="siguiente página">
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">siguiente</p>
         <p class="prev-next-title">Rincón de Práctica R</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -550,7 +495,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
+    <i class="fa-solid fa-list"></i> Contenido
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
@@ -572,7 +517,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
   <div class="footer-item">
     
 <p class="component-author">
-By Luis Chancí
+Por Luis Chancí
 </p>
 
   </div>
@@ -581,7 +526,7 @@ By Luis Chancí
     
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2019-2023.
       <br/>
     
   </p>
@@ -594,13 +539,6 @@ By Luis Chancí
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
-</div>
-
-</div>
   </div>
   
 </div>
@@ -612,8 +550,8 @@ By Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

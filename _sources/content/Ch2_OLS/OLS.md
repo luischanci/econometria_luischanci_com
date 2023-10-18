@@ -6,7 +6,7 @@
 
 &nbsp;
 
-#### Diapositivas
+## Diapositivas
 
 A continuación se incluyen las diapositivas empleadas. Para avanzar hacer click sobre la diapositiva y luego usar las flechas del teclado.
 
