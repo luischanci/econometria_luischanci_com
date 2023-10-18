@@ -1,4 +1,4 @@
-# Modelos de Censura y Truncamiento 
+# Censura, Truncamiento, Selección 
 
 ## Introducción
 

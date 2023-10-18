@@ -73,9 +73,9 @@ $$\hat{\beta}=\text{arg max}_\beta\,\sum_{i}^n{\left( Y_i\cdot\text{Ln}(p_i) + (
 
 Las condiciones necesarias de primer orden estarían dadas por una expresión no lineal,
 
-$$\frac{\partial \ell}{\partial\beta}=\sum\left\{\frac{(Y_i-F_i)}{F_i(1-F_i)}X_i'\right\}$$
+$$\frac{\partial \ell}{\partial\beta}=\sum\left\{\frac{(Y_i-F_i)}{F_i(1-F_i)}f_iX_i'\right\}$$
 
-la cual por cierto, al definir $w_i=(F_i(1-F_i))^{-1}$, se puede ver como mínimos cuadrados ponderados no lineales (NWLS): $\sum\left\{w_i(Y_i-\mathbb{E}(Y_i|X))X_i\right\}$. Y en el caso del LPM, $w_i=1$ y, por ende, serían las mismas condiciones de primer orden de OLS: $\sum\left\{(Y_i-X_i'\beta)X_i\right\}$. 
+la cual por cierto, al definir $w_i=f_i(F_i(1-F_i))^{-1}$, se puede ver como mínimos cuadrados ponderados no lineales (NWLS): $\sum\left\{w_i(Y_i-\mathbb{E}(Y_i|X))X_i\right\}$. Así, en el caso del LPM se da que $w_i=1$ y, por ende, serían las mismas condiciones de primer orden de OLS: $\sum\left\{(Y_i-X_i'\beta)X_i\right\}$. 
 
 De hecho, {cite:t}`amemiya1981q` muestra que para valores de probabilidad entre 0.1 y 0.9 habría cierto grado de relación entre los coeficientes estimados en el LPM, el logit y el probit. Específicamente: $\beta_{Logit}\approx4\beta_{OLS}$; $\beta_{Probit}\approx 2.5\beta_{OLS}$; $\beta_{Logit}\approx1.6\beta_{Probit}$.
 

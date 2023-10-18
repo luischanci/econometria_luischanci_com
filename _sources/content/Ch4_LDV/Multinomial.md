@@ -6,6 +6,8 @@ Consideramos ahora una generalización o extensión de los modelos logit/probit 
 
 Al igual que el caso del Logit/Probit, la técnica para obtener los parámetros estimados es el {ref}`Ch_MLE` y, por ende, el ejercicio se centra en plantear la función de verosimilitud. 
 
+Referencia: Esta subsección sigue de cerca el capítulo 15 de {cite:t}`cameron2005`.
+
 ## Multinomial Logit
 
 Existen más de dos posibles elecciones que no involucran un orden particular. Por ejemplo, elegir uno de entre tres medios diferentes de transporte (metro, bus, bicicleta) o elegir entre diferentes planes de salud.

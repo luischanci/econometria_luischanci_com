@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -83,15 +82,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -187,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Multinomial.html">Modelos de Elección Múltiple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Conteo.html">Modelo de Conteo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CensuraTrunc.html">Modelos de Censura y Truncamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CensuraTrunc.html">Censura, Truncamiento, Selección</a></li>
 </ul>
 </li>
 </ul>
@@ -281,10 +271,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -292,7 +282,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -384,7 +374,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 <div class="math notranslate nohighlight">
 \[min_\beta\,(Y-\mathbb{E}(Y|X))'(Y-\mathbb{E}(Y|X))\]</div>
 <p>es decir, sería mínimos cuadrados no lineales (NLS). Desventajas adicionales de querer seguir con <em>OLS</em> se asocian a la eficiencia del estimador (ya no es <em>BLUE</em>) y complejidad computacional innecesaria.</p>
-<p>Por ende, dado que se planteó la función de distribución de probabilidad, se puede emplear un estimador eficiente (en términos de la cota de Cramér–Rao) y computacionalmente más fácil: <span class="xref std std-ref">Ch_MLE</span>.</p>
+<p>Por ende, dado que se planteó la función de distribución de probabilidad, se puede emplear un estimador eficiente (en términos de la cota de Cramér–Rao) y computacionalmente más fácil: <a class="reference internal" href="../Ch3_MLE/Intro_MLE.html#ch-mle"><span class="std std-ref">3. Máxima Verosimilitud</span></a>.</p>
 <p>En particular, al considerar que <span class="math notranslate nohighlight">\(Y\)</span> corresponde a un ensayo Bernoulli con probabilidad <span class="math notranslate nohighlight">\(p\)</span>, la función de probabilidad para una observación particular <span class="math notranslate nohighlight">\(i\)</span> estaría dada por</p>
 <div class="math notranslate nohighlight">
 \[p_i^{Y_i}(1-p_i)^{1-Y_i}\]</div>
@@ -393,8 +383,8 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 \[\hat{\beta}=\text{arg max}_\beta\,\sum_{i}^n{\left( Y_i\cdot\text{Ln}(p_i) + (1-Y_i)\cdot\text{Ln}(1-p_i)\right)}\]</div>
 <p>Las condiciones necesarias de primer orden estarían dadas por una expresión no lineal,</p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial \ell}{\partial\beta}=\sum\left\{\frac{(Y_i-F_i)}{F_i(1-F_i)}X_i'\right\}\]</div>
-<p>la cual por cierto, al definir <span class="math notranslate nohighlight">\(w_i=(F_i(1-F_i))^{-1}\)</span>, se puede ver como mínimos cuadrados ponderados no lineales (NWLS): <span class="math notranslate nohighlight">\(\sum\left\{w_i(Y_i-\mathbb{E}(Y_i|X))X_i\right\}\)</span>. Y en el caso del LPM, <span class="math notranslate nohighlight">\(w_i=1\)</span> y, por ende, serían las mismas condiciones de primer orden de OLS: <span class="math notranslate nohighlight">\(\sum\left\{(Y_i-X_i'\beta)X_i\right\}\)</span>.</p>
+\[\frac{\partial \ell}{\partial\beta}=\sum\left\{\frac{(Y_i-F_i)}{F_i(1-F_i)}f_iX_i'\right\}\]</div>
+<p>la cual por cierto, al definir <span class="math notranslate nohighlight">\(w_i=f_i(F_i(1-F_i))^{-1}\)</span>, se puede ver como mínimos cuadrados ponderados no lineales (NWLS): <span class="math notranslate nohighlight">\(\sum\left\{w_i(Y_i-\mathbb{E}(Y_i|X))X_i\right\}\)</span>. Así, en el caso del LPM se da que <span class="math notranslate nohighlight">\(w_i=1\)</span> y, por ende, serían las mismas condiciones de primer orden de OLS: <span class="math notranslate nohighlight">\(\sum\left\{(Y_i-X_i'\beta)X_i\right\}\)</span>.</p>
 <p>De hecho, <span id="id1">Amemiya [<a class="reference internal" href="../zbibliography.html#id4" title="Takeshi Amemiya. Qualitative response models: a survey. Journal of economic literature, 19(4):1483–1536, 1981.">1981</a>]</span> muestra que para valores de probabilidad entre 0.1 y 0.9 habría cierto grado de relación entre los coeficientes estimados en el LPM, el logit y el probit. Específicamente: <span class="math notranslate nohighlight">\(\beta_{Logit}\approx4\beta_{OLS}\)</span>; <span class="math notranslate nohighlight">\(\beta_{Probit}\approx 2.5\beta_{OLS}\)</span>; <span class="math notranslate nohighlight">\(\beta_{Logit}\approx1.6\beta_{Probit}\)</span>.</p>
 <p>Finalmente, las condiciones necesarias de segundo orden, importantes para la matriz de varianza basada en la matriz Hesiana, serían</p>
 <ul>
@@ -429,7 +419,7 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="footnote-ct148" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>Nota: Recomiendo ver sección 14.8 en <span id="id3">Cameron and Trivedi [<a class="reference internal" href="../zbibliography.html#id8" title="A Colin Cameron and Pravin K Trivedi. Microeconometrics: methods and applications. Cambridge university press, 2005. doi:https://doi.org/10.1017/CBO9780511811241.">2005</a>]</span> para más detalles sobre la relación entre la f.d.p. de valor extremo y la logística.</p>
+<p>Nota: Recomiendo ver sección 14.8 en <span id="id3">Cameron and Trivedi [<a class="reference internal" href="../zbibliography.html#id6" title="A Colin Cameron and Pravin K Trivedi. Microeconometrics: methods and applications. Cambridge university press, 2005. doi:https://doi.org/10.1017/CBO9780511811241.">2005</a>]</span> para más detalles sobre la relación entre la f.d.p. de valor extremo y la logística.</p>
 </aside>
 </section>
 <div class="toctree-wrapper compound">
@@ -461,10 +451,11 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Intro_LDV.html"
@@ -484,7 +475,10 @@ Y=0&amp; &amp; \text{Si no se cumple cierta condición}\\
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -526,7 +520,7 @@ Por Luis Chancí
     
   <p class="copyright">
     
-      © Copyright 2019-2023.
+      © Copyright 2020-2023.
       <br/>
     
   </p>
@@ -550,8 +544,8 @@ Por Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
