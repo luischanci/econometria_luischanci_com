@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Rincón de Práctica Stata &#8212; Apuntes de Econometría</title>
+    <title>Rincón de Práctica R &#8212; Apuntes de Econometría</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch3_MLE/computer/pract_mle_stata';</script>
-    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch3_MLE/computer/pract_mle_stata.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/Binaria/pract_binaria_r';</script>
+    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/Binaria/pract_binaria_r.html" />
     <link rel="shortcut icon" href="../../../_static/icon.png"/>
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../../search.html" />
-    <link rel="next" title="4. Variable Dependiente Limitada" href="../../Ch4_LDV/Intro_LDV.html" />
-    <link rel="prev" title="Rincón de Práctica R" href="pract_mle_r.html" />
+    <link rel="next" title="Modelos de Elección Múltiple" href="../Multinomial.html" />
+    <link rel="prev" title="Rincón de Práctica Stata" href="pract_binaria_stata.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -170,24 +170,24 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../Ch2_OLS/OLS.html">2. Mínimos Cuadrados - Repaso</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Intro_MLE.html">3. Máxima Verosimilitud</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../MLE.html">Teoría MLE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pract_mle_r.html">Práctica R</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Práctica Stata</a></li>
-</ul>
-</li>
-</ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Ch4_LDV/Intro_LDV.html">4. Variable Dependiente Limitada</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../Ch4_LDV/Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Ch4_LDV/Binaria/pract_binaria_stata.html">Práctica Stata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Ch4_LDV/Binaria/pract_binaria_r.html">Práctica R</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Ch3_MLE/MLE.html">Teoría MLE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ch3_MLE/computer/pract_mle_r.html">Práctica R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ch3_MLE/computer/pract_mle_stata.html">Práctica Stata</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Ch4_LDV/Multinomial.html">Modelos de Elección Múltiple</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Ch4_LDV/Conteo.html">Modelo de Conteo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Ch4_LDV/CensuraTrunc.html">Censura, Truncamiento, Selección</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Intro_LDV.html">4. Variable Dependiente Limitada</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../Binaria.html">Modelos LP, Logit y Probit</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pract_binaria_stata.html">Práctica Stata</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Práctica R</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Multinomial.html">Modelos de Elección Múltiple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Conteo.html">Modelo de Conteo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CensuraTrunc.html">Censura, Truncamiento, Selección</a></li>
 </ul>
 </li>
 </ul>
@@ -309,7 +309,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Rincón de Práctica Stata</h1>
+    <h1>Rincón de Práctica R</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -319,9 +319,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mle-usando-stata">MLE usando Stata</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1">Ejemplo 1.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2">Ejemplo 2.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probit-logit-usando-r">Probit/Logit usando R</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1-nivel-usuario">Ejemplo 1 (Nivel usuario).</a></li>
 </ul>
 </li>
 </ul>
@@ -335,218 +334,107 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="rincon-de-practica-stata">
-<h1>Rincón de Práctica Stata<a class="headerlink" href="#rincon-de-practica-stata" title="Permalink to this heading">#</a></h1>
-<section id="mle-usando-stata">
-<h2>MLE usando Stata<a class="headerlink" href="#mle-usando-stata" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="rincon-de-practica-r">
+<h1>Rincón de Práctica R<a class="headerlink" href="#rincon-de-practica-r" title="Permalink to this heading">#</a></h1>
+<section id="probit-logit-usando-r">
+<h2>Probit/Logit usando R<a class="headerlink" href="#probit-logit-usando-r" title="Permalink to this heading">#</a></h2>
 <hr>
-<section id="ejemplo-1">
-<h3>Ejemplo 1.<a class="headerlink" href="#ejemplo-1" title="Permalink to this heading">#</a></h3>
-<p>Sea <span class="math notranslate nohighlight">\(\epsilon_i\sim i.i.d.\, N(\mu,\sigma^2)\)</span>.</p>
+<section id="ejemplo-1-nivel-usuario">
+<h3>Ejemplo 1 (Nivel usuario).<a class="headerlink" href="#ejemplo-1-nivel-usuario" title="Permalink to this heading">#</a></h3>
+<p>Nota: El enfoque del siguiente ejemplo estará solo en ilustrar el computo de efectos marginales manualmente (no en la parte de estimación vía MLE).</p>
 <ol class="arabic simple">
-<li><p>Planear la función log-verosimilitud.</p></li>
-<li><p>Realizar en el computador simulación de 100 datos con <span class="math notranslate nohighlight">\(\mathbb{N}(\mu_0,\sigma_0^2)=\mathbb{N}(1.7,3^2)\)</span> y estimación ML.</p></li>
+<li><p>Primero simular datos y luego</p></li>
+<li><p>comparar resultados entre los modelos LPM, Logit y Probit. Notar que, como vimos en la teoría, no es posible realizar una comparación directa entre los coeficientes estimados de los tres modelos.</p></li>
 </ol>
-<p><strong>Respuesta propuesta.</strong>
-Como vimos, la log-likelihood function estará dada por</p>
-<div class="math notranslate nohighlight">
-\[\ell(\boldsymbol{\theta})=-\frac{n\cdot log(2\pi)}{2}-\frac{n\cdot log(\sigma^2)}{2}-\sum_{i=1}^N{\frac{(\epsilon_i-\mu)^2}{2\cdot \sigma^2}}\]</div>
-<p>Así, una propuesta a la parte computacional en Stata sería la siguiente:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">ipystata</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Simular datos</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
+
+<span class="n">nobs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">100</span>
+<span class="n">x</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="n">nobs</span><span class="p">)</span>
+<span class="n">y</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbinom</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">nobs</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">prob</span><span class="o">=</span><span class="nf">pnorm</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># 1. Comparar LMP / Logit / Probit</span>
+<span class="n">lpm</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">)</span>
+<span class="n">logit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glm</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="o">=</span><span class="nf">binomial</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="s">&quot;logit&quot;</span><span class="p">))</span>
+<span class="n">probit</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glm</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="o">=</span><span class="nf">binomial</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="s">&quot;probit&quot;</span><span class="p">))</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">stargazer</span><span class="p">)</span>
+<span class="nf">stargazer</span><span class="p">(</span><span class="n">lpm</span><span class="p">,</span><span class="w"> </span><span class="n">logit</span><span class="p">,</span><span class="w"> </span><span class="n">probit</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Terminated 1 unattached Stata session(s).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please cite as: 
+
+
+ Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.
+
+ R package version 5.2.3. https://CRAN.R-project.org/package=stargazer 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>============================================================
+                              Dependent variable:           
+                    ----------------------------------------
+                                       y                    
+                             OLS           logistic  probit 
+                             (1)             (2)      (3)   
+------------------------------------------------------------
+x                          0.303***        2.083*** 1.186***
+                           (0.044)         (0.447)  (0.234) 
+                                                            
+Constant                   0.603***        0.683**  0.376** 
+                           (0.040)         (0.269)  (0.152) 
+                                                            
+------------------------------------------------------------
+Observations                 100             100      100   
+R2                          0.326                           
+Adjusted R2                 0.319                           
+Log Likelihood                             -45.679  -45.875 
+Akaike Inf. Crit.                           95.358   95.750 
+Residual Std. Error    0.400 (df = 98)                      
+F Statistic         47.369*** (df = 1; 98)                  
+============================================================
+Note:                            *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
-  * 1. Simular datos 
-  set    seed 123
-  set    obs  100
-  scalar mu    = 1.7
-  scalar sigma = 3
-  
-  gen eps = rnormal(mu,sigma)
-  sum eps
-
-  * 2. Escribir la función log-likelihood
-  cap prog drop my_mle
-  pro def my_mle
-	  args lnf mu sigma
-	  quie replace `lnf&#39; = -0.5*ln(2*_pi*`sigma&#39;^2)-($ML_y1 - `mu&#39;)^2/(2*`sigma&#39;^2)
-  end
-  
-  * 3. Optimizar la log-likelihood
-  ml model lf my_mle (mu: eps=)(sigma: eps=)
-  ml max
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of observations (_N) was 100, now 100.
-
-variable eps already defined
-r(110);
-
-    Variable |        Obs        Mean    Std. dev.       Min        Max
--------------+---------------------------------------------------------
-         eps |        100    1.516204    3.095611  -12.11381    8.02918
-
-  1.   args lnf mu sigma
-  2.   quie replace `lnf&#39; = -0.5*ln(2*_pi*`sigma&#39;^2)-($ML_y1 - `mu&#39;)^2/(2*`sigma&#39;^2)
-  3.   end
-
-initial:       log likelihood =     -&lt;inf&gt;  (could not be evaluated)
-feasible:      log likelihood = -2126.5089
-rescale:       log likelihood = -279.44898
-rescale eq:    log likelihood = -260.90153
-Iteration 0:   log likelihood = -260.90153  
-Iteration 1:   log likelihood = -254.80682  
-Iteration 2:   log likelihood = -254.39028  
-Iteration 3:   log likelihood = -254.38986  
-Iteration 4:   log likelihood = -254.38986  
-
-                                                           Number of obs = 100
-                                                           Wald chi2(0)  =   .
-Log likelihood = -254.38986                                Prob &gt; chi2   =   .
-
-------------------------------------------------------------------------------
-             | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]
--------------+----------------------------------------------------------------
-mu           |
-       _cons |   1.516204   .3080094     4.92   0.000     .9125165    2.119891
--------------+----------------------------------------------------------------
-sigma        |
-       _cons |   3.080094   .2177955    14.14   0.000     2.653223    3.506965
-------------------------------------------------------------------------------
-</pre></div>
-</div>
-</div>
-</div>
-</br>
-<hr>
-</section>
-<section id="ejemplo-2">
-<h3>Ejemplo 2.<a class="headerlink" href="#ejemplo-2" title="Permalink to this heading">#</a></h3>
-<p><strong>Bajo normalidad, MLE y OLS dan el mismo vector estimado de parámetros para el modelo lineal.</strong></p>
-<p>Sea,</p>
-<div class="math notranslate nohighlight">
-\[Y=\boldsymbol{X}\boldsymbol{\beta}+u \hspace{0.5cm};\hspace{0.5cm}u_i\sim N(0,\sigma^2)\]</div>
-<ol class="arabic simple">
-<li><p>Planear la función log-verosimilitud</p></li>
-<li><p>Encontrar <span class="math notranslate nohighlight">\(\hat{\boldsymbol{\theta}}_{MLE}=(\hat{\boldsymbol{\beta}},\hat{\sigma}^2)\)</span></p></li>
-<li><p>Encontrar la matriz de información</p></li>
-<li><p>Realizar en el computador simulación de 100 datos para <span class="math notranslate nohighlight">\(y_i=\beta_0+\beta_1x_{1i}+\beta_2x_{2i}+u_i\)</span>, donde <span class="math notranslate nohighlight">\(x_1\sim U[0,10]\)</span>, <span class="math notranslate nohighlight">\(x_2\sim\chi^2_1\)</span>, <span class="math notranslate nohighlight">\(u_i\sim\mathbb{N}(0,\sigma^2=3^2)\)</span> y <span class="math notranslate nohighlight">\(\boldsymbol{\beta}'=(\beta_0,\beta_1,\beta_2)'=(1,0.75,3.2)\)</span>. Realizar estimación ML de los parámetros y comparar con OLS.</p></li>
+<ol class="arabic simple" start="3">
+<li><p>Empleando la media de <span class="math notranslate nohighlight">\(x\)</span> y los resultados del logit, ilustrar el computo manual del efecto marginal:</p></li>
 </ol>
-<p><strong>Respuesta sugerida.</strong></p>
-<p>Como vimos, para <span class="math notranslate nohighlight">\(\boldsymbol{x}=(1,X_1,x_2)'\)</span> y <span class="math notranslate nohighlight">\(u_i=y_i-\boldsymbol{x}_i'\boldsymbol{\beta}\)</span> con <span class="math notranslate nohighlight">\(\boldsymbol{\beta}'=(\beta_0,\beta_1,\beta_2)'\)</span> se tiene que</p>
 <div class="math notranslate nohighlight">
-\[\ell(\boldsymbol{\theta})=-\frac{n\cdot log(2\pi\sigma^2)}{2}-\frac{(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})'(\boldsymbol{y}-\boldsymbol{X}\boldsymbol{\beta})}{2\sigma^2}\]</div>
-<p>y a partir de las condiciones de primer orden (<em>F.O.C.</em>) evaluadas en el estimador ML, se obtiene:
-$<span class="math notranslate nohighlight">\(\hat{\boldsymbol{\beta}}_{MLE}=(X'X)^{-1}(X'Y)\hspace{0.5cm},\hspace{0.5cm}\hat{\sigma}^2_{MLE}=(Y-X\hat{\beta})'(Y-X\hat{\beta})\cdot n^{-1}\)</span>$</p>
-<p>Notar que la expresión para <span class="math notranslate nohighlight">\(\beta\)</span> corresponde a la misma que se obtiene por OLS.</p>
-<p>Además, después de resolver, se obtiene la siguiente matriz de información</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}I(\boldsymbol{\beta}_0)=
-\left[\begin{array}{cc}
-\frac{1}{\sigma_0^2}(X'X) &amp; 0\\
-0 &amp; \frac{N}{2\sigma_0^4}
-\end{array}\right]\end{split}\]</div>
-<p>Así, una propuesta para el código de programación en Stata es la siguiente:</p>
+\[f_i*\hat{\beta}_1=f(\hat{\beta}_0+\hat{\beta}_1 x_i)*\hat{\beta}_1=\frac{exp(-\hat{\beta}_0-\hat{\beta}_1 x_i)}{(1+exp(-\hat{\beta}_0-\hat{\beta}_1 x_i))^2}\hat{\beta}_1\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">stata</span>
-  * 1. Simular datos 
-    set seed 123
-    set obs  100
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Efectos marginales</span>
+<span class="n">b0</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">logit</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">1</span><span class="p">]</span>
+<span class="n">b1</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">logit</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">2</span><span class="p">]</span>
+<span class="n">xbar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span>
 
-    scalar sigma = 3
+<span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">b0</span><span class="o">+</span><span class="p">(</span><span class="n">b1</span><span class="o">*</span><span class="n">xbar</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">b0</span><span class="o">+</span><span class="p">(</span><span class="n">b1</span><span class="o">*</span><span class="n">xbar</span><span class="p">))))</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="o">*</span><span class="n">b1</span><span class="w"> </span><span class="c1"># Efecto marginal</span>
 
-    gen x1 = runiform(0,10)
-    gen x2 = rchi2(1)
-    gen u  = rnormal(0,sigma)
-
-    gen y = 1 + 0.75*x1 + 3.2*x2 + u
-
-  * 2. Escribir la función log-likelihood
-    cap prog drop my_ols
-    pro def my_ols
-	    args lnf Xb sigma
-	    quie replace `lnf&#39; = ln(normalden($ML_y1,`Xb&#39;,`sigma&#39;))
-    end
-
-  * 3. Optimizar la log-likelihood
-    ml model lf my_ols (xb: y = x1 x2)(sigma:)
-    ml max
-  
-  * 4. Comparación con OLS
-    reg y x1 x2
+<span class="c1"># Comparación usando mfx</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">mfx</span><span class="p">)</span>
+<span class="nf">logitmfx</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="nf">data.frame</span><span class="p">(</span><span class="nf">cbind</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please note: session main was no longer active and is restarted.
+<div class="output text_html"><strong>(Intercept):</strong> 0.433155566019768</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+logitmfx(formula = y ~ x, data = data.frame(cbind(y, x)))
 
-Number of observations (_N) was 0, now 100.
-
-  1.     args lnf Xb sigma
-  2.     quie replace `lnf&#39; = ln(normalden($ML_y1,`Xb&#39;,`sigma&#39;))
-  3.     end
-
-initial:       log likelihood =     -&lt;inf&gt;  (could not be evaluated)
-feasible:      log likelihood = -822.51142
-rescale:       log likelihood =  -348.3095
-rescale eq:    log likelihood =  -348.3095
-Iteration 0:   log likelihood =  -348.3095  (not concave)
-Iteration 1:   log likelihood = -305.30761  
-Iteration 2:   log likelihood = -272.72806  
-Iteration 3:   log likelihood = -251.69736  
-Iteration 4:   log likelihood = -251.33146  
-Iteration 5:   log likelihood = -251.33126  
-Iteration 6:   log likelihood = -251.33126  
-
-                                                        Number of obs =    100
-                                                        Wald chi2(2)  = 445.22
-Log likelihood = -251.33126                             Prob &gt; chi2   = 0.0000
-
-------------------------------------------------------------------------------
-           y | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]
--------------+----------------------------------------------------------------
-xb           |
-          x1 |   .8781539   .1068187     8.22   0.000     .6687931    1.087515
-          x2 |   3.229557   .1698408    19.02   0.000     2.896675    3.562439
-       _cons |   .2802955   .6265632     0.45   0.655    -.9477458    1.508337
--------------+----------------------------------------------------------------
-sigma        |
-       _cons |   2.987312   .2112349    14.14   0.000       2.5733    3.401325
-------------------------------------------------------------------------------
-
-      Source |       SS           df       MS      Number of obs   =       100
--------------+----------------------------------   F(2, 97)        =    215.93
-       Model |  3973.17594         2  1986.58797   Prob &gt; F        =    0.0000
-    Residual |  892.403429        97  9.20003535   R-squared       =    0.8166
--------------+----------------------------------   Adj R-squared   =    0.8128
-       Total |  4865.57937        99  49.1472664   Root MSE        =    3.0332
-
-------------------------------------------------------------------------------
-           y | Coefficient  Std. err.      t    P&gt;|t|     [95% conf. interval]
--------------+----------------------------------------------------------------
-          x1 |   .8781539   .1084579     8.10   0.000     .6628949    1.093413
-          x2 |   3.229557   .1724472    18.73   0.000     2.887297    3.571817
-       _cons |   .2802955   .6361785     0.44   0.660    -.9823427    1.542934
-------------------------------------------------------------------------------
+Marginal Effects:
+     dF/dx Std. Err.      z     P&gt;|z|    
+x 0.433156  0.085583 5.0612 4.166e-07 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre></div>
 </div>
 </div>
 </div>
+<p>Es decir, como se esperaba, ambos resultados concuerdan.</p>
 </section>
 </section>
 </section>
@@ -560,16 +448,16 @@ sigma        |
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            name: "python3",
-            path: "./content\Ch3_MLE\computer"
+            name: "ir",
+            path: "./content\Ch4_LDV\Binaria"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
                 </article>
               
@@ -582,20 +470,20 @@ sigma        |
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="pract_mle_r.html"
+       href="pract_binaria_stata.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Rincón de Práctica R</p>
+        <p class="prev-next-title">Rincón de Práctica Stata</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../Ch4_LDV/Intro_LDV.html"
+       href="../Multinomial.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">4. Variable Dependiente Limitada</p>
+        <p class="prev-next-title">Modelos de Elección Múltiple</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -614,9 +502,8 @@ sigma        |
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mle-usando-stata">MLE usando Stata</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1">Ejemplo 1.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2">Ejemplo 2.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probit-logit-usando-r">Probit/Logit usando R</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1-nivel-usuario">Ejemplo 1 (Nivel usuario).</a></li>
 </ul>
 </li>
 </ul>

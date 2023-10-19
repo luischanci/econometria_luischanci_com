@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -71,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="Modelo de Conteo" href="Conteo.html" />
-    <link rel="prev" title="Rincón de Práctica Stata" href="Binaria/pract_ldv_stata.html" />
+    <link rel="prev" title="Rincón de Práctica R" href="Binaria/pract_binaria_r.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -82,6 +83,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -171,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_ldv_r.html">Práctica R</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_ldv_stata.html">Práctica Stata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_stata.html">Práctica Stata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_r.html">Práctica R</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Modelos de Elección Múltiple</a></li>
@@ -271,10 +281,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -282,7 +292,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -328,13 +338,14 @@ document.write(`
 <h1>Modelos de Elección Múltiple<a class="headerlink" href="#modelos-de-eleccion-multiple" title="Permalink to this heading">#</a></h1>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
-<p>Consideramos ahora una generalización o extensión de los modelos logit/probit de variable dependiente binaria a fin de considerar más de dos opciones. Partiremos con el caso de <strong>múltiples respuestas no ordenadas</strong>, conocido como regresión logística multinomial o <em>Multinomial Logit</em>, y luego revisaremos el caso de <strong>respuestas ordenadas</strong> conocido como Logit/Probit Ordenado.</p>
-<p>Al igual que el caso del Logit/Probit, la técnica para obtener los parámetros estimados es el <a class="reference internal" href="../Ch3_MLE/Intro_MLE.html#ch-mle"><span class="std std-ref">3. Máxima Verosimilitud</span></a> y, por ende, el ejercicio se centra en plantear la función de verosimilitud.</p>
+<p>Consideramos ahora una generalización o extensión de los modelos Logit/Probit. Pasaremos de una variable dependiente que permite dos opciones (binaria) a más de dos opciones. Primero estudiaremos el caso en el cual las opciones no asocian un orden particular. Es decir, modelo de <strong>múltiples respuestas no ordenadas</strong>, también conocido como regresión logística multinomial o <em>Multinomial Logit</em>. Por ejemplo, preguntarles a las personas cuál de los tres medios de transporte usa (metro, bus, bicicleta) o cuál es el plan de salud que elige entre varias opciones. Luego revisaremos el modelo de <strong>respuestas ordenadas</strong>, también conocido como Logit/Probit Ordenado. Por ejemplo, evaluar la calidad de un servicio seleccionando entre una de las tres opciones «excelente, bueno, malo», involucra un ordenamiento implicito de las alternativas.</p>
+<p>Al igual que el caso del Logit/Probit, la aproximación teórica parte por asociar funciones de probabilidad a las elecciones u opciones, y por ende la técnica que emplearemos para obtener los parámetros estimados es el <a class="reference internal" href="../Ch3_MLE/Intro_MLE.html#ch-mle"><span class="std std-ref">3. Máxima Verosimilitud</span></a>. Es decir, el ejercicio se centrará en plantear la función de verosimilitud.</p>
 <p>Referencia: Esta subsección sigue de cerca el capítulo 15 de <span id="id1">Cameron and Trivedi [<a class="reference internal" href="../zbibliography.html#id6" title="A Colin Cameron and Pravin K Trivedi. Microeconometrics: methods and applications. Cambridge university press, 2005. doi:https://doi.org/10.1017/CBO9780511811241.">2005</a>]</span>.</p>
 </section>
 <section id="multinomial-logit">
 <h2>Multinomial Logit<a class="headerlink" href="#multinomial-logit" title="Permalink to this heading">#</a></h2>
-<p>Existen más de dos posibles elecciones que no involucran un orden particular. Por ejemplo, elegir uno de entre tres medios diferentes de transporte (metro, bus, bicicleta) o elegir entre diferentes planes de salud.</p>
+<p>Es un modelo en donde la variable dependiente posee más de dos aalternativas cualitativas y las alternativas no implican un orden. Por ejemplo, eegir un lugar para pescar: <span class="math notranslate nohighlight">\(y_i\in\{playa,bote,muelle\}\)</span>.</p>
+<p>El planteamiento inicial es similar a lo visto en el modelo de utilidad aleatoria: se seleccionará una opción sobre otra  en base a la utilidad.</p>
 <p>Sean <span class="math notranslate nohighlight">\(J+1\)</span> opciones, la probabilidad</p>
 <div class="math notranslate nohighlight">
 \[Pr(Y=j|\boldsymbol{X})=\frac{exp(X\beta^{(j)})}{\left[1+\sum_{j=1}^J{exp(X\beta^{(j)})}\right]}\hspace{0.1cm},\hspace{0.5cm}j=1,...,J\]</div>
@@ -389,19 +400,18 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Binaria/pract_ldv_stata.html"
+       href="Binaria/pract_binaria_r.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Rincón de Práctica Stata</p>
+        <p class="prev-next-title">Rincón de Práctica R</p>
       </div>
     </a>
     <a class="right-next"
@@ -413,10 +423,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -482,8 +489,8 @@ Por Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

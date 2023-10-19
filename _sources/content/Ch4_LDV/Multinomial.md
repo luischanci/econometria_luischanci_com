@@ -2,15 +2,17 @@
 
 ## Introducción
 
-Consideramos ahora una generalización o extensión de los modelos logit/probit de variable dependiente binaria a fin de considerar más de dos opciones. Partiremos con el caso de **múltiples respuestas no ordenadas**, conocido como regresión logística multinomial o _Multinomial Logit_, y luego revisaremos el caso de **respuestas ordenadas** conocido como Logit/Probit Ordenado. 
+Consideramos ahora una generalización o extensión de los modelos Logit/Probit. Pasaremos de una variable dependiente que permite dos opciones (binaria) a más de dos opciones. Primero estudiaremos el caso en el cual las opciones no asocian un orden particular. Es decir, modelo de **múltiples respuestas no ordenadas**, también conocido como regresión logística multinomial o _Multinomial Logit_. Por ejemplo, preguntarles a las personas cuál de los tres medios de transporte usa (metro, bus, bicicleta) o cuál es el plan de salud que elige entre varias opciones. Luego revisaremos el modelo de **respuestas ordenadas**, también conocido como Logit/Probit Ordenado. Por ejemplo, evaluar la calidad de un servicio seleccionando entre una de las tres opciones "excelente, bueno, malo", involucra un ordenamiento implicito de las alternativas.
 
-Al igual que el caso del Logit/Probit, la técnica para obtener los parámetros estimados es el {ref}`Ch_MLE` y, por ende, el ejercicio se centra en plantear la función de verosimilitud. 
+Al igual que el caso del Logit/Probit, la aproximación teórica parte por asociar funciones de probabilidad a las elecciones u opciones, y por ende la técnica que emplearemos para obtener los parámetros estimados es el {ref}`Ch_MLE`. Es decir, el ejercicio se centrará en plantear la función de verosimilitud.
 
 Referencia: Esta subsección sigue de cerca el capítulo 15 de {cite:t}`cameron2005`.
 
 ## Multinomial Logit
 
-Existen más de dos posibles elecciones que no involucran un orden particular. Por ejemplo, elegir uno de entre tres medios diferentes de transporte (metro, bus, bicicleta) o elegir entre diferentes planes de salud.
+Es un modelo en donde la variable dependiente posee más de dos aalternativas cualitativas y las alternativas no implican un orden. Por ejemplo, eegir un lugar para pescar: $y_i\in\{playa,bote,muelle\}$. 
+
+El planteamiento inicial es similar a lo visto en el modelo de utilidad aleatoria: se seleccionará una opción sobre otra  en base a la utilidad.
 
 Sean $J+1$ opciones, la probabilidad 
 
