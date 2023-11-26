@@ -26,7 +26,7 @@ Notas:
 
 `````{admonition} Enlace
 :class: note
-[Ver diapositivas en pantalla completa.](https://www.luischanci.com/presentations/Econometrics/econometria_1.html#/)
+[Descargar diapositivas.](https://www.luischanci.com/presentations/Econometrics/econometria_1.pdf)
 `````
 
 </br>

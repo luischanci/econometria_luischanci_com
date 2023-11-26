@@ -338,19 +338,48 @@ document.write(`
 <h1>Modelos de Elección Múltiple<a class="headerlink" href="#modelos-de-eleccion-multiple" title="Permalink to this heading">#</a></h1>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
-<p>Consideramos ahora una generalización o extensión de los modelos Logit/Probit. Pasaremos de una variable dependiente que permite dos opciones (binaria) a más de dos opciones. Primero estudiaremos el caso en el cual las opciones no asocian un orden particular. Es decir, modelo de <strong>múltiples respuestas no ordenadas</strong>, también conocido como regresión logística multinomial o <em>Multinomial Logit</em>. Por ejemplo, preguntarles a las personas cuál de los tres medios de transporte usa (metro, bus, bicicleta) o cuál es el plan de salud que elige entre varias opciones. Luego revisaremos el modelo de <strong>respuestas ordenadas</strong>, también conocido como Logit/Probit Ordenado. Por ejemplo, evaluar la calidad de un servicio seleccionando entre una de las tres opciones «excelente, bueno, malo», involucra un ordenamiento implicito de las alternativas.</p>
-<p>Al igual que el caso del Logit/Probit, la aproximación teórica parte por asociar funciones de probabilidad a las elecciones u opciones, y por ende la técnica que emplearemos para obtener los parámetros estimados es el <a class="reference internal" href="../Ch3_MLE/Intro_MLE.html#ch-mle"><span class="std std-ref">3. Máxima Verosimilitud</span></a>. Es decir, el ejercicio se centrará en plantear la función de verosimilitud.</p>
+<p>Consideramos ahora una generalización o extensión de los modelos Logit/Probit. Específicamente, pasaremos de una variable dependiente que permite dos opciones (binaria) a una categórica que aborda más de dos opciones.</p>
+<p>Primero estudiaremos el caso en el cual las opciones no asocian un orden particular. Es decir, modelo de <strong>múltiples respuestas no ordenadas</strong>, también conocido como regresión logística multinomial o <em>Multinomial Logit</em>. Algunos ejemplos son:</p>
+<ul class="simple">
+<li><p>¿Cuál de los siguientes medios de transporte emplea para ir al trabajo?</p>
+<ol class="arabic simple">
+<li><p>Metro</p></li>
+<li><p>Bus</p></li>
+<li><p>Bicicleta</p></li>
+</ol>
+</li>
+<li><p>¿Por cuál de los siguientes partidos votará en las próximas elecciones?</p>
+<ol class="arabic simple">
+<li><p>Partido de Derecha</p></li>
+<li><p>Injerto del Centro</p></li>
+<li><p>Coalición de Izquierda</p></li>
+</ol>
+</li>
+</ul>
+<p>Luego pasaremos a revisar el modelo de <strong>respuestas ordenadas</strong>, también conocido como Logit/Probit Ordenado. Las opciones involucran un ordenamiento implicito. Algunos ejemplos son:</p>
+<ul class="simple">
+<li><p>Evaluar la calidad del servicio recibido seleccionando entre una de las siguientes tres opciones:</p>
+<ol class="arabic simple">
+<li><p>Excelente</p></li>
+<li><p>Bueno</p></li>
+<li><p>Malo</p></li>
+</ol>
+</li>
+</ul>
+<p>Al igual que el caso del Logit/Probit, se parte por asociar funciones de probabilidad a las elecciones u opciones, y por ende la técnica que emplearemos para obtener los parámetros estimados es el <a class="reference internal" href="../Ch3_MLE/Intro_MLE.html#ch-mle"><span class="std std-ref">3. Máxima Verosimilitud</span></a>. Es decir, el ejercicio se centrará en plantear la función de verosimilitud.</p>
 <p>Referencia: Esta subsección sigue de cerca el capítulo 15 de <span id="id1">Cameron and Trivedi [<a class="reference internal" href="../zbibliography.html#id6" title="A Colin Cameron and Pravin K Trivedi. Microeconometrics: methods and applications. Cambridge university press, 2005. doi:https://doi.org/10.1017/CBO9780511811241.">2005</a>]</span>.</p>
 </section>
 <section id="multinomial-logit">
 <h2>Multinomial Logit<a class="headerlink" href="#multinomial-logit" title="Permalink to this heading">#</a></h2>
-<p>Es un modelo en donde la variable dependiente posee más de dos aalternativas cualitativas y las alternativas no implican un orden. Por ejemplo, eegir un lugar para pescar: <span class="math notranslate nohighlight">\(y_i\in\{playa,bote,muelle\}\)</span>.</p>
-<p>El planteamiento inicial es similar a lo visto en el modelo de utilidad aleatoria: se seleccionará una opción sobre otra  en base a la utilidad.</p>
-<p>Sean <span class="math notranslate nohighlight">\(J+1\)</span> opciones, la probabilidad</p>
+<p>La variable dependiente asocia más de dos alternativas cualitativas y estas no involucran un orden. Por ejemplo, elegir un lugar para pescar: <span class="math notranslate nohighlight">\(y_i\in\{playa,bote,muelle\}\)</span>.</p>
+<p>Siguiendo la idea de los modelos de utilidad aleatoria, se compara la probabilidad de escoger una opción particular sobre las demás, dadas unas características observables. En particular, Una forma de extender el modelo es pensar que se comparan de a dos opciones a la vez, tal como hicimos en el logit, y a esto se le asocia una probabilidad. Se emplea principalmente la f.d.p. logística y se tiende a evitar la distribución normal ya que es computacionalmente más compleja de trabajar.</p>
+<p>Sean <span class="math notranslate nohighlight">\(J+1\)</span> alternativas u opciones, en donde se deja una categoría como base de comparación. Así, las funciones de probabilidad asociadas a cada opción serían</p>
+<div class="math notranslate nohighlight">
+\[Pr(Y=0|\boldsymbol{X})=\frac{1}{\left[1+\sum_{j=1}^J{exp(X\beta^{(j)})}\right]}\]</div>
 <div class="math notranslate nohighlight">
 \[Pr(Y=j|\boldsymbol{X})=\frac{exp(X\beta^{(j)})}{\left[1+\sum_{j=1}^J{exp(X\beta^{(j)})}\right]}\hspace{0.1cm},\hspace{0.5cm}j=1,...,J\]</div>
-<div class="math notranslate nohighlight">
-\[Pr(Y=0|\boldsymbol{X})=\frac{1}{\left[1+\sum_{j=1}^J{exp(X\beta^{(j)})}\right]}\hspace{0.1cm},\hspace{0.5cm}j=1,...,J\]</div>
+<p>Notar que los coefficientes varian por opción y que si <span class="math notranslate nohighlight">\(J=1\)</span> solo hay dos opciones y lo anterior colapsa en el modelos logit bivariado.</p>
+<p>Con estas probabilidades,</p>
 <p>.</p>
 <p>.</p>
 <p>.</p>

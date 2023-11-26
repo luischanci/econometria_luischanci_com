@@ -3,7 +3,9 @@
 <center><img src="_images/cover.png" alt="cover" width="50%" height="50%"style="margin: 15px 0 0 0"></center>
 </br>
 
-¡Bienvenidos a Econometría! Acá encontrarán algunos de los apuntes que empleo en clase para postgrado. Los apuntes están basados en diferentes referencias, siendo algunas principales: {cite:t}`hansen2022`, {cite:t}`davidson2004`, {cite:t}`cameron2005`, y {cite:t}`hamilton1994`. En la sección {ref}`Ch_Bib` encontrarán más detalle de las referencias revisadas.
+¡Bienvenidos a Econometría! Acá encontrarán algunos de los apuntes que empleo en clase para postgrado (una idea del curso se encuentra en el documento: [**Syllabus**](https://www.luischanci.com/documents/Syllabus_EconometriaII.pdf) ). 
+
+Los apuntes están basados en diferentes referencias, siendo algunas principales: {cite:t}`hansen2022`, {cite:t}`davidson2004`, {cite:t}`cameron2005`, y {cite:t}`hamilton1994`. En la sección {ref}`Ch_Bib` encontrarán más detalle de las referencias revisadas.
 
 En algunos tópicos incluiré aplicaciones/ilustraciones computacionales usando diferentes softwares. Algunas estarán en <a href="https://www.R-project.org/"><i class="fab fa-r-project"></i></a> {cite:p}`r2021` que es de uso común y gratuito. Posiblemente otras estarán en [Julia](https://julialang.org/) {cite:p}`julia2021`, ya que es el software que usamos en el electivo [Computational and Numerical Methods in Econometrics](https://www.luischanci.com/documents/SyllabusNumEcon.pdf). Entre las bondades de Julia se encuentra la posibilidad de la ilustrar el uso del álgebra lineal (ej. matrices) en econometría, fomentar las habilidades de programación de los estudiantes en un [software rápido](https://doi.org/10.1016/j.jedc.2015.05.009) y es gratuito. Por otro lado, considerando que muchos de mis estudiantes participan(rán) como ayudantes de investigación en proyectos, también emplearemos [Stata](https://www.stata.com/) {cite:p}`stata2019`.
 

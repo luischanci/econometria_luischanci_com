@@ -4,6 +4,30 @@
 
 **IV: _Instrumental Variables_**
 
+**Diapositivas**
+
+A continuación se incluyen las diapositivas (aún pendiente de traducir) y más abajo los apuntes. Para avanzar en las diapositivas, hacer click sobre la diapositiva y luego usar las flechas del teclado.
+
+Nota: puede tomar unos segundos en aparecer el material.
+
+<div id   ="Container"
+     style="padding-bottom:50.25%; position:relative; display:block; width: 100%">
+     <iframe id                 ="my_html_slides"
+             width              ="75%"
+             height             ="100%"
+             src                ="https://www.luischanci.com/presentations/Econometrics/econometria_5.html#/"
+             frameborder        ="0"
+             allowfullscreen    ="1"
+             style              ="position:absolute; top:5%; left: 5%">
+     </iframe>
+</div>
+</br>
+
+`````{admonition} Enlace
+:class: note
+[Descargar diapositivas.](https://www.luischanci.com/presentations/Econometrics/econometria_5.pdf)
+`````
+
 ## Introducción
 
 - En la parte inicial de los cursos en teoría en econometría (ej. Econometría I):
@@ -25,7 +49,7 @@
  * Usando solo datos de $Y$ y $X_1$, el estimador de OLS sería $\hat{\beta}_1=(X_1'X_1)^{-1}(X_1'Y)$. Pero considerando el verdadero modelo, el estimador se puede expresar como $\hat{\beta}_1=\beta_1+(X_1'X_1)^{-1}(X_1'X_2)\beta_2+(X_1'X_1)^{-1}(X_1'u_T)$.
  * Lo que implica que el estimador es sesgado, $\mathbb{E}_X(\hat{\beta}_1)=\beta_1+(X_1'X_1)^{-1}(X_1'X_2)\beta_2$, y la dirección del sesgo depende de la relación entre $X_1$ con $X_2$ y $\beta_2$. En otras palabras,
 
- $$\begin{eqnarray*} \mathbb{E}(\hat{\beta}_{1}|X)\equiv\beta_1+\beta_2\frac{Cov(X,'Parte\,Omitida')}{Var(X)} \end{eqnarray*}$$
+ $$\mathbb{E}(\hat{\beta}_{1}|X)\equiv\beta_1+\beta_2\frac{Cov(X,\text{'Parte\,Omitida'})}{Var(X)}$$
 
  * Ejemplo:
    - En el caso de la regresión entre escolaridad y salario, pensemos en la habilidad. Al analizar la variación exógena de la escolaridad en OLS, sería como si la opción de elegir más escolaridad fuera aleatoria, o al menos no correlaciona con las variables omitidas (habilidad). Sin embargo, no es así.
