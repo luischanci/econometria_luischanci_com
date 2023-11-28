@@ -1,66 +1,35 @@
 Traceback (most recent call last):
-  File "C:\ProgramData\miniconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+  File "C:\ProgramData\miniconda3\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
     executenb(
-  File "C:\ProgramData\miniconda3\Lib\site-packages\nbclient\client.py", line 1204, in execute
+  File "C:\ProgramData\miniconda3\lib\site-packages\nbclient\client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\ProgramData\miniconda3\Lib\site-packages\nbclient\util.py", line 84, in wrapped
+  File "C:\ProgramData\miniconda3\lib\site-packages\nbclient\util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\ProgramData\miniconda3\Lib\site-packages\nbclient\util.py", line 62, in just_run
+  File "C:\ProgramData\miniconda3\lib\site-packages\nbclient\util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\ProgramData\miniconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+  File "C:\ProgramData\miniconda3\lib\asyncio\base_events.py", line 649, in run_until_complete
     return future.result()
-           ^^^^^^^^^^^^^^^
-  File "C:\ProgramData\miniconda3\Lib\site-packages\nbclient\client.py", line 663, in async_execute
+  File "C:\ProgramData\miniconda3\lib\site-packages\nbclient\client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "C:\ProgramData\miniconda3\Lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+  File "C:\ProgramData\miniconda3\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "C:\ProgramData\miniconda3\Lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+  File "C:\ProgramData\miniconda3\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# gráficamente: diferencias entre países
-
-library(tidyverse)
-ggplot(Panel|>group_by(country)|>mutate(Mean=mean(y), Sd=sd(y)) , aes(country, Mean,group=1)) + 
-  geom_errorbar(aes(ymin=Mean-Sd, ymax=Mean+Sd), width=.1) +
-  geom_line() +
-  geom_point()
+# Lectura de datos y exploración inicial de la base
+options(warn=-1)
+library(foreign)
+Panel <- read.dta("http://dss.princeton.edu/training/Panel101.dta") # Source: http://dss.princeton.edu/training, 
+View(head(Panel,10))
 
 ------------------
 
-Error: package or namespace load failed for 'tidyverse':
- .onAttach failed in attachNamespace() for 'tidyverse', details:
-  call: NULL
-  error: package or namespace load failed for 'tidyr' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
- namespace 'vctrs' 0.6.3 is already loaded, but >= 0.6.4 is required
+Error in download.file(file, tmp, quiet = TRUE, mode = "wb"): no fue posible abrir la URL 'http://dss.princeton.edu/training/Panel101.dta'
 Traceback:
 
-1. library(tidyverse)
-2. tryCatch({
- .     attr(package, "LibPath") <- which.lib.loc
- .     ns <- loadNamespace(package, lib.loc)
- .     env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)
- . }, error = function(e) {
- .     P <- if (!is.null(cc <- conditionCall(e))) 
- .         paste(" in", deparse(cc)[1L])
- .     else ""
- .     msg <- gettextf("package or namespace load failed for %s%s:\n %s", 
- .         sQuote(package), P, conditionMessage(e))
- .     if (logical.return && !quietly) 
- .         message(paste("Error:", msg), domain = NA)
- .     else stop(msg, call. = FALSE, domain = NA)
- . })
-3. tryCatchList(expr, classes, parentenv, handlers)
-4. tryCatchOne(expr, names, parentenv, handlers[[1L]])
-5. value[[3L]](cond)
-6. stop(msg, call. = FALSE, domain = NA)
-ERROR: Error: package or namespace load failed for 'tidyverse':
- .onAttach failed in attachNamespace() for 'tidyverse', details:
-  call: NULL
-  error: package or namespace load failed for 'tidyr' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
- namespace 'vctrs' 0.6.3 is already loaded, but >= 0.6.4 is required
+1. read.dta("http://dss.princeton.edu/training/Panel101.dta")
+2. download.file(file, tmp, quiet = TRUE, mode = "wb")
+ERROR: Error in download.file(file, tmp, quiet = TRUE, mode = "wb"): no fue posible abrir la URL 'http://dss.princeton.edu/training/Panel101.dta'
 
 

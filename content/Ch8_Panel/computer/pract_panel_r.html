@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -83,15 +82,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -192,10 +182,10 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../Ch5_GMM/GMM.html">5. Método de Momentos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ch5_IV/IV.html">5. Variables Instrumentales</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../Ch6_IV/IV.html">6. Variables Instrumentales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Ch6_GMM/GMM.html">6. Método de Momentos</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -281,10 +271,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -292,7 +282,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -354,26 +344,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A data.frame: 10 × 9</caption>
-<thead>
-	<tr><th></th><th scope=col>country</th><th scope=col>year</th><th scope=col>y</th><th scope=col>y_bin</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th><th scope=col>opinion</th><th scope=col>op</th></tr>
-	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><th scope=row>1</th><td>A</td><td>1990</td><td> 1342787840</td><td>1</td><td>0.27790365</td><td>-1.1079559</td><td> 0.28255358</td><td>Str agree</td><td>1</td></tr>
-	<tr><th scope=row>2</th><td>A</td><td>1991</td><td>-1899660544</td><td>0</td><td>0.32068470</td><td>-0.9487200</td><td> 0.49253848</td><td>Disag    </td><td>0</td></tr>
-	<tr><th scope=row>3</th><td>A</td><td>1992</td><td>  -11234363</td><td>0</td><td>0.36346573</td><td>-0.7894840</td><td> 0.70252335</td><td>Disag    </td><td>0</td></tr>
-	<tr><th scope=row>4</th><td>A</td><td>1993</td><td> 2645775360</td><td>1</td><td>0.24614404</td><td>-0.8855330</td><td>-0.09439092</td><td>Disag    </td><td>0</td></tr>
-	<tr><th scope=row>5</th><td>A</td><td>1994</td><td> 3008334848</td><td>1</td><td>0.42462304</td><td>-0.7297683</td><td> 0.94613063</td><td>Disag    </td><td>0</td></tr>
-	<tr><th scope=row>6</th><td>A</td><td>1995</td><td> 3229574144</td><td>1</td><td>0.47721413</td><td>-0.7232460</td><td> 1.02968037</td><td>Str agree</td><td>1</td></tr>
-	<tr><th scope=row>7</th><td>A</td><td>1996</td><td> 2756754176</td><td>1</td><td>0.49980500</td><td>-0.7815716</td><td> 1.09228814</td><td>Disag    </td><td>0</td></tr>
-	<tr><th scope=row>8</th><td>A</td><td>1997</td><td> 2771810560</td><td>1</td><td>0.05162839</td><td>-0.7048455</td><td> 1.41590083</td><td>Str agree</td><td>1</td></tr>
-	<tr><th scope=row>9</th><td>A</td><td>1998</td><td> 3397338880</td><td>1</td><td>0.36641079</td><td>-0.6983712</td><td> 1.54872274</td><td>Disag    </td><td>0</td></tr>
-	<tr><th scope=row>10</th><td>A</td><td>1999</td><td>   39770336</td><td>1</td><td>0.39584252</td><td>-0.6431540</td><td> 1.79419804</td><td>Str disag</td><td>0</td></tr>
-</tbody>
-</table>
-</div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">download</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">quiet</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;wb&quot;</span><span class="p">):</span> <span class="n">no</span> <span class="n">fue</span> <span class="n">posible</span> <span class="n">abrir</span> <span class="n">la</span> <span class="n">URL</span> <span class="s1">&#39;http://dss.princeton.edu/training/Panel101.dta&#39;</span>
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">read</span><span class="o">.</span><span class="n">dta</span><span class="p">(</span><span class="s2">&quot;http://dss.princeton.edu/training/Panel101.dta&quot;</span><span class="p">)</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">download</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">quiet</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -404,34 +382,21 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">Error</span>: package or namespace load failed for &#39;tidyverse&#39;:
- <span class="o">.</span><span class="n">onAttach</span> <span class="n">failed</span> <span class="ow">in</span> <span class="n">attachNamespace</span><span class="p">()</span> <span class="k">for</span> <span class="s1">&#39;tidyverse&#39;</span><span class="p">,</span> <span class="n">details</span><span class="p">:</span>
-  <span class="n">call</span><span class="p">:</span> <span class="n">NULL</span>
-  <span class="n">error</span><span class="p">:</span> <span class="n">package</span> <span class="ow">or</span> <span class="n">namespace</span> <span class="n">load</span> <span class="n">failed</span> <span class="k">for</span> <span class="s1">&#39;tidyr&#39;</span> <span class="ow">in</span> <span class="n">loadNamespace</span><span class="p">(</span><span class="n">j</span> <span class="o">&lt;-</span> <span class="n">i</span><span class="p">[[</span><span class="mi">1</span><span class="n">L</span><span class="p">]],</span> <span class="n">c</span><span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">loc</span><span class="p">,</span> <span class="o">.</span><span class="n">libPaths</span><span class="p">()),</span> <span class="n">versionCheck</span> <span class="o">=</span> <span class="n">vI</span><span class="p">[[</span><span class="n">j</span><span class="p">]]):</span>
- <span class="n">namespace</span> <span class="s1">&#39;vctrs&#39;</span> <span class="mf">0.6.3</span> <span class="ow">is</span> <span class="n">already</span> <span class="n">loaded</span><span class="p">,</span> <span class="n">but</span> <span class="o">&gt;=</span> <span class="mf">0.6.4</span> <span class="ow">is</span> <span class="n">required</span>
-<span class="ne">Traceback</span>:
-
-<span class="mi">1</span><span class="o">.</span> <span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
-<span class="mi">2</span><span class="o">.</span> <span class="n">tryCatch</span><span class="p">({</span>
- <span class="o">.</span>     <span class="n">attr</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="s2">&quot;LibPath&quot;</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">which</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">loc</span>
- <span class="o">.</span>     <span class="n">ns</span> <span class="o">&lt;-</span> <span class="n">loadNamespace</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">loc</span><span class="p">)</span>
- <span class="o">.</span>     <span class="n">env</span> <span class="o">&lt;-</span> <span class="n">attachNamespace</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">pos</span><span class="p">,</span> <span class="n">deps</span><span class="p">,</span> <span class="n">exclude</span><span class="p">,</span> <span class="n">include</span><span class="o">.</span><span class="n">only</span><span class="p">)</span>
- <span class="o">.</span> <span class="p">},</span> <span class="n">error</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
- <span class="o">.</span>     <span class="n">P</span> <span class="o">&lt;-</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span>is.null<span class="o">(</span>cc<span class="w"> </span>&lt;-<span class="w"> </span>conditionCall<span class="o">(</span>e<span class="o">)))</span><span class="w"> </span>
- <span class="o">.</span>         <span class="n">paste</span><span class="p">(</span><span class="s2">&quot; in&quot;</span><span class="p">,</span> <span class="n">deparse</span><span class="p">(</span><span class="n">cc</span><span class="p">)[</span><span class="mi">1</span><span class="n">L</span><span class="p">])</span>
- <span class="o">.</span>     <span class="k">else</span> <span class="s2">&quot;&quot;</span>
- <span class="o">.</span>     <span class="n">msg</span> <span class="o">&lt;-</span> <span class="n">gettextf</span><span class="p">(</span><span class="s2">&quot;package or namespace load failed for </span><span class="si">%s%s</span><span class="s2">:</span><span class="se">\n</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> 
- <span class="o">.</span>         <span class="n">sQuote</span><span class="p">(</span><span class="n">package</span><span class="p">),</span> <span class="n">P</span><span class="p">,</span> <span class="n">conditionMessage</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
- <span class="o">.</span>     <span class="k">if</span> <span class="p">(</span><span class="n">logical</span><span class="o">.</span><span class="k">return</span> <span class="o">&amp;&amp;</span> <span class="o">!</span>quietly<span class="o">)</span><span class="w"> </span>
- <span class="o">.</span>         <span class="n">message</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">),</span> <span class="n">domain</span> <span class="o">=</span> <span class="n">NA</span><span class="p">)</span>
- <span class="o">.</span>     <span class="k">else</span> <span class="n">stop</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">call</span><span class="o">.</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">domain</span> <span class="o">=</span> <span class="n">NA</span><span class="p">)</span>
- <span class="o">.</span> <span class="p">})</span>
-<span class="mi">3</span><span class="o">.</span> <span class="n">tryCatchList</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span> <span class="n">parentenv</span><span class="p">,</span> <span class="n">handlers</span><span class="p">)</span>
-<span class="mi">4</span><span class="o">.</span> <span class="n">tryCatchOne</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">parentenv</span><span class="p">,</span> <span class="n">handlers</span><span class="p">[[</span><span class="mi">1</span><span class="n">L</span><span class="p">]])</span>
-<span class="mi">5</span><span class="o">.</span> <span class="n">value</span><span class="p">[[</span><span class="mi">3</span><span class="n">L</span><span class="p">]](</span><span class="n">cond</span><span class="p">)</span>
-<span class="mi">6</span><span class="o">.</span> <span class="n">stop</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">call</span><span class="o">.</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">domain</span> <span class="o">=</span> <span class="n">NA</span><span class="p">)</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.4
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.4.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.0
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
+── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">recode()</span> masks <span class=" -Color -Color-Blue">car</span>::recode()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">purrr</span>::<span class=" -Color -Color-Green">some()</span>   masks <span class=" -Color -Color-Blue">car</span>::some()
+<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
 </pre></div>
 </div>
+<img alt="../../../_images/36d1e727b08045ee17157036e8a2bc5368eda7d9e51b71c00ef4d0aa6f6d1165.png" src="../../../_images/36d1e727b08045ee17157036e8a2bc5368eda7d9e51b71c00ef4d0aa6f6d1165.png" />
 </div>
 </div>
 </section>
@@ -551,10 +516,11 @@ The following objects are masked from &#39;package:dplyr&#39;:
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Panel.html"
@@ -574,7 +540,10 @@ The following objects are masked from &#39;package:dplyr&#39;:
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -643,8 +612,8 @@ Por Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
