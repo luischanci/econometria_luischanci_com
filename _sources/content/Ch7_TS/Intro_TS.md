@@ -7,11 +7,26 @@
 En esta sección realizaremos una muy breve introducción a series de tiempo. Realizaremos una revisón de series de tiempo estacionarias y luego de vectores autorregresivos.
 
 
+**Diapositivas**
 
+A continuación se incluyen las diapositivas (aún pendiente de traducir). Para avanzar en las diapositivas, hacer click sobre la diapositiva y luego usar las flechas del teclado.
+
+Nota: puede tomar unos segundos en aparecer el material.
+
+<div id   ="Container"
+     style="padding-bottom:50.25%; position:relative; display:block; width: 100%">
+     <iframe id                 ="my_html_slides"
+             width              ="75%"
+             height             ="100%"
+             src                ="https://www.luischanci.com/presentations/Econometrics/econometria_7.html#/"
+             frameborder        ="0"
+             allowfullscreen    ="1"
+             style              ="position:absolute; top:5%; left: 5%">
+     </iframe>
+</div>
 </br>
-<center><figure>
-    <img alt="../../_images/pib.png" src="../../_images/pib.png" width="70%" height="70%"style="margin: 15px 0 0 0">
-    <figcaption>Figura: Serie trimestral del PIB. Volumen a precios del año anterior encadenado, series empalmadas, desestacionalizado, referencia 2018. Fuente: Construcción del autor usando R y la API del BCentral. </figcaption>
-</figure></center>
-</br>
-<hr>
+
+`````{admonition} Enlace
+:class: note
+[Descargar diapositivas.](https://www.luischanci.com/presentations/Econometrics/econometria_7.pdf)
+`````
