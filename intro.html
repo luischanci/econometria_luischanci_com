@@ -54,7 +54,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script data-domain="the-turing-way.netlify.app" defer="defer" src="https://plausible.io/js/script.js"></script>
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
@@ -423,13 +422,6 @@ Por Luis Chancí
   
   <div class="footer-item">
     
-  <p class="copyright">
-    
-      © Copyright 2020-2023.
-      <br/>
-    
-  </p>
-
   </div>
   
   <div class="footer-item">
@@ -453,16 +445,15 @@ Por Luis Chancí
 <script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK9F28LTP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1PK9F28LTP');
+    </script>
   </footer>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK9F28LTP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1PK9F28LTP');
-</script>
   </body>
 </html>
