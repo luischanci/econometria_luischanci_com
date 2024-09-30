@@ -2,7 +2,14 @@
 
 # 2. Mínimos Cuadrados - Repaso
 
-**OLS: _Ordinary Least Squares_**
+Esta sección es un repaso del modelo de regresión clásico. Además, se hace una introducción a algunas de las extensiones del modelo lineal. Los contenidos son:
+
+**1. OLS - _Ordinary Least Squares_**
+
+**2. Extensiones:**
+- **LASSO** Regression
+- **Ridge** Regression
+- **Quantile** Regression
 
 &nbsp;
 
@@ -27,7 +34,7 @@ Nota: puede tomar unos segundos en aparecer el material.
 
 `````{admonition} Enlace
 :class: note
-[Descargar diapositivas.](https://www.luischanci.com/presentations/Econometrics/econometria_2.pdf/)
+[Descargar diapositivas en PDF.](https://www.luischanci.com/presentations/Econometrics/econometria_2.pdf)
 `````
 
 </br>
