@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 
 
-<html lang="es" data-content_root="../../" >
+<html lang="es" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Modelos de Elección Múltiple &#8212; Apuntes de Econometría</title>
   
@@ -14,46 +14,46 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="../../_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="../../_static/documentation_options.js?v=c2101671"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../../_static/translations.js?v=d190bf04"></script>
+    <script src="../../_static/translations.js?v=efdbd0b9"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -76,23 +76,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -114,20 +119,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,13 +139,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
-  
   
   
   
@@ -158,16 +151,15 @@
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Apuntes de Econometría - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Apuntes de Econometría - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
-
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Búsqueda</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -183,25 +175,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">2. Mínimos Cuadrados - Repaso</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/MLE.html">Teoría MLE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_r.html">Práctica R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_stata.html">Práctica Stata</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_stata.html">Práctica Stata</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_r.html">Práctica R</a></li>
 </ul>
-</details></li>
+</li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Modelos de Elección Múltiple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Conteo.html">Modelo de Conteo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CensuraTrunc.html">Censura, Truncamiento, Selección</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CensuraTrunc.html">Censura, Truncamiento, Selección <br/> (Tobit y Heckman)</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Ch5_IV/IV.html">5. Variables Instrumentales</a></li>
@@ -210,26 +202,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../Ch6_GMM/GMM.html">6. Método de Momentos</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/Panel.html">Teoría Panel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_r.html">Práctica R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_stata.html">Práctica Stata</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Diff-in-Diff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../zbibliography.html">Bibliografía</a></li>
@@ -248,7 +236,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -257,14 +245,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -291,28 +279,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -336,7 +322,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-logit">Multinomial Logit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logit-condicional">Logit Condicional</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logit-probit-ordenado">Logit/Probit Ordenado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-probit">Multinomial Probit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#respuesta-multiple-ordenada">Respuesta Múltiple Ordenada</a></li>
 </ul>
             </nav>
         </div>
@@ -346,7 +333,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelos-de-eleccion-multiple">
 <h1>Modelos de Elección Múltiple<a class="headerlink" href="#modelos-de-eleccion-multiple" title="Link to this heading">#</a></h1>
@@ -385,36 +372,202 @@ document.write(`
 </section>
 <section id="multinomial-logit">
 <h2>Multinomial Logit<a class="headerlink" href="#multinomial-logit" title="Link to this heading">#</a></h2>
-<p>La variable dependiente asocia más de dos alternativas cualitativas y estas no involucran un orden. Por ejemplo, elegir un lugar para pescar: <span class="math notranslate nohighlight">\(y_i\in\{playa,bote,muelle\}\)</span>.</p>
-<p>Siguiendo la idea de los modelos de utilidad aleatoria, se compara la probabilidad de escoger una opción particular sobre las demás, dadas unas características observables. En particular, Una forma de extender el modelo es pensar que se comparan de a dos opciones a la vez, tal como hicimos en el logit, y a esto se le asocia una probabilidad. Se emplea principalmente la f.d.p. logística y se tiende a evitar la distribución normal ya que es computacionalmente más compleja de trabajar.</p>
-<p>Sean <span class="math notranslate nohighlight">\(J+1\)</span> alternativas u opciones, en donde se deja una categoría como base de comparación. Así, las funciones de probabilidad asociadas a cada opción serían</p>
+<ul>
+<li><p><strong>Descripción General</strong>:</p>
+<ul class="simple">
+<li><p>Este modelo es adecuado cuando la variable dependiente incluye <strong>más de dos alternativas cualitativas</strong> sin ningún tipo de orden implícito.</p></li>
+<li><p><strong>Ejemplo</strong>: Elegir un lugar para pescar, donde <span class="math notranslate nohighlight">\(y_i \in \{\text{playa}, \text{bote}, \text{muelle}\}\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Enfoque de Utilidad Aleatoria</strong>:</p>
+<ul class="simple">
+<li><p>Siguiendo el marco de los modelos de <strong>utilidad aleatoria</strong>, se modela la probabilidad de escoger una opción particular sobre las demás, dadas las características observables.</p></li>
+<li><p>Una forma de extender el modelo es comparar pares de opciones, como en el logit binario, asignando una probabilidad a cada comparación.</p></li>
+</ul>
+</li>
+<li><p><strong>Función de Distribución de Probabilidad (f.d.p.)</strong>:</p>
+<ul class="simple">
+<li><p>Se usa la <strong>f.d.p. logística</strong>, en lugar de la normal, ya que es computacionalmente más sencilla y adecuada para este contexto.</p></li>
+</ul>
+</li>
+<li><p><strong>Estructura del Modelo</strong>:</p>
+<ul>
+<li><p>Supongamos que existen <span class="math notranslate nohighlight">\(J + 1\)</span> alternativas, donde se designa una categoría como <strong>base de comparación</strong>.</p></li>
+<li><p>Las funciones de probabilidad para cada alternativa son:</p>
+<ul>
+<li><p>Para la categoría base <span class="math notranslate nohighlight">\(Y=0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[Pr(Y=0|\boldsymbol{X})=\frac{1}{\left[1+\sum_{j=1}^J{exp(X\beta^{(j)})}\right]}\]</div>
+\[
+      Pr(Y=0|\boldsymbol{X}) = \frac{1}{\left[1 + \sum_{j=1}^J \exp(X \beta^{(j)})\right]}
+      \]</div>
+</li>
+<li><p>Para cualquier otra categoría <span class="math notranslate nohighlight">\(Y=j\)</span>, con <span class="math notranslate nohighlight">\(j=1,...,J\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[Pr(Y=j|\boldsymbol{X})=\frac{exp(X\beta^{(j)})}{\left[1+\sum_{j=1}^J{exp(X\beta^{(j)})}\right]}\hspace{0.1cm},\hspace{0.5cm}j=1,...,J\]</div>
-<p>Notar que los coefficientes varian por opción y que si <span class="math notranslate nohighlight">\(J=1\)</span> solo hay dos opciones y lo anterior colapsa en el modelos logit bivariado.</p>
-<p>Con estas probabilidades,</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-</br>
+\[
+      Pr(Y=j|\boldsymbol{X}) = \frac{\exp(X \beta^{(j)})}{\left[1 + \sum_{j=1}^J \exp(X \beta^{(j)})\right]}
+      \]</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Interpretación de los Coeficientes</strong>:</p>
+<ul class="simple">
+<li><p>Los coeficientes <span class="math notranslate nohighlight">\(\beta^{(j)}\)</span> <strong>varían por opción</strong>, lo que significa que cada alternativa tiene su propio conjunto de parámetros.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(J = 1\)</span>, el modelo se reduce a un logit binario, donde solo hay dos opciones.</p></li>
+</ul>
+<p><strong>Log de los Coeficientes</strong>:</p>
+<ul>
+<li><p>La relación de los logaritmos de las probabilidades se expresa como:</p>
+<div class="math notranslate nohighlight">
+\[\ln \left( \frac{P_{ij}}{P_{i0}} \right) = X_i' \beta^j\]</div>
+</li>
+<li><p>Alternativamente, normalizando respecto a otra probabilidad <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\ln \left( \frac{P_{ij}}{P_{ik}} \right) = X_i' (\beta^j - \beta^k)\]</div>
+</li>
+</ul>
+<blockquote>
+<div><p>Nota: Con estas probabilidades, se pueden construir modelos que expliquen la preferencia por una opción sobre otras a partir de las características observables y la estructura de utilidades latentes.</p>
+</div></blockquote>
+<p><strong>Independencia de Alternativas Irrelevantes (IAI)</strong></p>
+<p>Los modelos multinomiales como el logit asumen la <strong>independencia de alternativas irrelevantes (IAI)</strong>. Esto significa que la relación de probabilidades entre dos opciones es independiente de la presencia o ausencia de otras alternativas.</p>
+<p>Como vimos, para dos respuestas <span class="math notranslate nohighlight">\(k\)</span> y <span class="math notranslate nohighlight">\(r\)</span>, la razón de probabilidades se expresa como:</p>
+<div class="math notranslate nohighlight">
+\[\frac{Pr(Y_i = k)}{Pr(Y_i = r)} = \exp \left( X_i' (\beta^k - \beta^r) \right)\]</div>
+<ul class="simple">
+<li><p>Esto implica que la relación entre las probabilidades de escoger las opciones <span class="math notranslate nohighlight">\(k\)</span> y <span class="math notranslate nohighlight">\(r\)</span> no depende de las características de otras alternativas en el conjunto de opciones.</p></li>
+<li><p>La propiedad de IAI implica que <strong>adicionar o remover alternativas</strong> en el conjunto de opciones no afecta la relación de probabilidades entre dos opciones específicas, como <span class="math notranslate nohighlight">\(k\)</span> y <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
+</ul>
+<p>Este supuesto facilita la estimación y análisis de los modelos, pero también limita la flexibilidad del modelo en situaciones donde las alternativas pueden estar correlacionadas o donde la presencia de otras opciones influye en la elección relativa entre dos opciones.</p>
+<p><strong>Función de Verosimilitud</strong> La función de verosimilitud a maximizar es:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \sum_{i=1}^N \sum_{j=0}^J d_{ij} \cdot \ln \left( P(Y_i = j) \right)\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(d_{ij}\)</span> es una variable indicadora (dummy) que toma el valor de 1 si el individuo <span class="math notranslate nohighlight">\(i\)</span> escoge la alternativa <span class="math notranslate nohighlight">\(j\)</span>, y 0 en caso contrario.</p>
+<p><strong>Condiciones de Primer Orden</strong>: Las condiciones necesarias de primer orden para maximizar la verosimilitud son:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \mathcal{L}}{\partial \beta^j} = \sum_i (d_{ij} - P_{ij}) \cdot X_i \quad \text{para } j = 1, \ldots, J\]</div>
 </section>
 <section id="logit-condicional">
 <h2>Logit Condicional<a class="headerlink" href="#logit-condicional" title="Link to this heading">#</a></h2>
-</br>
+<p>El modelo de <strong>Logit Condicional</strong> es una extensión del logit multinomial que permite que las probabilidades de elección dependan no solo de las características individuales, sino también de las características específicas de cada alternativa. Ambos modelos permiten manejar múltiples alternativas no ordenadas, pero el logit condicional incorpora explícitamente características de cada opción.</p>
+<p>El modelo logit condicional es útil en contextos donde las opciones de elección tienen características propias que influyen en la decisión del individuo. Ejemplos:</p>
+<ul class="simple">
+<li><p>Elección de medios de transporte en función de atributos como el costo, tiempo de viaje, y comodidad de cada opción (metro, bus, bicicleta, etc.).</p></li>
+<li><p>Elección de lugar de compra basado en factores como precio, distancia, y calidad del servicio en cada tienda.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Referencia:</strong> Ver capítulo 15 en Cameron y Trivedi para una discusión detallada.</p>
+</div></blockquote>
+<p><strong>Probabilidad de Elección y función de verosimilitud</strong></p>
+<ul>
+<li><p>La probabilidad de que el individuo <span class="math notranslate nohighlight">\(i\)</span> elija la alternativa <span class="math notranslate nohighlight">\(j\)</span> se define como:</p>
+<div class="math notranslate nohighlight">
+\[ P_{ij} = \frac{\exp(X_{ij}' \beta)}{\sum_{v=1}^J \exp(X_{iv}' \beta)} \]</div>
+</li>
+<li><p>Aquí, <span class="math notranslate nohighlight">\(X_{ij}\)</span> representa las características observables de la alternativa <span class="math notranslate nohighlight">\(j\)</span> para el individuo <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
+<li><p>La interpretación es que el vector de parámetros <span class="math notranslate nohighlight">\(\beta\)</span> es común para todas las alternativas, pero las características específicas varían entre opciones.</p></li>
+<li><p>La función de verosimilitud para el logit condicional, dada la elección observada, es:</p>
+<div class="math notranslate nohighlight">
+\[ \mathcal{L} = \prod_{i=1}^N \prod_{j=0}^J \left( \frac{\exp(X_{ij}' \beta)}{\sum_{k=1}^J \exp(X_{ik}' \beta)} \right)^{d_{ij}} \]</div>
+<p>Donde <span class="math notranslate nohighlight">\(d_{ij}\)</span> es una variable indicadora que toma el valor de 1 si el individuo <span class="math notranslate nohighlight">\(i\)</span> elige la alternativa <span class="math notranslate nohighlight">\(j\)</span>, y 0 en caso contrario.</p>
+</li>
+</ul>
 </section>
-<section id="logit-probit-ordenado">
-<h2>Logit/Probit Ordenado<a class="headerlink" href="#logit-probit-ordenado" title="Link to this heading">#</a></h2>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-</br>
-<center><figure>
-    <img alt="../../_images/under_construction.jpg" src="../../_images/under_construction.jpg" width="30%" height="30%"style="margin: 15px 0 0 0">
-    <figcaption>(Digitalización de apuntes en progreso) </figcaption>
-</figure></center>
-</br>
-<hr>
+<section id="multinomial-probit">
+<h2>Multinomial Probit<a class="headerlink" href="#multinomial-probit" title="Link to this heading">#</a></h2>
+<p>El modelo de <strong>Multinomial Probit</strong> es una alternativa al <strong>Multinomial Logit</strong> cuando se desea incorporar <strong>correlación entre alternativas</strong>. A diferencia del multinomial logit, el multinomial probit no asume <strong>Independencia de Alternativas Irrelevantes (IAI)</strong>. Esto significa que la relación de probabilidades entre dos opciones <strong>sí puede depender de la presencia o ausencia de otras alternativas</strong>.</p>
+<p>El <strong>Multinomial Probit</strong> permite <strong>relajarse del supuesto de IAI</strong> ya que modela la correlación entre los errores de las alternativas mediante una distribución normal multivariada. Esto permite una mayor flexibilidad en escenarios donde las alternativas son similares y podrían estar correlacionadas, como en la elección de diferentes marcas o modos de transporte.</p>
+<p>En el multinomial probit, la probabilidad de elegir una alternativa involucra múltiples integrales de la función de densidad normal multivariada. Esto genera un problema de alta <strong>complejidad computacional</strong> debido a la necesidad de calcular integrales múltiples.</p>
+<p>Por ejemplo, para un modelo con tres alternativas, la probabilidad de elegir una de ellas está dada por:</p>
+<div class="math notranslate nohighlight">
+\[ Pr(Y_i = 1) = \iint f(u_{i2}, u_{i3}) \, du_{i2} \, du_{i3} \]</div>
+<p>Aquí, <span class="math notranslate nohighlight">\(f(u_{i2}, u_{i3})\)</span> representa la función de densidad conjunta de una distribución normal bivariada. A medida que aumenta el número de alternativas, el número de integrales necesarias también aumenta, lo que complica el cálculo.</p>
+<p>En la práctica, para resolver este problema, se emplean técnicas de simulación como el <strong>Método de Simulación de Máxima Verosimilitud</strong> (ML) o métodos basados en <strong>Monte Carlo</strong> para aproximar las probabilidades.</p>
+<p><strong>Función de Verosimilitud</strong></p>
+<p>Similar al multinomial logit, el modelo multinomial probit utiliza una función de verosimilitud para estimar los parámetros. Sin embargo, debido a las integrales mencionadas, la maximización de la verosimilitud es considerablemente más complicada. La función de verosimilitud, en este caso, requiere aproximaciones numéricas para poder resolver los múltiples integrales.</p>
+<blockquote>
+<div><p><strong>Nota</strong>: La elección entre el multinomial logit y el multinomial probit depende de la aplicación específica y la disponibilidad de recursos computacionales. Si las alternativas son claramente diferenciables y no correlacionadas, el logit multinomial puede ser suficiente y más práctico.</p>
+</div></blockquote>
+<p><strong>Software</strong>:</p>
+<ul class="simple">
+<li><p>Stata: <code class="docutils literal notranslate"><span class="pre">mprobit</span></code> para Multinomial Probit, <code class="docutils literal notranslate"><span class="pre">mlogit</span></code> para Multinomial Logit y <code class="docutils literal notranslate"><span class="pre">clogit</span></code> para Logit Condicional.</p></li>
+<li><p>R: <code class="docutils literal notranslate"><span class="pre">multinom</span></code> de la libreria “nnet”, <code class="docutils literal notranslate"><span class="pre">mlogit</span></code> de la libreria “mlogit”, <code class="docutils literal notranslate"><span class="pre">clogit</span></code> de la libreria “survival”. Otros son <code class="docutils literal notranslate"><span class="pre">MNP</span></code> y <code class="docutils literal notranslate"><span class="pre">bayesm</span></code> . Pero para grandes bases, tal vez el <code class="docutils literal notranslate"><span class="pre">mlogit</span></code> sea más eficiente.</p></li>
+</ul>
+</section>
+<section id="respuesta-multiple-ordenada">
+<h2>Respuesta Múltiple Ordenada<a class="headerlink" href="#respuesta-multiple-ordenada" title="Link to this heading">#</a></h2>
+<p>En algunos casos, la variable dependiente es una variable categórica con <strong>más de dos alternativas</strong> y <strong>un orden natural</strong> entre las categorías. A diferencia del multinomial logit, donde las opciones no tienen un orden particular, en el modelo de <strong>respuesta múltiple ordenada</strong> se aprovecha el orden implícito entre las categorías.</p>
+<p>Los modelos <strong>Ordered Logit</strong> y <strong>Ordered Probit</strong> son extensiones de los modelos logit y probit tradicionales para tratar con variables dependientes ordinales.</p>
+<p><strong>Ejemplos</strong>:</p>
+<ul class="simple">
+<li><p>Un cliente califica su satisfacción con un producto o servicio en una escala ordinal: <br> 1. Insatisfecho; 2. Neutral; 3. Satisfecho; 4. Muy Satisfecho</p></li>
+<li><p>Un individuo alcanza un nivel de educación que se puede ordenar de menor a mayor: <br> 1. Primaria; 2. Secundaria; 3. Pregrado; 4. Posgrado</p></li>
+</ul>
+<p>La <strong>interpretación del modelo</strong> se centra en analizar cómo los cambios en las variables explicativas influyen en la probabilidad de moverse hacia categorías superiores o inferiores.</p>
+<p>Los modelos de respuesta múltiple ordenada parten de una <strong>variable latente</strong> <span class="math notranslate nohighlight">\(Y^*\)</span>, que representa la propensión subyacente de una persona a seleccionar una categoría más alta o baja. La variable latente se modela como <span class="math notranslate nohighlight">\(Y^* = X\beta + u\)</span>, donde  <span class="math notranslate nohighlight">\(X\)</span> son las variables explicativas (observables) and <span class="math notranslate nohighlight">\(u_i\)</span> es el término de error (asumido con distribución normal o logística).</p>
+<p>La variable dependiente observada <span class="math notranslate nohighlight">\(Y\)</span> es una versión ordinal de <span class="math notranslate nohighlight">\(Y^*\)</span>, donde cada valor de <span class="math notranslate nohighlight">\(Y\)</span> se asocia a un rango específico de <span class="math notranslate nohighlight">\(Y^*\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Y_i = 
+  \begin{cases} 
+    0 &amp; \text{si } Y_i^* &lt; A_0 \\
+    1 &amp; \text{si } A_0 \leq Y_i^* &lt; A_1 \\
+    \vdots \\
+    J &amp; \text{si } A_{J-1} \leq Y_i^* &lt; A_J
+  \end{cases}
+\end{split}\]</div>
+<p>los <strong>umbrales <span class="math notranslate nohighlight">\(A\)</span></strong> representan los puntos de corte que delimitan las categorías.</p>
+<p>Así, los parámetros a estimar son: <span class="math notranslate nohighlight">\(\beta\)</span> junto a los <span class="math notranslate nohighlight">\(A=(A_0,\ldots,A_{J-1})\)</span> umbrales.</p>
+<p>La probabilidad de que un individuo elija una categoría en particular se calcula mediante la función de distribución acumulada de la normal estándar (para el <strong>probit ordenado</strong>) o de la logística (para el <strong>logit ordenado</strong>).</p>
+<p>La probabilidad de que <span class="math notranslate nohighlight">\(Y_i = j\)</span> está dada por:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray}
+Pr(Y_i = 0) &amp;=&amp; F(a_0 - X_i'\beta) \\
+Pr(Y_i = j) &amp;=&amp; F(a_j - X_i'\beta) - F(a_{j-1} - X_i'\beta), \quad j &gt; 0 \\
+Pr(Y_i = J) &amp;=&amp; 1 - F(a_{J-1} - X_i'\beta)
+\end{eqnarray}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(F(\cdot)\)</span> representa la función de distribución acumulada, por ejemplo, la normal acumulada en el caso del Probit o la logística acumulada en el caso del Logit ( <span class="math notranslate nohighlight">\(F(z)=[1+exp(-z)]^{-1}\)</span> ).</p>
+<p>Así, la <strong>función de verosimilitud</strong> a maximizar es:</p>
+<div class="math notranslate nohighlight">
+\[
+ \mathcal{L}(\beta, a) = \prod_{i=1}^N \prod_{j=0}^J \left( Pr(Y_i = j) \right)^{d_{ij}}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(d_{ij}\)</span> es una variable indicadora que toma valor 1 si <span class="math notranslate nohighlight">\(Y_i = j\)</span> y 0 en caso contrario.</p>
+<blockquote>
+<div><p>Observación: tanto el logit multinomial como el logit ordenado tienen una forma similar para la log-verosimilitud.</p>
+</div></blockquote>
+<p>Aunque la estructura de la log-verosimilitud es la misma, la <strong>elección de la función de probabilidad</strong> refleja las suposiciones del modelo sobre la naturaleza de las opciones (no ordenadas vs. ordenadas).</p>
+<p>La diferencia radica en la expresión para <span class="math notranslate nohighlight">\(P(Y_i = j)\)</span>:</p>
+<ul>
+<li><p><strong>Logit Multinomial</strong>: <span class="math notranslate nohighlight">\(P(Y_i = j)\)</span> se calcula <strong>usando la función</strong> logística multinomial:</p>
+<div class="math notranslate nohighlight">
+\[
+  P(Y_i = j) = \frac{\exp(X_i' \beta_j)}{\sum_{k=1}^J \exp(X_i' \beta_k)}
+  \]</div>
+</li>
+<li><p><strong>Logit Ordenado</strong>: <span class="math notranslate nohighlight">\(P(Y_i = j)\)</span> se basa en probabilidades acumuladas, típicamente <strong>usando la función de distribución logística acumulada</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+    P(Y_i = j) = F(a_j - X_i' \beta) - F(a_{j-1} - X_i' \beta)
+    \]</div>
+</li>
+</ul>
+<p>En el <strong>logit multinomial</strong>, los coeficientes <span class="math notranslate nohighlight">\(\beta_j\)</span> varían por opción, capturando la preferencia relativa para cada opción; en el <strong>logit ordenado</strong>, el coeficiente <span class="math notranslate nohighlight">\(\beta\)</span> es constante y las probabilidades de las categorías ordenadas dependen de los umbrales <span class="math notranslate nohighlight">\(a_j\)</span>, que segmentan la variable latente en categorías ordenadas.</p>
+<p><strong>Efectos Marginales:</strong></p>
+<p>En los modelos logit y probit ordenados, los <strong>coeficientes</strong> no representan cambios marginales directos en las probabilidades de cada categoría. En su lugar, indican el <strong>efecto de un cambio en las variables explicativas</strong> sobre la probabilidad de moverse a categorías superiores o inferiores.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial Pr(Y_i = j)}{\partial X_r} = \left[ F'(a_j - X_i'\beta) - F'(a_{j-1} - X_i'\beta) \right] \cdot \beta_r
+\]</div>
+<p>Notar que varían según el punto de evaluación, usualmente en la media de <span class="math notranslate nohighlight">\(X\)</span> o en valores específicos.</p>
+<p><strong>Software</strong>:</p>
+<ul class="simple">
+<li><p>Stata: <code class="docutils literal notranslate"><span class="pre">oprobit</span></code> para Probit Ordenado, <code class="docutils literal notranslate"><span class="pre">ologit</span></code> para Logit Ordenado.</p></li>
+<li><p>R: <code class="docutils literal notranslate"><span class="pre">polr</span></code> de la libreria MASS</p></li>
+</ul>
 </section>
 </section>
 
@@ -445,8 +598,8 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Binaria/pract_binaria_r.html"
@@ -475,7 +628,6 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contenido
@@ -485,7 +637,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-logit">Multinomial Logit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logit-condicional">Logit Condicional</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logit-probit-ordenado">Logit/Probit Ordenado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-probit">Multinomial Probit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#respuesta-multiple-ordenada">Respuesta Múltiple Ordenada</a></li>
 </ul>
   </nav></div>
 
@@ -507,7 +660,6 @@ Por Luis Chancí
   
   <div class="footer-item">
     
-
   </div>
   
   <div class="footer-item">
@@ -527,8 +679,8 @@ Por Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

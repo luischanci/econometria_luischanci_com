@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 
 
-<html lang="es" data-content_root="../../" >
+<html lang="es" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Modelo de Conteo &#8212; Apuntes de Econometría</title>
   
@@ -14,56 +14,58 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="../../_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="../../_static/documentation_options.js?v=c2101671"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../../_static/translations.js?v=d190bf04"></script>
+    <script src="../../_static/translations.js?v=efdbd0b9"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/Conteo';</script>
     <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/Conteo.html" />
     <link rel="icon" href="../../_static/icon.png"/>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Censura, Truncamiento, Selección" href="CensuraTrunc.html" />
+    <link rel="next" title="Censura, Truncamiento, Selección (Tobit y Heckman)" href="CensuraTrunc.html" />
     <link rel="prev" title="Modelos de Elección Múltiple" href="Multinomial.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -74,23 +76,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -112,20 +119,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,13 +139,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
-  
   
   
   
@@ -156,16 +151,15 @@
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Apuntes de Econometría - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Apuntes de Econometría - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
-
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Búsqueda</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -181,25 +175,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">2. Mínimos Cuadrados - Repaso</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/MLE.html">Teoría MLE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_r.html">Práctica R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_stata.html">Práctica Stata</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_stata.html">Práctica Stata</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_r.html">Práctica R</a></li>
 </ul>
-</details></li>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Multinomial.html">Modelos de Elección Múltiple</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Modelo de Conteo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CensuraTrunc.html">Censura, Truncamiento, Selección</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CensuraTrunc.html">Censura, Truncamiento, Selección <br/> (Tobit y Heckman)</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Ch5_IV/IV.html">5. Variables Instrumentales</a></li>
@@ -208,26 +202,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../Ch6_GMM/GMM.html">6. Método de Momentos</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/Panel.html">Teoría Panel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_r.html">Práctica R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_stata.html">Práctica Stata</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Diff-in-Diff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../zbibliography.html">Bibliografía</a></li>
@@ -246,7 +236,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -255,14 +245,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -289,28 +279,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -332,6 +320,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-de-probabilidad">Función de Probabilidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-de-verosimilitud">Función de Verosimilitud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobre-inferencia">Sobre Inferencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobredispersion">Sobredispersión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software">Software</a></li>
 </ul>
             </nav>
         </div>
@@ -341,23 +334,105 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelo-de-conteo">
 <h1>Modelo de Conteo<a class="headerlink" href="#modelo-de-conteo" title="Link to this heading">#</a></h1>
+<p><strong>Poisson Regression: Modelo para variables de conteo.</strong></p>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">#</a></h2>
-<p>Regresión Poisson</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-</br>
-<center><figure>
-    <img alt="../../_images/under_construction.jpg" src="../../_images/under_construction.jpg" width="30%" height="30%"style="margin: 15px 0 0 0">
-    <figcaption>(Digitalización de apuntes en progreso) </figcaption>
-</figure></center>
-</br>
-<hr>
+<ul class="simple">
+<li><p><strong>Regresión de Poisson</strong></p>
+<ul>
+<li><p>Modelo de regresión para <strong>datos de conteo</strong>, donde la variable dependiente representa el <strong>número de eventos en un tiempo</strong> o espacio específico.</p></li>
+<li><p>Los datos de conteo son no negativos y discretos (0, 1, 2,…).</p></li>
+</ul>
+</li>
+<li><p>Ejemplos:</p>
+<ul>
+<li><p>Número de cervezas que se venden en un bar entre las 23:00 y las 00:00 horas.</p></li>
+<li><p>Número de accidentes de tráfico en una intersección por día.</p></li>
+<li><p>Número de llamadas telefónicas recibidas por un centro de atención al cliente por minuto.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="funcion-de-probabilidad">
+<h2>Función de Probabilidad<a class="headerlink" href="#funcion-de-probabilidad" title="Link to this heading">#</a></h2>
+<p>El modelo de probabilidad esta dado por:</p>
+<ul>
+<li><p><strong>Función de Probabilidad:</strong>
+$<span class="math notranslate nohighlight">\(P(Y = y) = \frac{e^{-\lambda} \lambda^y}{y!}, \quad y = 0, 1, 2, ...\)</span>$</p>
+<p><span class="math notranslate nohighlight">\(Y\)</span> es variable discreta que representa el número de eventos; <span class="math notranslate nohighlight">\(\lambda\)</span> es la <strong>media</strong>.</p>
+</li>
+</ul>
+<p>Para hacerlo un modelo de regresión:</p>
+<ul class="simple">
+<li><p><strong>Relación entre Media y Variables Independientes:</strong>
+$<span class="math notranslate nohighlight">\(\lambda = E(Y|X) = e^{X'\beta}\)</span><span class="math notranslate nohighlight">\(
+donde \)</span>X = (X_1, X_2, …, X_k)”$ es un vector de variables explicativas.</p></li>
+<li><p><strong>Supuesto Clave:</strong> <span class="math notranslate nohighlight">\(Y\)</span> sigue una distribución de Poisson con media <span class="math notranslate nohighlight">\(\lambda\)</span>, donde <span class="math notranslate nohighlight">\(\lambda\)</span> es función de <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+<p>Donde</p>
+<ul class="simple">
+<li><p><strong>Coeficientes (<span class="math notranslate nohighlight">\(\beta_j\)</span>):</strong></p>
+<ul>
+<li><p>Representan el cambio en el logaritmo de la media de <span class="math notranslate nohighlight">\(Y\)</span> por un cambio de una unidad en <span class="math notranslate nohighlight">\(X_j\)</span>, manteniendo constantes las demás variables.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\exp(\beta_j)\)</span> representa el cambio multiplicativo en la media de <span class="math notranslate nohighlight">\(Y\)</span> con un cambio unitario en <span class="math notranslate nohighlight">\(X_j\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Ejemplo:</strong> Si <span class="math notranslate nohighlight">\(\exp(\beta_1) = 1,2\)</span>, un aumento de una unidad en <span class="math notranslate nohighlight">\(X_1\)</span> se asocia con un aumento del 20% en la media de <span class="math notranslate nohighlight">\(Y\)</span>.</p></li>
+</ul>
+</section>
+<section id="funcion-de-verosimilitud">
+<h2>Función de Verosimilitud<a class="headerlink" href="#funcion-de-verosimilitud" title="Link to this heading">#</a></h2>
+<p>Considerando la función de probabilidad, la verosimilitud es:</p>
+<div class="math notranslate nohighlight">
+\[L(\beta) = \prod_{i=1}^{n} \frac{e^{-\lambda_i} \lambda_i^{y_i}}{y_i!}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\lambda_i = e^{X_i'\beta}\)</span>.</p>
+<p>y la <strong>Log-Verosimilitud</strong> es:</p>
+<div class="math notranslate nohighlight">
+\[\ell(\beta) = \sum_{i=1}^{n} (y_i X_i'\beta - e^{X_i'\beta} - \ln(y_i!))\]</div>
+</section>
+<section id="sobre-inferencia">
+<h2>Sobre Inferencia<a class="headerlink" href="#sobre-inferencia" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Los <strong>Errores Estándar</strong> se calculan a partir de la matriz de información de Fisher.</p></li>
+<li><p>Y las <strong>Pruebas de Hipótesis</strong> se pueden realizar mediante pruebas t para la significancia individual de los coeficientes y pruebas de Wald para restricciones conjuntas.</p></li>
+<li><p>Respecto a los <strong>Intervalos de Confianza,</strong> se pueden construir intervalos de confianza para los coeficientes de forma usual.</p></li>
+</ul>
+</section>
+<section id="sobredispersion">
+<h2>Sobredispersión<a class="headerlink" href="#sobredispersion" title="Link to this heading">#</a></h2>
+<p>La sobredispersión ocurre cuando la varianza de <span class="math notranslate nohighlight">\(Y\)</span> es mayor que su media, violando el supuesto de Poisson.</p>
+<ul class="simple">
+<li><p><strong>Causas:</strong></p>
+<ul>
+<li><p>Heterogeneidad no observada.</p></li>
+<li><p>Omisión de variables relevantes.</p></li>
+<li><p>Eventos correlacionados.</p></li>
+</ul>
+</li>
+<li><p><strong>Consecuencias:</strong></p>
+<ul>
+<li><p>Sesgo en estimaciones de errores estándar.</p></li>
+<li><p>Pruebas de hipótesis incorrectas.</p></li>
+</ul>
+</li>
+<li><p><strong>Soluciones:</strong></p>
+<ul>
+<li><p><strong>Regresión Binomial Negativa:</strong> Modelo alternativo para permitir sobredispersión.</p></li>
+<li><p><strong>Estimación Robusta:</strong> Ajuste de errores estándar para sobredispersión.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="software">
+<h2>Software<a class="headerlink" href="#software" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Stata: <code class="docutils literal notranslate"><span class="pre">rpoisson</span></code></p></li>
+<li><p>R: <code class="docutils literal notranslate"><span class="pre">glm</span></code></p></li>
+</ul>
 </section>
 </section>
 
@@ -388,8 +463,8 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Multinomial.html"
@@ -405,7 +480,7 @@ document.write(`
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Censura, Truncamiento, Selección</p>
+        <p class="prev-next-title">Censura, Truncamiento, Selección <br> (Tobit y Heckman)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -418,7 +493,6 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contenido
@@ -426,6 +500,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-de-probabilidad">Función de Probabilidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-de-verosimilitud">Función de Verosimilitud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobre-inferencia">Sobre Inferencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobredispersion">Sobredispersión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software">Software</a></li>
 </ul>
   </nav></div>
 
@@ -447,7 +526,6 @@ Por Luis Chancí
   
   <div class="footer-item">
     
-
   </div>
   
   <div class="footer-item">
@@ -467,8 +545,8 @@ Por Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

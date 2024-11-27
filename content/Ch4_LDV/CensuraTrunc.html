@@ -2,62 +2,64 @@
 <!DOCTYPE html>
 
 
-<html lang="es" data-content_root="../../" >
+<html lang="es" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Censura, Truncamiento, Selección &#8212; Apuntes de Econometría</title>
+    <title>Censura, Truncamiento, Selección (Tobit y Heckman) &#8212; Apuntes de Econometría</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="../../_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="../../_static/documentation_options.js?v=c2101671"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../../_static/translations.js?v=d190bf04"></script>
+    <script src="../../_static/translations.js?v=efdbd0b9"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/CensuraTrunc';</script>
     <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/CensuraTrunc.html" />
     <link rel="icon" href="../../_static/icon.png"/>
@@ -74,23 +76,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -112,20 +119,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,13 +139,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
-  
   
   
   
@@ -156,16 +151,15 @@
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Apuntes de Econometría - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Apuntes de Econometría - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
-
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Búsqueda</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -181,25 +175,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">2. Mínimos Cuadrados - Repaso</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/MLE.html">Teoría MLE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_r.html">Práctica R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_stata.html">Práctica Stata</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_stata.html">Práctica Stata</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_r.html">Práctica R</a></li>
 </ul>
-</details></li>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Multinomial.html">Modelos de Elección Múltiple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Conteo.html">Modelo de Conteo</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Censura, Truncamiento, Selección</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Censura, Truncamiento, Selección <br/> (Tobit y Heckman)</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Ch5_IV/IV.html">5. Variables Instrumentales</a></li>
@@ -208,26 +202,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../Ch6_GMM/GMM.html">6. Método de Momentos</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/Estacionarias.html">Series Estacionarias</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch7_TS/VAR.html">VAR</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/Panel.html">Teoría Panel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_r.html">Práctica R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_stata.html">Práctica Stata</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Diff-in-Diff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
 </ul>
-</details></li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../zbibliography.html">Bibliografía</a></li>
@@ -246,7 +236,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -255,14 +245,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -289,28 +279,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -321,7 +309,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Censura, Truncamiento, Selección</h1>
+    <h1>Censura, Truncamiento, Selección <br> (Tobit y Heckman)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -332,6 +320,34 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#censura">Censura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#censura-normalidad-y-modelo-tobit">Censura: Normalidad y Modelo Tobit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentos-de-la-distribucion-normal-censurada">Momentos de la Distribución Normal Censurada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-tobit">Modelo Tobit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento">Truncamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento-y-normalidad">Truncamiento y Normalidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-regresion-truncada">Modelo de Regresión Truncada</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#censura-truncamiento-y-modelos-de-regresion">Censura, Truncamiento y Modelos de Regresión</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medias-condicionales">Medias Condicionales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulas-bajo-supuestos-de-normalidad">Fórmulas bajo supuestos de normalidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Censura</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento-por-debajo-l-0"><strong>Truncamiento</strong> por debajo (<span class="math notranslate nohighlight">\(L=0\)</span>):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador-de-heckman-en-dos-pasos">Estimador de Heckman (en dos pasos)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento-incidental-o-sesgo-de-seleccion">Truncamiento Incidental o Sesgo de Selección</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Introducción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-muestra-de-seleccion-modelo-con-dos-ecuaciones">Modelo de Muestra de Selección. Modelo con Dos Ecuaciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-lineal">Modelo Lineal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construccion-de-la-verosimilitud"><strong>Construcción de la Verosimilitud</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supuesto-de-normalidad"><strong>Supuesto de Normalidad</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-heckman-en-dos-pasos-heckit">Método de Heckman en Dos Pasos (Heckit)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -341,25 +357,606 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="censura-truncamiento-seleccion">
-<h1>Censura, Truncamiento, Selección<a class="headerlink" href="#censura-truncamiento-seleccion" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="censura-truncamiento-seleccion-tobit-y-heckman">
+<h1>Censura, Truncamiento, Selección <br> (Tobit y Heckman)<a class="headerlink" href="#censura-truncamiento-seleccion-tobit-y-heckman" title="Link to this heading">#</a></h1>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">#</a></h2>
-<p><strong>Truncamiento:</strong> Observaciones sistemáticamente excluidas.</p>
-<p><strong>Censura:</strong> Observaciones son todas incluidas, pero la variable dependiente presenta un umbral. Por ejemplo, si es negativa, se reemplaza por valores cero. Un caso relacionado en términos de la representación probabilistica, es la solución de esquina.</p>
-<p><strong>Truncamiento incidental y sesgo de selección.</strong></p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-</br>
-<center><figure>
-    <img alt="../../_images/under_construction.jpg" src="../../_images/under_construction.jpg" width="30%" height="30%"style="margin: 15px 0 0 0">
-    <figcaption>(Digitalización de apuntes en progreso) </figcaption>
-</figure></center>
-</br>
+<ul class="simple">
+<li><p>En estos modelos, la variable de interés  <code class="docutils literal notranslate"><span class="pre">Y</span></code>  es continua (nuevamente).</p></li>
+<li><p>Sin embargo, por alguna razón, la variable  <code class="docutils literal notranslate"><span class="pre">Y</span></code>  está incompleta observada en forma incompleta o limitada:</p>
+<ul>
+<li><p>Truncada o censurada.</p></li>
+</ul>
+</li>
+<li><p>Por ende, OLS no es válido ya que la muestra no es representativa de la población.</p></li>
+</ul>
+<p>En <strong>Truncamiento:</strong></p>
+<ul class="simple">
+<li><p>Las observaciones <strong><u>sistemáticamente excluidas</u></strong> (var. dep. <span class="math notranslate nohighlight">\(y\)</span> explicativas eliminadas o perdidas). Es decir, no hay datos completos.</p></li>
+<li><p>Ejemplo:  Encuesta de hogares donde no se incluye a hogares con ingresos muy altos. Por alguna razón, la muestra de ingreso de hogares no incluye los hogares que ganan 10 millones de pesos al mes.</p></li>
+</ul>
+<p>En <strong>Censura:</strong></p>
+<ul class="simple">
+<li><p>Todas las observaciones son incluidas. Sin embargo, la variable dependiente <span class="math notranslate nohighlight">\(y\)</span> <strong>se observa dentro de un rango</strong>; por encima o por debajo de cierto <strong><u>umbral</u></strong> son tratados como si estuvieran en el umbral.</p></li>
+<li><p>Ejemplo:  Encuesta de hogares donde se reemplaza ingreso con «ingreso es mayor a 10» por un valor. Usando el ejemplo hipotético de la encuesta de hogares, diciendo que en los datos de «ganar mil millones», un millón es lo máximo, donde «ganar un millón» está registrado como ese umbral.</p></li>
+</ul>
+<p>En <strong>Truncamiento incidental a sesgo de selección:</strong></p>
+<ul class="simple">
+<li><p>Hay un truncamiento donde la posibilidad de obtener la muestra en particular se relaciona de forma con la variable de interés. <strong>Ejemplo:</strong> Encuesta de innovación de Chile que solo incluye a las empresas que innovan.</p></li>
+<li><p>Hay un sesgo de selección. Por ejemplo, en un estudio de salarios femeninos que se base solo en usar datos de mujeres que trabajan las estimaciones enfrentan un sesgo ya que la decisión de trabajar no es aleatoria y depende del nivel de la variable de interés.</p></li>
+<li><p><strong>Heckman (1979):</strong> El ejemplo más famoso es el de Heckman, donde el valor es implícito en la oferta de empleo. En principio, se necesita incluir trabajadores que no trabajan en la muestra.</p></li>
+</ul>
+</section>
+<section id="censura">
+<h2>Censura<a class="headerlink" href="#censura" title="Link to this heading">#</a></h2>
+<p>Nuestro gran objetivo es plantear la función de verosimilitud, así que partamos por entender el contexto del modelo.</p>
+<p><strong>Mecanismo:</strong></p>
+<p><strong>Sea  <span class="math notranslate nohighlight">\(y\)</span>  el valor observado, la parte incompleta de  <span class="math notranslate nohighlight">\(y^*\)</span>.</strong></p>
+<p>En censura observamos toda la información de  <span class="math notranslate nohighlight">\(X_i\)</span>, pero la censura en  <span class="math notranslate nohighlight">\(y^*\)</span>  puede ser:</p>
+<ul>
+<li><p><strong>Censura por debajo:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y = \begin{cases}
+        y^* &amp; \text{ si } y^* &gt; L \\
+        L &amp; \text{ si } y^* \leq L
+    \end{cases}
+  \end{split}\]</div>
+<ul class="simple">
+<li><p>Es decir, si  la variable latente es menor a un umbral ( <span class="math notranslate nohighlight">\(y^* \leq L\)</span> ), entonces  la variable <span class="math notranslate nohighlight">\(y\)</span>  toma el valor del umbral <span class="math notranslate nohighlight">\(L\)</span>. Y si  <span class="math notranslate nohighlight">\(y^* &gt; L\)</span>, entonces  <span class="math notranslate nohighlight">\(y = y^*\)</span>.</p></li>
+<li><p>Por ejemplo,  <span class="math notranslate nohighlight">\(L = 0\)</span>  en una encuesta de gasto en bienes durables. Otro ejemplo, es lo que intentaba Tobit: <strong>modelar una solución de esquina.</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Censura por encima:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y = \begin{cases}
+        y^* &amp; \text{ si } y^* \leq U \\
+        U &amp; \text{ si } y^* &gt; L
+    \end{cases}
+  \end{split}\]</div>
+<ul class="simple">
+<li><p>Por ejemplo, en una encuesta de hogares con ingreso mayor a  <span class="math notranslate nohighlight">\(U = 10^6\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Observaciones:</strong></p>
+<ul class="simple">
+<li><p>Supongamos que en los datos solo vemos la variable dependiente hasta un umbral. Por ejemplo, ingresos hasta un millón: todos los ingresos reportan  <span class="math notranslate nohighlight">\(&lt; U\)</span>  y los ingresos mayores se consideran censurados.</p></li>
+<li><p>Censura superior o inferior. Ejemplo: censura por debajo en los ingresos cuando  <span class="math notranslate nohighlight">\(L = 0\)</span>. En este caso: para deuda negativa sustituimos 0.</p></li>
+</ul>
+<p><strong>Función de densidad con censura:</strong>  Para  <span class="math notranslate nohighlight">\(y^*\)</span>, la función de densidad  <span class="math notranslate nohighlight">\(f^*(y^*|x, \theta)\)</span>  se define de la forma usual, donde  <span class="math notranslate nohighlight">\(\theta\)</span>  representa los parámetros del modelo.  Sin embargo, para la variable observada  <span class="math notranslate nohighlight">\(y\)</span>, la densidad se ajusta para considerar la censura.</p>
+<p><strong>Censura por debajo en  <span class="math notranslate nohighlight">\(L\)</span></strong></p>
+<ul>
+<li><p>Para los valores de  <span class="math notranslate nohighlight">\(y &gt; L\)</span>, la densidad de  <span class="math notranslate nohighlight">\(y\)</span>  es la misma que la densidad de  <span class="math notranslate nohighlight">\(y^*\)</span>:
+$<span class="math notranslate nohighlight">\( f(y|x) = f^*(y|x,\theta) \text{ si } y &gt; L\)</span>$</p></li>
+<li><p>Para  <span class="math notranslate nohighlight">\(y \leq L\)</span>, la densidad de  <span class="math notranslate nohighlight">\(y\)</span>  se concentra en el punto  <span class="math notranslate nohighlight">\(L\)</span>:
+$<span class="math notranslate nohighlight">\( f(y|x) = P(y^* \leq L | x, \theta) = F^*(L | x, \theta) \text{ si } y = L\)</span>$</p>
+<p>donde  <span class="math notranslate nohighlight">\(F^*(L | x, \theta)\)</span>  es la función de distribución acumulada de  <span class="math notranslate nohighlight">\(y^*\)</span>  evaluada en  <span class="math notranslate nohighlight">\(L\)</span>.</p>
+</li>
+</ul>
+<p><strong>Función de Verosimilitud:</strong></p>
+<p>Para una observación  <span class="math notranslate nohighlight">\(i\)</span>, la contribución a la función de verosimilitud se define como:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    L_i(\theta) = \begin{cases}
+    f^*(y_i | x_i, \theta) &amp; \text{si } y_i &gt; L \\
+    F^*(L | x_i, \theta) &amp; \text{si } y_i = L
+    \end{cases}
+  \end{split}\]</div>
+<p>Podemos escribir esto de forma compacta usando una variable indicadora  <span class="math notranslate nohighlight">\(d_i = \mathbb{I}(y_i &gt; L)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    L_i(\theta) = [f^*(y_i | x_i, \theta)]^{d_i} \cdot [F^*(L | x_i, \theta)]^{1-d_i}
+  \]</div>
+<p><strong>Log-verosimilitud:</strong></p>
+<p>La log-verosimilitud para la muestra completa se obtiene sumando las contribuciones individuales:</p>
+<div class="math notranslate nohighlight">
+\[
+    \ell(\theta) = \sum_{i=1}^{n} \left[ d_i \cdot \ln f^*(y_i | x_i, \theta) + (1-d_i) \cdot \ln F^*(L | x_i, \theta) \right]
+  \]</div>
+</section>
+<section id="censura-normalidad-y-modelo-tobit">
+<h2>Censura: Normalidad y Modelo Tobit<a class="headerlink" href="#censura-normalidad-y-modelo-tobit" title="Link to this heading">#</a></h2>
+<p><strong>Incorporación del supuesto de Normalidad</strong></p>
+<ul class="simple">
+<li><p>En muchos casos, se asume que la variable latente  <span class="math notranslate nohighlight">\(y^*\)</span>  sigue una distribución normal.</p></li>
+<li><p>Es importante repasar primero las propiedades estadísticas de la distribución normal censurada para comprender cómo afecta al modelo.</p></li>
+<li><p>Bajo el supuesto de normalidad, podemos derivar expresiones explícitas para la función de verosimilitud, lo que facilita la estimación e inferencia.</p></li>
+</ul>
+<section id="momentos-de-la-distribucion-normal-censurada">
+<h3>Momentos de la Distribución Normal Censurada<a class="headerlink" href="#momentos-de-la-distribucion-normal-censurada" title="Link to this heading">#</a></h3>
+<p>Consideremos una variable aleatoria  <span class="math notranslate nohighlight">\(z^*\)</span>  que sigue una distribución normal con media  <span class="math notranslate nohighlight">\(\mu\)</span>  y varianza  <span class="math notranslate nohighlight">\(\sigma^2\)</span>.</p>
+<p>Supongamos que  <span class="math notranslate nohighlight">\(z^*\)</span>  está censurada por debajo en un umbral  <span class="math notranslate nohighlight">\(L\)</span>.  Esto significa que solo observamos  <span class="math notranslate nohighlight">\(z = z^*\)</span>  si  <span class="math notranslate nohighlight">\(z^* &gt; L\)</span>, y observamos  <span class="math notranslate nohighlight">\(z = L\)</span>  si  <span class="math notranslate nohighlight">\(z^* \leq L\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}z^* \sim \mathcal{N}(\mu, \sigma^2) \hspace{0.5cm};\hspace{0.5cm} 
+  z = \begin{cases}
+   z^*, &amp; \text{si } z^* &gt; L \\
+   L, &amp; \text{si } z^* \leq L
+   \end{cases}\end{split}\]</div>
+<p><strong>Momentos:</strong></p>
+<ul class="simple">
+<li><p><strong>Media:</strong>  La media de la variable censurada  <span class="math notranslate nohighlight">\(z\)</span>  está dada por:
+$<span class="math notranslate nohighlight">\( E(z) = \mu + \sigma \cdot \frac{\phi(\lambda)}{1-\Phi(\lambda)}, \)</span><span class="math notranslate nohighlight">\(
+donde  \)</span>\lambda = (L - \mu)/\sigma$.</p></li>
+<li><p><strong>Varianza:</strong> La varianza de la variable censurada  <span class="math notranslate nohighlight">\(z\)</span>  es:
+$<span class="math notranslate nohighlight">\( \text{Var}(z) = \sigma^2 \left[ 1 - \frac{\phi(\lambda) \cdot (\phi(\lambda) - \lambda)}{[1-\Phi(\lambda)]^2} \right], \)</span><span class="math notranslate nohighlight">\(
+donde \)</span>\phi(\cdot)<span class="math notranslate nohighlight">\( es la función de densidad normal estándar y \)</span>\Phi(\cdot)$ es la acumulada normal estándar.</p></li>
+</ul>
+</section>
+<section id="modelo-tobit">
+<h3>Modelo Tobit<a class="headerlink" href="#modelo-tobit" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>El modelo Tobit es un modelo de <strong>regresión censurada</strong> donde la variable dependiente está censurada, típicamente en <strong>cero</strong>.</p></li>
+<li><p>Originalmente fue propuesto para soluciones de esquina (ej. adquirir un seguro agrícola).</p></li>
+<li><p>Es una extensión del modelo de regresión lineal que permite manejar la censura en la variable dependiente.</p></li>
+<li><p>Se asume que existe una variable latente  <span class="math notranslate nohighlight">\(y_i^*\)</span>  que sigue un modelo lineal con errores normales:</p>
+<div class="math notranslate nohighlight">
+\[ y_i^* = X_i'\beta + \varepsilon_i, \quad \varepsilon_i \sim \mathcal{N}(0, \sigma^2). \]</div>
+</li>
+<li><p>La variable observada  <span class="math notranslate nohighlight">\(y_i\)</span>  es una versión censurada de  <span class="math notranslate nohighlight">\(y_i^*\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} y_i =
+  \begin{cases}
+  y_i^*, &amp; \text{si } y_i^* &gt; 0, \\
+  0, &amp; \text{si } y_i^* \leq 0.
+  \end{cases}\end{split}\]</div>
+</li>
+</ul>
+<p><strong>Probabilidad de Censura.</strong></p>
+<p>La probabilidad de que la variable latente sea menor o igual a cero (y por lo tanto censurada) es:</p>
+<div class="math notranslate nohighlight">
+\[ F^*(0) = P(y^* \leq 0) = P(\varepsilon \leq -X'\beta) = \Phi(-X'\beta/\sigma). \]</div>
+<p><strong>Función de log-verosimilitud.</strong></p>
+<p>Para estimar los parámetros del modelo Tobit (<span class="math notranslate nohighlight">\(\beta\)</span> y <span class="math notranslate nohighlight">\(\sigma\)</span>), se utiliza el método de máxima verosimilitud. La función de log-verosimilitud se construye considerando la densidad de la variable observada  <span class="math notranslate nohighlight">\(y_i\)</span>, que se ajusta para tener en cuenta la censura:</p>
+<div class="math notranslate nohighlight">
+\[\ell(\beta, \sigma) = \sum_{i=1}^n \left[
+  d_i \left(-\ln(\sqrt{2\pi} \sigma) - \frac{(y_i - X_i'\beta)^2}{2\sigma^2}\right) +
+  (1-d_i) \ln[1 - \Phi(X_i'\beta/\sigma)]
+  \right]\]</div>
+<p>donde <span class="math notranslate nohighlight">\(d_i = 1\)</span> si <span class="math notranslate nohighlight">\(y_i &gt; 0\)</span>, y <span class="math notranslate nohighlight">\(d_i = 0\)</span> si <span class="math notranslate nohighlight">\(y_i \leq 0\)</span>. Es decir, el primer término dentro de la suma corresponde a las observaciones no censuradas, y el segundo término a las observaciones censuradas.</p>
+<p><strong>Condiciones de Primer Orden (CPO) del Modelo Tobit</strong></p>
+<p>Derivadas de la función de log-verosimilitud respecto a los parámetros:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial \ell}{\partial \beta} = \sum_i \left[
+    d_i \cdot \frac{(y_i - X_i'\beta)}{\sigma^2} + (1 - d_i) \cdot \frac{\phi(X_i'\beta/\sigma)}{1 - \Phi(X_i'\beta/\sigma)} \cdot \frac{X_i}{\sigma}
+    \right] = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial \ell}{\partial \sigma} = \sum_i \left[
+    d_i \left(-\frac{1}{\sigma} + \frac{(y_i - X_i'\beta)^2}{\sigma^3}\right) +
+    (1 - d_i) \cdot \frac{\phi(X_i'\beta/\sigma)}{1 - \Phi(X_i'\beta/\sigma)} \cdot \frac{X_i'\beta}{\sigma^2}
+    \right] = 0 \]</div>
+<p>Estas ecuaciones no tienen una solución analítica cerrada y se utilizan métodos numéricos, como el algoritmo de Newton-Raphson, para encontrar las estimaciones de máxima verosimilitud de  <span class="math notranslate nohighlight">\(\beta\)</span>  y  <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+</section>
+</section>
+<section id="truncamiento">
+<h2>Truncamiento<a class="headerlink" href="#truncamiento" title="Link to this heading">#</a></h2>
+<p>El truncamiento es un tipo de censura donde las observaciones fuera de un rango determinado se <strong>excluyen completamente</strong> de la muestra.  Esto implica una <strong>pérdida de información</strong> tanto de la variable dependiente como de las variables independientes.</p>
+<p><strong>Tipos de Truncamiento:</strong></p>
+<ul>
+<li><p><strong>Truncamiento por debajo (<span class="math notranslate nohighlight">\(L\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y = \begin{cases}
+        y^* &amp; \text{ si } y^* &gt; L \\
+        - &amp; \text{ si } y^* \leq L
+    \end{cases}
+  \end{split}\]</div>
+<ul class="simple">
+<li><p>Ejemplo: Solo se incluyen observaciones con  <span class="math notranslate nohighlight">\(y^* &gt; L\)</span>  (e.g., hogares con ingresos mayores a 10 millones).</p></li>
+</ul>
+</li>
+<li><p><strong>Truncamiento por encima ( <span class="math notranslate nohighlight">\(U\)</span> ):</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y = \begin{cases}
+        y^* &amp; \text{ si } y^* \leq U \\
+        - &amp; \text{ si } y^* &gt; U
+    \end{cases}
+  \end{split}\]</div>
+<ul class="simple">
+<li><p>Ejemplo: Solo se incluyen hogares con ingresos menores a <span class="math notranslate nohighlight">\(10\)</span> millones.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Función de Densidad Condicional:</strong>  Para modelar datos truncados, necesitamos ajustar la función de densidad para tener en cuenta la exclusión de observaciones fuera del rango permitido.  La función de densidad condicional de  <span class="math notranslate nohighlight">\(y\)</span>  dado que  <span class="math notranslate nohighlight">\(y^* &gt; L\)</span>  (truncamiento por debajo) es:</p>
+<div class="math notranslate nohighlight">
+\[ f(y) = \frac{f^*(y)}{P(y^* &gt; L)}, \]</div>
+<ul class="simple">
+<li><p>donde  <span class="math notranslate nohighlight">\(f^*(y)\)</span> es la función de densidad no censurada (o no truncada) de  <span class="math notranslate nohighlight">\(y^*\)</span>. <span class="math notranslate nohighlight">\(P(y^* &gt; L)\)</span> es la probabilidad de que  <span class="math notranslate nohighlight">\(y^*\)</span>  sea mayor que  <span class="math notranslate nohighlight">\(L\)</span>  (es decir, la probabilidad de que la observación no esté truncada).</p></li>
+<li><p><strong>Probabilidad de Truncamiento</strong>  La probabilidad de truncamiento se puede expresar en términos de la función de distribución acumulada (FDA) de  <span class="math notranslate nohighlight">\(y^*\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ P(y^* &gt; L) = 1 - F^*(L), \]</div>
+<ul class="simple">
+<li><p>donde  <span class="math notranslate nohighlight">\(F^*(L)\)</span>  es la F.D.Acumulada de  <span class="math notranslate nohighlight">\(y^*\)</span>  evaluada en  <span class="math notranslate nohighlight">\(L\)</span>.</p></li>
+</ul>
+<p><strong>Verosimilitud</strong></p>
+<p>La función de verosimilitud para datos truncados se construye considerando la densidad condicional de las observaciones que no están truncadas. En el caso de truncamiento, la log-verosimilitud incluye solo las observaciones dentro del rango permitido:</p>
+<div class="math notranslate nohighlight">
+\[ \ell(\theta) = \sum_{i: y_i &gt; L} \ln\left(\frac{f^*(y_i | x_i, \theta)}{1 - F^*(L | x_i, \theta)}\right). \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\theta\)</span>  representa los parámetros del modelo.</p>
+<p><strong>Log-Verosimilitud</strong></p>
+<p>Para datos truncados por debajo en  <span class="math notranslate nohighlight">\(L\)</span>, la función de log-verosimilitud se puede escribir como:</p>
+<div class="math notranslate nohighlight">
+\[ \ell(\theta) = \sum_{i=1}^{n} \left\{ \ln f^*(y_i | x_i; \theta) - \ln \left[1 - F^*(L | x_i; \theta)\right] \right\}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(f^*(y_i | x_i; \theta)\)</span> es la densidad condicional de  <span class="math notranslate nohighlight">\(y_i^*\)</span>  dado  <span class="math notranslate nohighlight">\(x_i\)</span>  con parámetros  <span class="math notranslate nohighlight">\(\theta\)</span>. <span class="math notranslate nohighlight">\(F^*(L | x_i; \theta)\)</span> es la función de distribución acumulada (FDA) de  <span class="math notranslate nohighlight">\(y_i^*\)</span>  evaluada en el umbral  <span class="math notranslate nohighlight">\(L\)</span>, condicional en  <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
+<p><strong>Notar que</strong>  la log-verosimilitud se compone de dos términos:</p>
+<ul class="simple">
+<li><p>El primer término,  <span class="math notranslate nohighlight">\(\ln f^*(y_i | x_i; \theta)\)</span>, es la log-verosimilitud de la variable no truncada  <span class="math notranslate nohighlight">\(y_i^*\)</span>.</p></li>
+<li><p>El segundo término,  <span class="math notranslate nohighlight">\(-\ln \left[1 - F^*(L | x_i; \theta)\right]\)</span>, ajusta la verosimilitud para tener en cuenta el truncamiento.  Representa la probabilidad de observar  <span class="math notranslate nohighlight">\(y_i^*\)</span>  por encima del umbral  <span class="math notranslate nohighlight">\(L\)</span>.</p></li>
+<li><p><strong>Importancia del Ajuste:</strong> Ignorar el truncamiento en los datos implicaría <strong>no incluir el segundo término</strong> en la log-verosimilitud.  Esto resultaría en estimaciones sesgadas e inferencias incorrectas, ya que la muestra truncada no es representativa de la población completa.</p></li>
+</ul>
+</section>
+<section id="truncamiento-y-normalidad">
+<h2>Truncamiento y Normalidad<a class="headerlink" href="#truncamiento-y-normalidad" title="Link to this heading">#</a></h2>
+<p>A menudo se asume que la variable  <span class="math notranslate nohighlight">\(y_i^*\)</span>  sigue una distribución normal.  En este caso, es importante comprender cómo el truncamiento afecta los momentos (media y varianza) de la distribución.</p>
+<p>Supongamos que  <span class="math notranslate nohighlight">\(z\)</span>  sigue una distribución normal  <span class="math notranslate nohighlight">\(N(\mu, \sigma^2)\)</span>  y que está truncada por debajo en  <span class="math notranslate nohighlight">\(L\)</span>.  La función de densidad de la distribución normal truncada es:</p>
+<div class="math notranslate nohighlight">
+\[ f(z | z \geq L) = \frac{f(z)}{1 - \Phi(\alpha)}, \]</div>
+<p>donde <span class="math notranslate nohighlight">\(\alpha = \frac{L - \mu}{\sigma}\)</span> (valor estandarizado del umbral de truncamiento) y <span class="math notranslate nohighlight">\(f(z)\)</span> es la densidad normal. <span class="math notranslate nohighlight">\(\Phi(\alpha)\)</span> es la función de distribución acumulada normal estándar.</p>
+<p><strong>Distribución Normal Truncada Gráficamente:</strong> La densidad normal truncada tiene forma similar a la densidad normal estándar pero restringida al intervalo <span class="math notranslate nohighlight">\([L, \infty)\)</span>.</p>
+<p><strong>Normalidad (normal truncada) - Momentos</strong></p>
+<ul>
+<li><p><strong>Media:</strong>  La media de la distribución normal truncada por debajo en  <span class="math notranslate nohighlight">\(L\)</span>  es:</p>
+<div class="math notranslate nohighlight">
+\[ E(z | z \geq L) = \mu + \sigma \lambda, \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\lambda = \frac{\phi(\alpha)}{1 - \Phi(\alpha)}\)</span>  es la <strong>relación de Mills inversa</strong>.</p>
+</li>
+<li><p><strong>Varianza:</strong>  La varianza de la distribución normal truncada por debajo en  <span class="math notranslate nohighlight">\(L\)</span>  es:</p>
+<div class="math notranslate nohighlight">
+\[ V(z | z \geq L) = \sigma^2 (1 - \delta), \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\delta = \lambda (\lambda - \alpha)\)</span>  es un factor de ajuste.</p>
+</li>
+<li><p><strong>Interpretación:</strong></p>
+<ul class="simple">
+<li><p>La relación de Mills inversa  (<span class="math notranslate nohighlight">\(\lambda\)</span>)  mide el cambio en la media debido al truncamiento.</p></li>
+<li><p>El factor de ajuste  (<span class="math notranslate nohighlight">\(\delta\)</span>)  mide el cambio en la varianza debido al truncamiento.</p></li>
+</ul>
+</li>
+</ul>
+<section id="modelo-de-regresion-truncada">
+<h3>Modelo de Regresión Truncada<a class="headerlink" href="#modelo-de-regresion-truncada" title="Link to this heading">#</a></h3>
+<p>El modelo de regresión truncada se utiliza cuando la variable dependiente  <span class="math notranslate nohighlight">\(y^*\)</span>  está <strong>truncada</strong>, es decir, solo observamos valores de  <span class="math notranslate nohighlight">\(y^*\)</span>  que caen dentro de un rango determinado.</p>
+<p><strong>Estructura del Modelo:</strong>  Se asume que la variable latente  <span class="math notranslate nohighlight">\(y_i^*\)</span>  sigue un modelo lineal:</p>
+<div class="math notranslate nohighlight">
+\[ y_i^* = x_i'\beta + \epsilon_i, \quad \epsilon_i \sim N(0, \sigma^2) \]</div>
+<p><strong>Distribución de  <span class="math notranslate nohighlight">\(y_i^*\)</span>  (condicional al truncamiento):</strong>  La función de densidad de  <span class="math notranslate nohighlight">\(y_i^*\)</span> , condicional a que  <span class="math notranslate nohighlight">\(y_i^* &gt; L\)</span>  (truncamiento por debajo), es:</p>
+<div class="math notranslate nohighlight">
+\[ f^*(y_i | x_i; \theta) = \frac{(1/\sigma) \cdot \phi(\alpha)}{1 - \Phi(\alpha)} \]</div>
+<p>donde <span class="math notranslate nohighlight">\(\alpha = \frac{L - x_i'\beta}{\sigma}\)</span>.</p>
+<p><strong>Probabilidad acumulada hasta el umbral <span class="math notranslate nohighlight">\(L\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[ F^*(L) = \Phi\left(\frac{L - x_i'\beta}{\sigma}\right) \]</div>
+<p><strong>Log-Verosimilitud:</strong> La función de log-verosimilitud para el modelo de regresión truncada es:</p>
+<div class="math notranslate nohighlight">
+\[ \ell(\beta, \sigma^2) = \sum_{i=1}^{n} \left[ -\ln(\sqrt{2\pi}\sigma) - \frac{(y_i - x_i'\beta)^2}{2\sigma^2} - \ln\left(1 - \Phi\left(\frac{L - x_i'\beta}{\sigma}\right)\right) \right] \]</div>
+<p><strong>Observaciones:</strong></p>
+<ul class="simple">
+<li><p><strong>OLS con  <span class="math notranslate nohighlight">\(y\)</span>  y  <span class="math notranslate nohighlight">\(x\)</span>  censurados o truncados:</strong></p>
+<ul>
+<li><p><strong>Inconsistencia:</strong>  Si aplicamos OLS directamente a datos censurados o truncados, las estimaciones de los coeficientes serán inconsistentes.  Esto se debe a que la muestra censurada o truncada no es representativa de la población, lo que introduce un sesgo en las estimaciones.</p></li>
+</ul>
+</li>
+<li><p><strong>Aproximaciones:</strong></p>
+<ul>
+<li><p><strong>Mínimos Cuadrados Ponderados:</strong>  Para corregir el sesgo, se pueden utilizar métodos de mínimos cuadrados ponderados, donde las ponderaciones se ajustan para tener en cuenta la censura o el truncamiento.  Estos métodos son similares al <strong>procedimiento de Heckman</strong> para la corrección del sesgo de selección.</p></li>
+</ul>
+</li>
+<li><p><strong>Supuesto de Normalidad:</strong></p>
+<ul>
+<li><p>En muchos casos, se asume que los errores  <span class="math notranslate nohighlight">\(\epsilon_i\)</span>  siguen una distribución normal.  Este supuesto facilita la derivación de las expresiones para la función de verosimilitud y la estimación de los parámetros.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="censura-truncamiento-y-modelos-de-regresion">
+<h2>Censura, Truncamiento y Modelos de Regresión<a class="headerlink" href="#censura-truncamiento-y-modelos-de-regresion" title="Link to this heading">#</a></h2>
+<section id="medias-condicionales">
+<h3>Medias Condicionales<a class="headerlink" href="#medias-condicionales" title="Link to this heading">#</a></h3>
+<p>Media Condicional <strong><u>para Censura</u></strong> por Debajo (umbral <span class="math notranslate nohighlight">\(L = 0\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ E(y | d = 0) = E(y^* | y^* \leq 0) = E(y^*) \cdot P(y^* \leq 0) + E(y^* | y^* &gt; 0). \]</div>
+<ul class="simple">
+<li><p><strong>Interpretación:</strong> La media condicional de  <span class="math notranslate nohighlight">\(y\)</span>  dado que está censurado  (<span class="math notranslate nohighlight">\(d=0\)</span>)  se puede descomponer en dos términos:</p>
+<ul>
+<li><p>La media de  <span class="math notranslate nohighlight">\(y^*\)</span>  (la variable latente) multiplicada por la probabilidad de que  <span class="math notranslate nohighlight">\(y^*\)</span>  sea menor o igual a cero (la probabilidad de censura).</p></li>
+<li><p>La media condicional de  <span class="math notranslate nohighlight">\(y^*\)</span>  dado que  <span class="math notranslate nohighlight">\(y^*\)</span>  es mayor que cero (la media de las observaciones no censuradas).</p></li>
+</ul>
+</li>
+</ul>
+<p>Media Condicional <strong><u>para truncamiento</u>.</strong> La media condicional de  <span class="math notranslate nohighlight">\(y\)</span>  dado  <span class="math notranslate nohighlight">\(x\)</span>  y que  <span class="math notranslate nohighlight">\(y \geq L\)</span>  (truncamiento por debajo) es</p>
+<div class="math notranslate nohighlight">
+\[ E(y | x, y \geq L) = E(y^* | x, y^* \geq L) = x_i'\beta + \sigma\lambda, \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\lambda = \frac{\phi(\alpha)}{1 - \Phi(\alpha)}\)</span>  es la relación de Mills inversa.</p>
+</section>
+<section id="formulas-bajo-supuestos-de-normalidad">
+<h3>Fórmulas bajo supuestos de normalidad<a class="headerlink" href="#formulas-bajo-supuestos-de-normalidad" title="Link to this heading">#</a></h3>
+<p><strong>Motivación:</strong>  Cuando asumimos que los errores en el modelo de regresión censurada o truncada siguen una distribución normal, podemos derivar expresiones explícitas para las medias condicionales.  Estas expresiones son útiles para comprender el impacto de la censura o el truncamiento en las estimaciones y para desarrollar métodos de corrección.</p>
+</section>
+<section id="id1">
+<h3><strong>Censura</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Para el modelo de censura por debajo con umbral  <span class="math notranslate nohighlight">\(L = 0\)</span>, la media condicional de  <span class="math notranslate nohighlight">\(\epsilon_i\)</span>  dado que  <span class="math notranslate nohighlight">\(x_i'\beta + \epsilon_i &gt; 0\)</span>  es:</p>
+<div class="math notranslate nohighlight">
+\[ E(\epsilon_i | x_i'\beta + \epsilon_i &gt; 0) = \sigma \cdot \lambda(\alpha), \]</div>
+<p>donde <span class="math notranslate nohighlight">\(\alpha = \frac{x_i'\beta}{\sigma}\)</span>  es el valor estandarizado de  <span class="math notranslate nohighlight">\(x_i'\beta\)</span> y <span class="math notranslate nohighlight">\(\lambda(\alpha) = \frac{\phi(\alpha)}{\Phi(\alpha)}\)</span>  es la <strong>relación de Mills inversa</strong>.</p>
+<p><strong>Media Condicional de  <span class="math notranslate nohighlight">\(y_i\)</span>  (Censura):</strong>  La media condicional de  <span class="math notranslate nohighlight">\(y_i\)</span>  dado  <span class="math notranslate nohighlight">\(x_i\)</span>  y que  <span class="math notranslate nohighlight">\(y_i^* &gt; 0\)</span>  (no censurado) se puede expresar como:</p>
+<div class="math notranslate nohighlight">
+\[E(y_i | x_i, y_i^* &gt; 0) = \Phi(\alpha) \cdot x_i'\beta + \sigma \cdot \lambda(\alpha)\]</div>
+</section>
+<section id="truncamiento-por-debajo-l-0">
+<h3><strong>Truncamiento</strong> por debajo (<span class="math notranslate nohighlight">\(L=0\)</span>):<a class="headerlink" href="#truncamiento-por-debajo-l-0" title="Link to this heading">#</a></h3>
+<p><strong>Media Condicional:</strong>  La media condicional de  <span class="math notranslate nohighlight">\(y_i\)</span>  dado  <span class="math notranslate nohighlight">\(x_i\)</span>  y que  <span class="math notranslate nohighlight">\(y_i^* \geq 0\)</span>  (no truncado) es:</p>
+<div class="math notranslate nohighlight">
+\[ E(y_i | x_i, y_i^* \geq 0) = x_i'\beta + E(\epsilon_i | x_i, \epsilon_i &gt; 0). \]</div>
+<p><strong>Bajo normalidad:</strong>  Asumiendo que  <span class="math notranslate nohighlight">\(\epsilon_i \sim N(0, \sigma^2)\)</span>, la media condicional se simplifica a:</p>
+<div class="math notranslate nohighlight">
+\[ E(y_i | x_i, y_i^* \geq 0) = x_i'\beta + \sigma \cdot \lambda\left(\frac{x_i'\beta}{\sigma}\right). \]</div>
+</section>
+<section id="estimador-de-heckman-en-dos-pasos">
+<h3>Estimador de Heckman (en dos pasos)<a class="headerlink" href="#estimador-de-heckman-en-dos-pasos" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>El estimador de Heckman, también conocido como el procedimiento de dos pasos de Heckman, se utiliza para corregir el sesgo de selección en modelos de regresión con datos censurados o truncados.</p></li>
+<li><p>Este sesgo surge cuando la muestra observada no es representativa de la población, debido a la censura o el truncamiento.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><strong>Primer paso:</strong></p>
+<ul class="simple">
+<li><p><strong>Estimación de la Probabilidad de Selección:</strong>  Se estima un modelo Probit para la variable indicadora de selección  <span class="math notranslate nohighlight">\(d_i\)</span>, donde  <span class="math notranslate nohighlight">\(d_i = 1\)</span>  si  <span class="math notranslate nohighlight">\(y_i^* &gt; 0\)</span>  (no censurado o no truncado) y  <span class="math notranslate nohighlight">\(d_i = 0\)</span>  en caso contrario.  El modelo Probit se estima utilizando la muestra completa.</p></li>
+<li><p><strong>Cálculo de la Relación de Mills Inversa:</strong>  Se utiliza la estimación del modelo Probit para calcular la relación de Mills inversa  <span class="math notranslate nohighlight">\(\hat{\lambda} = \frac{\phi(\hat{\alpha})}{\Phi(\hat{\alpha})}\)</span>, donde  <span class="math notranslate nohighlight">\(\hat{\alpha} = \frac{x_i'\hat{\beta}}{\hat{\sigma}}\)</span>  se obtiene a partir de las estimaciones del Probit.</p></li>
+</ul>
+</li>
+<li><p><strong>Segundo paso:</strong></p>
+<ul class="simple">
+<li><p><strong>Regresión con Corrección de Sesgo:</strong>  Se estima un modelo OLS de  <span class="math notranslate nohighlight">\(y_i\)</span>  en  <span class="math notranslate nohighlight">\(x_i\)</span>  y  <span class="math notranslate nohighlight">\(\hat{\lambda}(x_i'\hat{\beta})\)</span>, utilizando solo la muestra no censurada o no truncada  (<span class="math notranslate nohighlight">\(d_i = 1\)</span>).  La inclusión de la relación de Mills inversa como regresor adicional corrige el sesgo de selección.</p></li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p><strong>Intuición:</strong>  El primer paso estima la probabilidad de que una observación no esté censurada o truncada.  El segundo paso utiliza esta información para ajustar la regresión y corregir el sesgo.</p></li>
+<li><p><strong>Corrección de Sesgo:</strong>  El estimador de Heckman proporciona una forma de obtener estimaciones consistentes de los parámetros del modelo en presencia de censura o truncamiento.</p></li>
+<li><p><strong>Matriz de Varianza:</strong>  Es importante tener en cuenta que la matriz de varianza y los errores estándar deben ajustarse para considerar la estimación en dos pasos.  Se utilizan métodos como el método de Murphy-Topel o el bootstrap para obtener errores estándar consistentes.</p></li>
+</ul>
+</section>
+</section>
+<section id="truncamiento-incidental-o-sesgo-de-seleccion">
+<h2>Truncamiento Incidental o Sesgo de Selección<a class="headerlink" href="#truncamiento-incidental-o-sesgo-de-seleccion" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Introducción<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Relación con problemas de selectividad en la muestra:</strong></p>
+<ul class="simple">
+<li><p>Se conoce como <strong>Sesgo de Selectividad Muestral</strong> ( <em>Sample Selectivity Bias</em> ).</p></li>
+<li><p>Ocurre cuando la muestra observada no es representativa de la población debido a un proceso de selección no aleatorio.</p></li>
+</ul>
+</li>
+<li><p><strong>Ejemplo:</strong> Consideremos el mercado laboral. Una persona <strong>entra al mercado laboral</strong> si el <strong>salario ofrecido</strong> es mayor al <strong>costo de oportunidad</strong> de trabajar. Por ende, una muestra del mercado laboral <strong>excluye personas</strong> para las cuales no es rentable entrar al mercado.</p></li>
+<li><p><strong>Implicaciones:</strong></p>
+<ul class="simple">
+<li><p>Esto genera un problema de <strong>sesgo de selección</strong>.</p></li>
+<li><p><strong>OLS es inconsistente</strong> porque el salario observado está correlacionado con la probabilidad de entrar al mercado laboral.</p></li>
+</ul>
+</li>
+<li><p><strong>Contexto del mercado laboral</strong>: Observamos  <span class="math notranslate nohighlight">\(y_i\)</span>  (salario) solo para las personas que trabajan  (<span class="math notranslate nohighlight">\(d_i = 1\)</span>). <span class="math notranslate nohighlight">\(d_i\)</span>  es una <strong>variable dummy</strong> que indica si una persona trabaja,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} d_i = \begin{cases} 1 &amp; \text{si trabaja} \\ 0 &amp; \text{en caso contrario} \end{cases} \end{split}\]</div>
+</li>
+<li><p><strong>Variables Latentes</strong>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(y_i^*\)</span>: Variable latente de resultado (salario, incluso para los que no trabajan).</p></li>
+<li><p><span class="math notranslate nohighlight">\(d_i^*\)</span>: Variable latente que describe la decisión de participar en el mercado laboral.</p></li>
+</ul>
+</li>
+<li><p><strong>Definición</strong>:</p>
+<ul class="simple">
+<li><p>Si  <span class="math notranslate nohighlight">\(d_i^* &gt; 0\)</span>: La persona participa en el mercado laboral  (<span class="math notranslate nohighlight">\(d_i = 1\)</span>).</p></li>
+<li><p>Si  <span class="math notranslate nohighlight">\(d_i^* \leq 0\)</span>: La persona no participa en el mercado laboral  (<span class="math notranslate nohighlight">\(d_i = 0\)</span>).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="modelo-de-muestra-de-seleccion-modelo-con-dos-ecuaciones">
+<h3>Modelo de Muestra de Selección. Modelo con Dos Ecuaciones<a class="headerlink" href="#modelo-de-muestra-de-seleccion-modelo-con-dos-ecuaciones" title="Link to this heading">#</a></h3>
+<p>Para modelar el sesgo de selección, se utiliza un sistema de dos ecuaciones:</p>
+<ol class="arabic">
+<li><p><strong>Ecuación de Selección:</strong>  Modela la decisión de participar en el mercado laboral:</p>
+<div class="math notranslate nohighlight">
+\[ d_i^* = z_i' \gamma + \epsilon_i, \quad d_i = 1 \text{ si } d_i^* &gt; 0. \]</div>
+<p>donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(z_i\)</span>: Vector de variables que influyen en la decisión de participar (e.g., educación, edad, estado civil).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span>: Vector de coeficientes.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\epsilon_i\)</span>: Término de error.</p></li>
+</ul>
+</li>
+<li><p><strong>Ecuación de Resultado (<em>outcome</em>):</strong>  Modela la variable de interés (salario):</p>
+<div class="math notranslate nohighlight">
+\[ y_i = x_i' \beta + u_i, \quad \text{observada solo si } d_i = 1. \]</div>
+<p>donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: Vector de variables que influyen en el salario (e.g., experiencia, educación).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span>: Vector de coeficientes.</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_i\)</span>: Término de error.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Ejemplo</strong>: <span class="math notranslate nohighlight">\(d_i\)</span> es Participación en el mercado laboral;  <span class="math notranslate nohighlight">\(y_i\)</span> es Salario individual; <span class="math notranslate nohighlight">\(z_i\)</span> son características que afectan la participación (ej., nivel educativo); <span class="math notranslate nohighlight">\(x_i\)</span> son características que afectan el salario (e.g., experiencia laboral).</p>
+<ul class="simple">
+<li><p><strong>Selección No Aleatoria:</strong> El modelo aborda la selección no aleatoria de la muestra, donde la decisión de participar (o ser observado) está correlacionada con la variable de resultado.</p></li>
+<li><p><strong>Correlación de Errores:</strong>  Los errores  <span class="math notranslate nohighlight">\(\epsilon_i\)</span>  y  <span class="math notranslate nohighlight">\(u_i\)</span>  pueden estar correlacionados.  Esta correlación es la fuente del sesgo de selección, ya que implica que las variables no observadas que afectan la participación también afectan el resultado.</p></li>
+<li><p><strong>Estimación Conjunta:</strong>  Se requiere una estimación conjunta de las dos ecuaciones para obtener resultados consistentes.  El estimador de Heckman (de dos pasos) es un método común para corregir el sesgo de selección en este tipo de modelos.</p></li>
+</ul>
+</section>
+<section id="modelo-lineal">
+<h3>Modelo Lineal<a class="headerlink" href="#modelo-lineal" title="Link to this heading">#</a></h3>
+<p>El truncamiento incidental o sesgo de selección surge cuando la observación de la variable dependiente está condicionada a un proceso de selección.  Para modelar este tipo de datos, se utiliza un modelo con dos ecuaciones: una para la selección y otra para el resultado.</p>
+<p><strong>Especificación:</strong>  El modelo de truncamiento incidental se especifica mediante dos ecuaciones lineales:</p>
+<ol class="arabic">
+<li><p><strong>Ecuación de Participación:</strong></p>
+<div class="math notranslate nohighlight">
+\[ y_i^{1*} = x_{i1}' \beta_1 + \epsilon_{i1} \]</div>
+<p>Esta ecuación modela la decisión binaria de participar o no en la muestra.  La variable latente  <span class="math notranslate nohighlight">\(y_i^{1*}\)</span>  representa la propensión a participar, y  <span class="math notranslate nohighlight">\(x_{i1}\)</span>  son las variables que influyen en esta decisión.</p>
+</li>
+<li><p><strong>Ecuación de Outcome:</strong></p>
+<div class="math notranslate nohighlight">
+\[ y_i^{2*} = x_{i2}' \beta_2 + \epsilon_{i2} \]</div>
+<p>Esta ecuación modela la variable de resultado  <span class="math notranslate nohighlight">\(y_i^{2*}\)</span>, que solo se observa si el individuo decide participar  (<span class="math notranslate nohighlight">\(y_i^{1*} &gt; 0\)</span>).  Las variables  <span class="math notranslate nohighlight">\(x_{i2}\)</span>  son las que influyen en el resultado.</p>
+</li>
+</ol>
+<p><strong>Relación con el Modelo Tobit:</strong>  El modelo Tobit es un caso particular de este modelo donde  <span class="math notranslate nohighlight">\(y_i^{1*} = y_i^{2*}\)</span>, es decir, la variable latente que determina la selección es la misma que la variable de resultado.</p>
+<p><strong>Supuesto de Normalidad:</strong>  Se asume que los errores de ambas ecuaciones,  <span class="math notranslate nohighlight">\(\epsilon_{i1}\)</span>  y  <span class="math notranslate nohighlight">\(\epsilon_{i2}\)</span>, siguen una distribución normal bivariada:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \begin{pmatrix}
+    \epsilon_{i1} \\
+    \epsilon_{i2}
+    \end{pmatrix} \sim \mathcal{N}
+    \begin{pmatrix}
+    0, &amp;
+    \begin{pmatrix}
+    \sigma_1^2 &amp; \rho\sigma_1\sigma_2 \\
+    \rho\sigma_1\sigma_2 &amp; \sigma_2^2
+    \end{pmatrix}
+    \end{pmatrix}.
+  \end{split}\]</div>
+<p><strong>Implicaciones:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span>:  El parámetro  <span class="math notranslate nohighlight">\(\rho\)</span>  representa la correlación entre los errores de la ecuación de participación y la ecuación de resultado.</p></li>
+<li><p><strong>Consistencia:</strong>  Si  <span class="math notranslate nohighlight">\(\rho \neq 0\)</span>, existe una correlación entre las variables no observadas que afectan la participación y las que afectan el resultado.  Ignorar esta correlación al estimar la ecuación de resultado resultará en estimaciones sesgadas e inconsistentes.</p></li>
+</ul>
+</section>
+<section id="construccion-de-la-verosimilitud">
+<h3><strong>Construcción de la Verosimilitud</strong><a class="headerlink" href="#construccion-de-la-verosimilitud" title="Link to this heading">#</a></h3>
+<p>Para construir la función de verosimilitud, necesitamos considerar dos casos:</p>
+<ol class="arabic">
+<li><p><strong>Participación:</strong>  Si  <span class="math notranslate nohighlight">\(y_i^{1*} &gt; 0\)</span>, observamos  <span class="math notranslate nohighlight">\(y_i^{2*}\)</span>.  La contribución a la verosimilitud en este caso es la probabilidad conjunta de observar  <span class="math notranslate nohighlight">\(y_i^{1*} &gt; 0\)</span>  y  <span class="math notranslate nohighlight">\(y_i^{2*}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ P(y_i^{1*} &gt; 0) \cdot f(y_i^{2*} | y_i^{1*} &gt; 0). \]</div>
+</li>
+<li><p><strong>No Participación:</strong>  Si  <span class="math notranslate nohighlight">\(y_i^{1*} \leq 0\)</span>, no observamos  <span class="math notranslate nohighlight">\(y_i^{2*}\)</span>.  La contribución a la verosimilitud en este caso es simplemente la probabilidad de observar  <span class="math notranslate nohighlight">\(y_i^{1*} \leq 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ P(y_i^{1*} \leq 0). \]</div>
+</li>
+</ol>
+<p>La log-verosimilitud para la muestra completa se obtiene sumando las contribuciones de cada observación, teniendo en cuenta si participa o no en la muestra.</p>
+<p><strong>Observaciones:</strong></p>
+<ul class="simple">
+<li><p><strong>Correlación entre las Ecuaciones:</strong>  La correlación  <span class="math notranslate nohighlight">\(\rho\)</span>  entre los errores de las dos ecuaciones captura la dependencia entre la decisión de participar y el resultado.  Si  <span class="math notranslate nohighlight">\(\rho\)</span>  es diferente de cero, es crucial tener en cuenta esta correlación en la estimación.</p></li>
+<li><p><strong>Modelo de Selección:</strong>  Este modelo proporciona un marco para incorporar explícitamente la selectividad muestral en el análisis de regresión, permitiendo obtener estimaciones consistentes de los parámetros de interés.</p></li>
+</ul>
+<p><strong>Función de Verosimilitud para el Modelo de Sesgo de Selección</strong></p>
+<p>La función de verosimilitud puede escribirse de la siguiente manera:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L} = \prod_{i=1}^{N} \left[ P(y_i^{1*} \leq 0) \right]^{1-d_i} \cdot \left[ f(y_i^{2*} | y_i^{1*} &gt; 0) \cdot P(y_i^{1*} &gt; 0) \right]^{d_i}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(d_i\)</span> es una variable indicadora que toma el valor de 1 si el individuo participa (<span class="math notranslate nohighlight">\(y_i^{1*} &gt; 0\)</span>) y 0 en caso contrario.</p>
+<p>La función de verosimilitud es el producto de las probabilidades de observar cada individuo en la muestra.  Para los individuos que no participan  (<span class="math notranslate nohighlight">\(d_i = 0\)</span>), la probabilidad es simplemente  <span class="math notranslate nohighlight">\(P(y_i^{1*} \leq 0)\)</span>.  Para los individuos que participan  (<span class="math notranslate nohighlight">\(d_i = 1\)</span>), la probabilidad es la probabilidad conjunta de observar  <span class="math notranslate nohighlight">\(y_i^{1*} &gt; 0\)</span>  y  <span class="math notranslate nohighlight">\(y_i^{2*}\)</span>.</p>
+</section>
+<section id="supuesto-de-normalidad">
+<h3><strong>Supuesto de Normalidad</strong><a class="headerlink" href="#supuesto-de-normalidad" title="Link to this heading">#</a></h3>
+<p><strong>Elemento Clave</strong> para simplificar la función de verosimilitud, se asume que los errores  <span class="math notranslate nohighlight">\(\epsilon_{i1}\)</span>  y  <span class="math notranslate nohighlight">\(\epsilon_{i2}\)</span>  tienen una distribución conjunta bivariada normal estándar:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \begin{pmatrix}
+  \epsilon_{i1} \\
+  \epsilon_{i2}
+  \end{pmatrix} \sim \mathcal{N}
+  \begin{pmatrix}
+  0, &amp;
+  \begin{pmatrix}
+  1 &amp; \rho \\
+  \rho &amp; 1
+  \end{pmatrix}
+  \end{pmatrix}.
+  \end{split}\]</div>
+<p><strong>Probabilidad de Participación:</strong>  Bajo este supuesto, la probabilidad de participación se puede expresar como:</p>
+<div class="math notranslate nohighlight">
+\[P(y_i^{1*} &gt; 0) = \Phi\left( \frac{x_{i1}'\beta_1}{\sqrt{1-\rho^2}} \right)\]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\Phi(\cdot)\)</span>  es la función de distribución acumulada de la normal estándar.</p>
+<p>Bajo el supuesto de normalidad, la log-verosimilitud para este modelo está dada por:</p>
+<div class="math notranslate nohighlight">
+\[\ell(\beta_1, \beta_2, \rho) = \sum_{y_i = 0} \ln\left( \Phi\left( \frac{x_{i1}'\beta_1}{\sqrt{1-\rho^2}} \right) \right)
+   + \sum_{y_i = 1} \ln\left( \phi\left( \frac{y_i^{2*} - x_{i2}'\beta_2}{\sqrt{1-\rho^2}} \right) \cdot \Phi\left( \frac{x_{i1}'\beta_1 + \rho \frac{y_i^{2*} - x_{i2}'\beta_2}{\sqrt{1-\rho^2}}}{\sqrt{1-\rho^2}} \right) \right).
+ \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\phi(\cdot)\)</span>  es la función de densidad de la normal estándar.</p>
+</section>
+<section id="metodo-de-heckman-en-dos-pasos-heckit">
+<h3>Método de Heckman en Dos Pasos (Heckit)<a class="headerlink" href="#metodo-de-heckman-en-dos-pasos-heckit" title="Link to this heading">#</a></h3>
+<p><strong>Alternativa a la Máxima Verosimilitud</strong>  El método de Heckman en dos pasos es una alternativa a la estimación por máxima verosimilitud.  Es computacionalmente menos costoso, pero requiere el supuesto de normalidad de los errores.</p>
+<p>Idea general de los pasos:</p>
+<ol class="arabic">
+<li><p><strong>Relación entre los Errores:</strong>  Bajo el supuesto de normalidad bivariada, la relación entre los errores de las dos ecuaciones se puede escribir como:</p>
+<div class="math notranslate nohighlight">
+\[
+    \epsilon_{i2} = \rho \epsilon_{i1} + \xi_i,
+    \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\xi_i\)</span>  es independiente de  <span class="math notranslate nohighlight">\(\epsilon_{i1}\)</span>  y  <span class="math notranslate nohighlight">\(\xi_i \sim \mathcal{N}(0, \sigma^2_\xi)\)</span>.</p>
+</li>
+<li><p><strong>Media Condicional:</strong>  La media condicional del outcome  (<span class="math notranslate nohighlight">\(y_i^{2*}\)</span>)  dado que el individuo participa  (<span class="math notranslate nohighlight">\(y_i^{1*} &gt; 0\)</span>)  es:</p>
+<div class="math notranslate nohighlight">
+\[
+    \mathbb{E}(y_i^{2*} | y_i^{1*} &gt; 0) = x_{i2}'\beta_2 + \rho \lambda(x_{i1}'\beta_1),
+    \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\lambda(\cdot)\)</span>  es el <strong>Inverse Mills Ratio</strong> <span class="math notranslate nohighlight">\(\lambda(x) = \frac{\phi(x)}{\Phi(x)}\)</span>.</p>
+</li>
+</ol>
+<p><strong>Corrección del Sesgo:</strong>  El término  <span class="math notranslate nohighlight">\(\rho \lambda(x_{i1}'\beta_1)\)</span>  corrige el sesgo de selección.  La relación de Mills inversa  (<span class="math notranslate nohighlight">\(\lambda(x)\)</span>)  captura la información sobre la selección no aleatoria de la muestra.</p>
+<p>El método de Heckman, también conocido como Heckit, es un procedimiento en dos pasos que se utiliza para corregir el sesgo de selección en modelos de regresión.  Este método es una alternativa a la estimación por máxima verosimilitud completa y es especialmente útil cuando se asume una distribución normal bivariada para los errores.</p>
+<p><strong>Pasos:</strong></p>
+<ol class="arabic">
+<li><p><strong>Probit para la Participación:</strong></p>
+<ul>
+<li><p>Se estima un modelo probit para la variable indicadora de participación  <span class="math notranslate nohighlight">\(d_i\)</span>, donde  <span class="math notranslate nohighlight">\(d_i = 1\)</span>  si el individuo participa  (<span class="math notranslate nohighlight">\(y_i^{1*} &gt; 0\)</span>)  y  <span class="math notranslate nohighlight">\(d_i = 0\)</span>  en caso contrario.</p></li>
+<li><p>La probabilidad de participación se modela como:</p>
+<div class="math notranslate nohighlight">
+\[
+      P(d_i = 1 | x_{i1}) = \Phi(x_{i1}'\beta_1),
+      \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\Phi(\cdot)\)</span>  es la función de distribución acumulada de la normal estándar.</p>
+</li>
+<li><p>Se obtienen las estimaciones de los coeficientes  <span class="math notranslate nohighlight">\(\hat{\beta}_1\)</span>  del modelo probit.</p></li>
+<li><p>Se calcula la relación de Mills inversa  (<span class="math notranslate nohighlight">\(\lambda\)</span>)  para cada individuo utilizando las estimaciones del probit:</p>
+<div class="math notranslate nohighlight">
+\[
+      \hat{\lambda}_i = \lambda(x_{i1}'\hat{\beta}_1) = \frac{\phi(x_{i1}'\hat{\beta}_1)}{\Phi(x_{i1}'\hat{\beta}_1)},
+      \]</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Regresión OLS Aumentada:</strong></p>
+<ul>
+<li><p>Se estima la ecuación de resultado  (<span class="math notranslate nohighlight">\(y_i^{2*}\)</span>)  mediante una regresión OLS que incluye la relación de Mills inversa  (<span class="math notranslate nohighlight">\(\hat{\lambda}_i\)</span>)  como una variable explicativa adicional:</p>
+<div class="math notranslate nohighlight">
+\[
+        y_i^{2*} = x_{i2}'\beta_2 + \rho \sigma_2 \hat{\lambda}_i + \nu_i,
+        \]</div>
+<p>donde  <span class="math notranslate nohighlight">\(\rho\)</span>  es la correlación entre los errores de las dos ecuaciones y  <span class="math notranslate nohighlight">\(\sigma_2\)</span>  es la desviación estándar del error en la ecuación de resultado.</p>
+</li>
+<li><p>La inclusión de  <span class="math notranslate nohighlight">\(\hat{\lambda}_i\)</span>  corrige el sesgo de selección.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Ventajas del Método Heckit:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- **Simplicidad:**  Es fácil de implementar, ya que solo requiere la estimación de un modelo probit y una regresión OLS.
+- **Amplitud:**  Es aplicable a una amplia variedad de modelos de selección, como el análisis del mercado laboral, la participación en programas sociales y las decisiones de inversión.
+- **Supuestos:**  Requiere menos supuestos que la máxima verosimilitud completa, pero asume la normalidad conjunta de los errores  $\epsilon_{i1}$  y  $\epsilon_{i2}$.
+</pre></div>
+</div>
+<p>Sobre <strong>Prueba de Hipótesis:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Se puede realizar una prueba de hipótesis para determinar si la correlación entre los errores  ($\rho$)  es significativamente diferente de cero: $H_0: \rho = 0$.
+- Si se rechaza la hipótesis nula  ($H_0$), se recomienda utilizar la máxima verosimilitud completa (MLE) en lugar de OLS, ya que OLS no captura adecuadamente el sesgo de selección cuando  $\rho \neq 0$.
+</pre></div>
+</div>
+<p><strong>Comparación de Métodos:</strong></p>
+<ul class="simple">
+<li><p>Es recomendable comparar los resultados del método de Heckman (Heckit) con los de la máxima verosimilitud completa (MLE) en un ejemplo práctico.  Esto ayuda a comprender las diferencias entre los métodos y el impacto del sesgo de selección en las estimaciones.</p></li>
+<li><p>La comparación de los métodos también puede ayudar a clarificar las diferencias entre selección, censura y truncamiento, y a comprender cómo cada uno de estos problemas afecta la estimación de los modelos de regresión.</p></li>
+</ul>
+<p><strong>Nota:</strong>  Siempre es importante entender los supuestos y limitaciones de cada método para seleccionar el más adecuado en contextos prácticos.</p>
 <hr>
+</section>
 </section>
 </section>
 
@@ -390,8 +987,8 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Conteo.html"
@@ -420,7 +1017,6 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contenido
@@ -428,6 +1024,34 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#censura">Censura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#censura-normalidad-y-modelo-tobit">Censura: Normalidad y Modelo Tobit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentos-de-la-distribucion-normal-censurada">Momentos de la Distribución Normal Censurada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-tobit">Modelo Tobit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento">Truncamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento-y-normalidad">Truncamiento y Normalidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-regresion-truncada">Modelo de Regresión Truncada</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#censura-truncamiento-y-modelos-de-regresion">Censura, Truncamiento y Modelos de Regresión</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medias-condicionales">Medias Condicionales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulas-bajo-supuestos-de-normalidad">Fórmulas bajo supuestos de normalidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Censura</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento-por-debajo-l-0"><strong>Truncamiento</strong> por debajo (<span class="math notranslate nohighlight">\(L=0\)</span>):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimador-de-heckman-en-dos-pasos">Estimador de Heckman (en dos pasos)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncamiento-incidental-o-sesgo-de-seleccion">Truncamiento Incidental o Sesgo de Selección</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Introducción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-muestra-de-seleccion-modelo-con-dos-ecuaciones">Modelo de Muestra de Selección. Modelo con Dos Ecuaciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-lineal">Modelo Lineal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construccion-de-la-verosimilitud"><strong>Construcción de la Verosimilitud</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supuesto-de-normalidad"><strong>Supuesto de Normalidad</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-heckman-en-dos-pasos-heckit">Método de Heckman en Dos Pasos (Heckit)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -449,7 +1073,6 @@ Por Luis Chancí
   
   <div class="footer-item">
     
-
   </div>
   
   <div class="footer-item">
@@ -469,8 +1092,8 @@ Por Luis Chancí
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
