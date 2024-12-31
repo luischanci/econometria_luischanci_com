@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -472,14 +472,14 @@ document.write(`
 <section id="efectos-fijos-fixed-effects-fe">
 <h2>Efectos Fijos - Fixed Effects (FE)<a class="headerlink" href="#efectos-fijos-fixed-effects-fe" title="Link to this heading">#</a></h2>
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=720px></html>
-<p>Assumiendo,</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\alpha_i\)</span> son parámetros fijos (a ser estimados)</p></li>
-<li><p>restricción: <span class="math notranslate nohighlight">\(|\alpha_i|&lt;\kappa&lt;\infty\,\,,\,\,\forall\,i\)</span> (boundedness)</p></li>
-<li><p><span class="math notranslate nohighlight">\(\alpha_i\)</span> puede (en algún grado) estar relacionado con <span class="math notranslate nohighlight">\(x_{it}\)</span> ó <span class="math notranslate nohighlight">\(u_{it}\)</span>.</p></li>
-<li><p>se incluye el caso en donde <span class="math notranslate nohighlight">\(\alpha_i\)</span> es aleatorio (realizaciones de una distribución dada)</p></li>
-<li><p><span class="math notranslate nohighlight">\(x\)</span> siguen siendo exógenas. Serán deterministicas y acotadas, satisfaciendo: <span class="math notranslate nohighlight">\(\mathbb{E}||(x_{it}-\bar{x}_{i\cdot})(x_{jt'}-\bar{x}_{j\cdot})||&lt;\kappa&lt;\infty\)</span></p></li>
-</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Assumiendo,
+- $\alpha_i$ son parámetros fijos (a ser estimados)
+- restricción: $|\alpha_i|&lt;\kappa&lt;\infty\,\,,\,\,\forall\,i$ (boundedness)
+- $\alpha_i$ puede (en algún grado) estar relacionado con $x_{it}$ ó $u_{it}$.
+- se incluye el caso en donde $\alpha_i$ es aleatorio (realizaciones de una distribución dada)
+- $x$ siguen siendo exógenas. Serán deterministicas y acotadas, satisfaciendo: $\mathbb{E}||(x_{it}-\bar{x}_{i\cdot})(x_{jt&#39;}-\bar{x}_{j\cdot})||&lt;\kappa&lt;\infty$ 
+</pre></div>
+</div>
 <section id="estimacion-fe">
 <h3>Estimación FE<a class="headerlink" href="#estimacion-fe" title="Link to this heading">#</a></h3>
 <ul>
@@ -787,12 +787,6 @@ $<span class="math notranslate nohighlight">\(H=(\hat{\beta}_{FE} - \hat{\beta}_
 </ul>
 <section id="estimacion-de-panel-dinamico">
 <h3>Estimación de Panel Dinámico<a class="headerlink" href="#estimacion-de-panel-dinamico" title="Link to this heading">#</a></h3>
-<p>Paso 1: Primera diferencia para eliminar <span class="math notranslate nohighlight">\(\alpha_i\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\Delta y_{it}=\gamma\Delta y_{it-1}+\Delta x_{it}'\beta+\Delta u_{it}\]</div>
-<p>Notar del modelo anterior que</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray*} \mathbb{E}(\Delta y_{it-1}\cdot\Delta u_{it}) &amp;=&amp; \mathbb{E}((y_{it-1}-y_{it-2})\cdot (u_{it}-u_{it-1})) = -\sigma^2_u \neq0 \\ &amp;\,&amp; \\ \mathbb{E}(\Delta u_{it-s}\cdot\Delta u_{it}) &amp;=&amp; \left\{\begin{array}{ccc} 2\sigma^2_u &amp; para &amp; s=0 \\ -\sigma^2_u &amp; para &amp; s=1 \\ 0 &amp; para &amp; s&gt;0 \end{array}\right. \end{eqnarray*}\end{split}\]</div>
 <p>Paso 1: Primera diferencia para eliminar <span class="math notranslate nohighlight">\(\alpha_i\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\Delta y_{it}=\gamma\Delta y_{it-1}+\Delta x_{it}'\beta+\Delta u_{it}\]</div>
