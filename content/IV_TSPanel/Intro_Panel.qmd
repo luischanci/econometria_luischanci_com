@@ -1,0 +1,56 @@
+---
+title: "D2. Panel Data — Overview"
+---
+
+## About
+
+This section introduces **panel data econometrics** — data combining $N$ units observed over $T$ periods. This structure allows controlling for unobserved time-invariant heterogeneity, a key advantage over pure cross-sections.
+
+Topics: one-way error component model, Fixed Effects (within estimator), Random Effects (GLS), Hausman test, first-difference estimator, dynamic panels (Arellano-Bond).
+
+## Lecture Notes
+
+- [Download lecture notes (PDF)](https://www.luischanci.com/documents/Econometrics/Panel.pdf){target="_blank"}
+
+&nbsp;
+
+## Slides
+
+Click on the slide and use the keyboard arrows to navigate.
+
+<div class="slide-container">
+  <iframe
+    src="https://www.luischanci.com/presentations/Econometrics/econometria_8.html#/"
+    allowfullscreen="">
+  </iframe>
+</div>
+
+&nbsp;
+
+::: {.callout-note appearance="simple"}
+**Links:** &nbsp; [View slides (full screen)](https://www.luischanci.com/presentations/Econometrics/econometria_8.html){target="_blank"} &nbsp;·&nbsp; [Download slides (PDF)](https://www.luischanci.com/presentations/Econometrics/econometria_8.pdf){target="_blank"}
+:::
+
+::: {.callout-warning appearance="simple"}
+**Note:** Slides and notes are pending translation to English.
+:::
+
+---
+
+## Overview
+
+**Panel data** (also called longitudinal data) combines cross-sectional and time series dimensions: we observe $N$ units (individuals, firms, countries) over $T$ time periods. This structure allows us to control for unobserved heterogeneity that is constant within a unit — a key advantage over pure cross-sections.
+
+### Key topics covered
+
+- The one-way error component model: $y_{it} = x_{it}'\beta + \alpha_i + u_{it}$
+- Fixed Effects (FE) — within estimator, FWL theorem applied to panels
+- Random Effects (RE) — GLS estimator, feasible GLS
+- Hausman test: FE vs. RE
+- First-difference estimator
+- Clustered standard errors
+- Dynamic panel models (GMM-based: Arellano-Bond)
+
+### More detail
+
+See [D3. Panel Data Theory](Panel.qmd) for derivations and proofs.

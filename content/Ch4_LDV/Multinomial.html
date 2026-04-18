@@ -1,688 +1,971 @@
-
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<html lang="es" >
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
-    <title>Modelos de Elección Múltiple &#8212; Apuntes de Econometría</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
-
-    <script src="../../_static/documentation_options.js?v=c2101671"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../../_static/translations.js?v=efdbd0b9"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Ch4_LDV/Multinomial';</script>
-    <link rel="canonical" href="http://econometria.luischanci.com/content/Ch4_LDV/Multinomial.html" />
-    <link rel="icon" href="../../_static/icon.png"/>
-    <link rel="index" title="Índice" href="../../genindex.html" />
-    <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Modelo de Conteo" href="Conteo.html" />
-    <link rel="prev" title="Rincón de Práctica R" href="Binaria/pract_binaria_r.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="es"/>
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../../intro.html">
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item">
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Búsqueda</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Intro_Curso.html">1. Introducción al Curso</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch2_OLS/OLS.html">2. Mínimos Cuadrados - Repaso</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch3_MLE/Intro_MLE.html">3. Máxima Verosimilitud</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/MLE.html">Teoría MLE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_r.html">Práctica R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch3_MLE/computer/pract_mle_stata.html">Práctica Stata</a></li>
-</ul>
-</li>
-</ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Intro_LDV.html">4. Variable Dependiente Limitada</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="Binaria.html">Modelos LP, Logit y Probit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_stata.html">Práctica Stata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Binaria/pract_binaria_r.html">Práctica R</a></li>
-</ul>
-</li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Modelos de Elección Múltiple</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Conteo.html">Modelo de Conteo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CensuraTrunc.html">Censura, Truncamiento, Selección <br/> (Tobit y Heckman)</a></li>
-</ul>
-</li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch5_IV/IV.html">5. Variables Instrumentales</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch6_GMM/GMM.html">6. Método de Momentos</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Ch7_TS/Intro_TS.html">7. Series de Tiempo</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch8_Panel/Intro_Panel.html">8. Datos en Panel</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/Panel.html">Teoría Panel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_r.html">Práctica R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch8_Panel/computer/pract_panel_stata.html">Práctica Stata</a></li>
-</ul>
-</li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ch9_Causal/Intro_Causal.html">9. Inferencia Causal</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/DifinDif.html">Diff-in-Diff</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ch9_Causal/RDD.html">RDD</a></li>
-</ul>
-</li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../zbibliography.html">Bibliografía</a></li>
-</ul>
-
-    </div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
+<title>11&nbsp; B4. Multinomial Choice Models – [Econometrics](https://econometria.luischanci.com/)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../content/Ch4_LDV/Conteo.html" rel="next">
+<link href="../../content/Ch4_LDV/Binaria.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ee969fc44ef9071c70f6f6213bc693cd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
 
-<div class="sbt-scroll-pixel-helper"></div>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Modo de pantalla completa"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
-  
-</div>
-</div>
-              
-              
-
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Modelos de Elección Múltiple</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contenido </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-logit">Multinomial Logit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logit-condicional">Logit Condicional</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-probit">Multinomial Probit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#respuesta-multiple-ordenada">Respuesta Múltiple Ordenada</a></li>
-</ul>
-            </nav>
-        </div>
-    </div>
-</div>
-
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
-  <section class="tex2jax_ignore mathjax_ignore" id="modelos-de-eleccion-multiple">
-<h1>Modelos de Elección Múltiple<a class="headerlink" href="#modelos-de-eleccion-multiple" title="Link to this heading">#</a></h1>
-<section id="introduccion">
-<h2>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">#</a></h2>
-<p>Consideramos ahora una generalización o extensión de los modelos Logit/Probit. Específicamente, pasaremos de una variable dependiente que permite dos opciones (binaria) a una categórica que aborda más de dos opciones.</p>
-<p>Primero estudiaremos el caso en el cual las opciones no asocian un orden particular. Es decir, modelo de <strong>múltiples respuestas no ordenadas</strong>, también conocido como regresión logística multinomial o <em>Multinomial Logit</em>. Algunos ejemplos son:</p>
-<ul class="simple">
-<li><p>¿Cuál de los siguientes medios de transporte emplea para ir al trabajo?</p>
-<ol class="arabic simple">
-<li><p>Metro</p></li>
-<li><p>Bus</p></li>
-<li><p>Bicicleta</p></li>
-</ol>
-</li>
-<li><p>¿Por cuál de los siguientes partidos votará en las próximas elecciones?</p>
-<ol class="arabic simple">
-<li><p>Partido de Derecha</p></li>
-<li><p>Injerto del Centro</p></li>
-<li><p>Coalición de Izquierda</p></li>
-</ol>
-</li>
-</ul>
-<p>Luego pasaremos a revisar el modelo de <strong>respuestas ordenadas</strong>, también conocido como Logit/Probit Ordenado. Las opciones involucran un ordenamiento implicito. Algunos ejemplos son:</p>
-<ul class="simple">
-<li><p>Evaluar la calidad del servicio recibido seleccionando entre una de las siguientes tres opciones:</p>
-<ol class="arabic simple">
-<li><p>Excelente</p></li>
-<li><p>Bueno</p></li>
-<li><p>Malo</p></li>
-</ol>
-</li>
-</ul>
-<p>Al igual que el caso del Logit/Probit, se parte por asociar funciones de probabilidad a las elecciones u opciones, y por ende la técnica que emplearemos para obtener los parámetros estimados es el <a class="reference internal" href="../Ch3_MLE/Intro_MLE.html#ch-mle"><span class="std std-ref">3. Máxima Verosimilitud</span></a>. Es decir, el ejercicio se centrará en plantear la función de verosimilitud.</p>
-<p>Referencia: Esta subsección sigue de cerca el capítulo 15 de <span id="id1">Cameron and Trivedi [<a class="reference internal" href="../zbibliography.html#id6" title="A Colin Cameron and Pravin K Trivedi. Microeconometrics: methods and applications. Cambridge university press, 2005. doi:https://doi.org/10.1017/CBO9780511811241.">2005</a>]</span>.</p>
-</section>
-<section id="multinomial-logit">
-<h2>Multinomial Logit<a class="headerlink" href="#multinomial-logit" title="Link to this heading">#</a></h2>
-<ul>
-<li><p><strong>Descripción General</strong>:</p>
-<ul class="simple">
-<li><p>Este modelo es adecuado cuando la variable dependiente incluye <strong>más de dos alternativas cualitativas</strong> sin ningún tipo de orden implícito.</p></li>
-<li><p><strong>Ejemplo</strong>: Elegir un lugar para pescar, donde <span class="math notranslate nohighlight">\(y_i \in \{\text{playa}, \text{bote}, \text{muelle}\}\)</span>.</p></li>
-</ul>
-</li>
-<li><p><strong>Enfoque de Utilidad Aleatoria</strong>:</p>
-<ul class="simple">
-<li><p>Siguiendo el marco de los modelos de <strong>utilidad aleatoria</strong>, se modela la probabilidad de escoger una opción particular sobre las demás, dadas las características observables.</p></li>
-<li><p>Una forma de extender el modelo es comparar pares de opciones, como en el logit binario, asignando una probabilidad a cada comparación.</p></li>
-</ul>
-</li>
-<li><p><strong>Función de Distribución de Probabilidad (f.d.p.)</strong>:</p>
-<ul class="simple">
-<li><p>Se usa la <strong>f.d.p. logística</strong>, en lugar de la normal, ya que es computacionalmente más sencilla y adecuada para este contexto.</p></li>
-</ul>
-</li>
-<li><p><strong>Estructura del Modelo</strong>:</p>
-<ul>
-<li><p>Supongamos que existen <span class="math notranslate nohighlight">\(J + 1\)</span> alternativas, donde se designa una categoría como <strong>base de comparación</strong>.</p></li>
-<li><p>Las funciones de probabilidad para cada alternativa son:</p>
-<ul>
-<li><p>Para la categoría base <span class="math notranslate nohighlight">\(Y=0\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-      Pr(Y=0|\boldsymbol{X}) = \frac{1}{\left[1 + \sum_{j=1}^J \exp(X \beta^{(j)})\right]}
-      \]</div>
-</li>
-<li><p>Para cualquier otra categoría <span class="math notranslate nohighlight">\(Y=j\)</span>, con <span class="math notranslate nohighlight">\(j=1,...,J\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-      Pr(Y=j|\boldsymbol{X}) = \frac{\exp(X \beta^{(j)})}{\left[1 + \sum_{j=1}^J \exp(X \beta^{(j)})\right]}
-      \]</div>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>Interpretación de los Coeficientes</strong>:</p>
-<ul class="simple">
-<li><p>Los coeficientes <span class="math notranslate nohighlight">\(\beta^{(j)}\)</span> <strong>varían por opción</strong>, lo que significa que cada alternativa tiene su propio conjunto de parámetros.</p></li>
-<li><p>Si <span class="math notranslate nohighlight">\(J = 1\)</span>, el modelo se reduce a un logit binario, donde solo hay dos opciones.</p></li>
-</ul>
-<p><strong>Log de los Coeficientes</strong>:</p>
-<ul>
-<li><p>La relación de los logaritmos de las probabilidades se expresa como:</p>
-<div class="math notranslate nohighlight">
-\[\ln \left( \frac{P_{ij}}{P_{i0}} \right) = X_i' \beta^j\]</div>
-</li>
-<li><p>Alternativamente, normalizando respecto a otra probabilidad <span class="math notranslate nohighlight">\(k\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\ln \left( \frac{P_{ij}}{P_{ik}} \right) = X_i' (\beta^j - \beta^k)\]</div>
-</li>
-</ul>
-<blockquote>
-<div><p>Nota: Con estas probabilidades, se pueden construir modelos que expliquen la preferencia por una opción sobre otras a partir de las características observables y la estructura de utilidades latentes.</p>
-</div></blockquote>
-<p><strong>Independencia de Alternativas Irrelevantes (IAI)</strong></p>
-<p>Los modelos multinomiales como el logit asumen la <strong>independencia de alternativas irrelevantes (IAI)</strong>. Esto significa que la relación de probabilidades entre dos opciones es independiente de la presencia o ausencia de otras alternativas.</p>
-<p>Como vimos, para dos respuestas <span class="math notranslate nohighlight">\(k\)</span> y <span class="math notranslate nohighlight">\(r\)</span>, la razón de probabilidades se expresa como:</p>
-<div class="math notranslate nohighlight">
-\[\frac{Pr(Y_i = k)}{Pr(Y_i = r)} = \exp \left( X_i' (\beta^k - \beta^r) \right)\]</div>
-<ul class="simple">
-<li><p>Esto implica que la relación entre las probabilidades de escoger las opciones <span class="math notranslate nohighlight">\(k\)</span> y <span class="math notranslate nohighlight">\(r\)</span> no depende de las características de otras alternativas en el conjunto de opciones.</p></li>
-<li><p>La propiedad de IAI implica que <strong>adicionar o remover alternativas</strong> en el conjunto de opciones no afecta la relación de probabilidades entre dos opciones específicas, como <span class="math notranslate nohighlight">\(k\)</span> y <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
-</ul>
-<p>Este supuesto facilita la estimación y análisis de los modelos, pero también limita la flexibilidad del modelo en situaciones donde las alternativas pueden estar correlacionadas o donde la presencia de otras opciones influye en la elección relativa entre dos opciones.</p>
-<p><strong>Función de Verosimilitud</strong> La función de verosimilitud a maximizar es:</p>
-<div class="math notranslate nohighlight">
-\[\mathcal{L} = \sum_{i=1}^N \sum_{j=0}^J d_{ij} \cdot \ln \left( P(Y_i = j) \right)\]</div>
-<p>Donde <span class="math notranslate nohighlight">\(d_{ij}\)</span> es una variable indicadora (dummy) que toma el valor de 1 si el individuo <span class="math notranslate nohighlight">\(i\)</span> escoge la alternativa <span class="math notranslate nohighlight">\(j\)</span>, y 0 en caso contrario.</p>
-<p><strong>Condiciones de Primer Orden</strong>: Las condiciones necesarias de primer orden para maximizar la verosimilitud son:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial \mathcal{L}}{\partial \beta^j} = \sum_i (d_{ij} - P_{ij}) \cdot X_i \quad \text{para } j = 1, \ldots, J\]</div>
-</section>
-<section id="logit-condicional">
-<h2>Logit Condicional<a class="headerlink" href="#logit-condicional" title="Link to this heading">#</a></h2>
-<p>El modelo de <strong>Logit Condicional</strong> es una extensión del logit multinomial que permite que las probabilidades de elección dependan no solo de las características individuales, sino también de las características específicas de cada alternativa. Ambos modelos permiten manejar múltiples alternativas no ordenadas, pero el logit condicional incorpora explícitamente características de cada opción.</p>
-<p>El modelo logit condicional es útil en contextos donde las opciones de elección tienen características propias que influyen en la decisión del individuo. Ejemplos:</p>
-<ul class="simple">
-<li><p>Elección de medios de transporte en función de atributos como el costo, tiempo de viaje, y comodidad de cada opción (metro, bus, bicicleta, etc.).</p></li>
-<li><p>Elección de lugar de compra basado en factores como precio, distancia, y calidad del servicio en cada tienda.</p></li>
-</ul>
-<blockquote>
-<div><p><strong>Referencia:</strong> Ver capítulo 15 en Cameron y Trivedi para una discusión detallada.</p>
-</div></blockquote>
-<p><strong>Probabilidad de Elección y función de verosimilitud</strong></p>
-<ul>
-<li><p>La probabilidad de que el individuo <span class="math notranslate nohighlight">\(i\)</span> elija la alternativa <span class="math notranslate nohighlight">\(j\)</span> se define como:</p>
-<div class="math notranslate nohighlight">
-\[ P_{ij} = \frac{\exp(X_{ij}' \beta)}{\sum_{v=1}^J \exp(X_{iv}' \beta)} \]</div>
-</li>
-<li><p>Aquí, <span class="math notranslate nohighlight">\(X_{ij}\)</span> representa las características observables de la alternativa <span class="math notranslate nohighlight">\(j\)</span> para el individuo <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
-<li><p>La interpretación es que el vector de parámetros <span class="math notranslate nohighlight">\(\beta\)</span> es común para todas las alternativas, pero las características específicas varían entre opciones.</p></li>
-<li><p>La función de verosimilitud para el logit condicional, dada la elección observada, es:</p>
-<div class="math notranslate nohighlight">
-\[ \mathcal{L} = \prod_{i=1}^N \prod_{j=0}^J \left( \frac{\exp(X_{ij}' \beta)}{\sum_{k=1}^J \exp(X_{ik}' \beta)} \right)^{d_{ij}} \]</div>
-<p>Donde <span class="math notranslate nohighlight">\(d_{ij}\)</span> es una variable indicadora que toma el valor de 1 si el individuo <span class="math notranslate nohighlight">\(i\)</span> elige la alternativa <span class="math notranslate nohighlight">\(j\)</span>, y 0 en caso contrario.</p>
-</li>
-</ul>
-</section>
-<section id="multinomial-probit">
-<h2>Multinomial Probit<a class="headerlink" href="#multinomial-probit" title="Link to this heading">#</a></h2>
-<p>El modelo de <strong>Multinomial Probit</strong> es una alternativa al <strong>Multinomial Logit</strong> cuando se desea incorporar <strong>correlación entre alternativas</strong>. A diferencia del multinomial logit, el multinomial probit no asume <strong>Independencia de Alternativas Irrelevantes (IAI)</strong>. Esto significa que la relación de probabilidades entre dos opciones <strong>sí puede depender de la presencia o ausencia de otras alternativas</strong>.</p>
-<p>El <strong>Multinomial Probit</strong> permite <strong>relajarse del supuesto de IAI</strong> ya que modela la correlación entre los errores de las alternativas mediante una distribución normal multivariada. Esto permite una mayor flexibilidad en escenarios donde las alternativas son similares y podrían estar correlacionadas, como en la elección de diferentes marcas o modos de transporte.</p>
-<p>En el multinomial probit, la probabilidad de elegir una alternativa involucra múltiples integrales de la función de densidad normal multivariada. Esto genera un problema de alta <strong>complejidad computacional</strong> debido a la necesidad de calcular integrales múltiples.</p>
-<p>Por ejemplo, para un modelo con tres alternativas, la probabilidad de elegir una de ellas está dada por:</p>
-<div class="math notranslate nohighlight">
-\[ Pr(Y_i = 1) = \iint f(u_{i2}, u_{i3}) \, du_{i2} \, du_{i3} \]</div>
-<p>Aquí, <span class="math notranslate nohighlight">\(f(u_{i2}, u_{i3})\)</span> representa la función de densidad conjunta de una distribución normal bivariada. A medida que aumenta el número de alternativas, el número de integrales necesarias también aumenta, lo que complica el cálculo.</p>
-<p>En la práctica, para resolver este problema, se emplean técnicas de simulación como el <strong>Método de Simulación de Máxima Verosimilitud</strong> (ML) o métodos basados en <strong>Monte Carlo</strong> para aproximar las probabilidades.</p>
-<p><strong>Función de Verosimilitud</strong></p>
-<p>Similar al multinomial logit, el modelo multinomial probit utiliza una función de verosimilitud para estimar los parámetros. Sin embargo, debido a las integrales mencionadas, la maximización de la verosimilitud es considerablemente más complicada. La función de verosimilitud, en este caso, requiere aproximaciones numéricas para poder resolver los múltiples integrales.</p>
-<blockquote>
-<div><p><strong>Nota</strong>: La elección entre el multinomial logit y el multinomial probit depende de la aplicación específica y la disponibilidad de recursos computacionales. Si las alternativas son claramente diferenciables y no correlacionadas, el logit multinomial puede ser suficiente y más práctico.</p>
-</div></blockquote>
-<p><strong>Software</strong>:</p>
-<ul class="simple">
-<li><p>Stata: <code class="docutils literal notranslate"><span class="pre">mprobit</span></code> para Multinomial Probit, <code class="docutils literal notranslate"><span class="pre">mlogit</span></code> para Multinomial Logit y <code class="docutils literal notranslate"><span class="pre">clogit</span></code> para Logit Condicional.</p></li>
-<li><p>R: <code class="docutils literal notranslate"><span class="pre">multinom</span></code> de la libreria “nnet”, <code class="docutils literal notranslate"><span class="pre">mlogit</span></code> de la libreria “mlogit”, <code class="docutils literal notranslate"><span class="pre">clogit</span></code> de la libreria “survival”. Otros son <code class="docutils literal notranslate"><span class="pre">MNP</span></code> y <code class="docutils literal notranslate"><span class="pre">bayesm</span></code> . Pero para grandes bases, tal vez el <code class="docutils literal notranslate"><span class="pre">mlogit</span></code> sea más eficiente.</p></li>
-</ul>
-</section>
-<section id="respuesta-multiple-ordenada">
-<h2>Respuesta Múltiple Ordenada<a class="headerlink" href="#respuesta-multiple-ordenada" title="Link to this heading">#</a></h2>
-<p>En algunos casos, la variable dependiente es una variable categórica con <strong>más de dos alternativas</strong> y <strong>un orden natural</strong> entre las categorías. A diferencia del multinomial logit, donde las opciones no tienen un orden particular, en el modelo de <strong>respuesta múltiple ordenada</strong> se aprovecha el orden implícito entre las categorías.</p>
-<p>Los modelos <strong>Ordered Logit</strong> y <strong>Ordered Probit</strong> son extensiones de los modelos logit y probit tradicionales para tratar con variables dependientes ordinales.</p>
-<p><strong>Ejemplos</strong>:</p>
-<ul class="simple">
-<li><p>Un cliente califica su satisfacción con un producto o servicio en una escala ordinal: <br> 1. Insatisfecho; 2. Neutral; 3. Satisfecho; 4. Muy Satisfecho</p></li>
-<li><p>Un individuo alcanza un nivel de educación que se puede ordenar de menor a mayor: <br> 1. Primaria; 2. Secundaria; 3. Pregrado; 4. Posgrado</p></li>
-</ul>
-<p>La <strong>interpretación del modelo</strong> se centra en analizar cómo los cambios en las variables explicativas influyen en la probabilidad de moverse hacia categorías superiores o inferiores.</p>
-<p>Los modelos de respuesta múltiple ordenada parten de una <strong>variable latente</strong> <span class="math notranslate nohighlight">\(Y^*\)</span>, que representa la propensión subyacente de una persona a seleccionar una categoría más alta o baja. La variable latente se modela como <span class="math notranslate nohighlight">\(Y^* = X\beta + u\)</span>, donde  <span class="math notranslate nohighlight">\(X\)</span> son las variables explicativas (observables) and <span class="math notranslate nohighlight">\(u_i\)</span> es el término de error (asumido con distribución normal o logística).</p>
-<p>La variable dependiente observada <span class="math notranslate nohighlight">\(Y\)</span> es una versión ordinal de <span class="math notranslate nohighlight">\(Y^*\)</span>, donde cada valor de <span class="math notranslate nohighlight">\(Y\)</span> se asocia a un rango específico de <span class="math notranslate nohighlight">\(Y^*\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}Y_i = 
-  \begin{cases} 
-    0 &amp; \text{si } Y_i^* &lt; A_0 \\
-    1 &amp; \text{si } A_0 \leq Y_i^* &lt; A_1 \\
-    \vdots \\
-    J &amp; \text{si } A_{J-1} \leq Y_i^* &lt; A_J
-  \end{cases}
-\end{split}\]</div>
-<p>los <strong>umbrales <span class="math notranslate nohighlight">\(A\)</span></strong> representan los puntos de corte que delimitan las categorías.</p>
-<p>Así, los parámetros a estimar son: <span class="math notranslate nohighlight">\(\beta\)</span> junto a los <span class="math notranslate nohighlight">\(A=(A_0,\ldots,A_{J-1})\)</span> umbrales.</p>
-<p>La probabilidad de que un individuo elija una categoría en particular se calcula mediante la función de distribución acumulada de la normal estándar (para el <strong>probit ordenado</strong>) o de la logística (para el <strong>logit ordenado</strong>).</p>
-<p>La probabilidad de que <span class="math notranslate nohighlight">\(Y_i = j\)</span> está dada por:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{eqnarray}
-Pr(Y_i = 0) &amp;=&amp; F(a_0 - X_i'\beta) \\
-Pr(Y_i = j) &amp;=&amp; F(a_j - X_i'\beta) - F(a_{j-1} - X_i'\beta), \quad j &gt; 0 \\
-Pr(Y_i = J) &amp;=&amp; 1 - F(a_{J-1} - X_i'\beta)
-\end{eqnarray}
-\end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(F(\cdot)\)</span> representa la función de distribución acumulada, por ejemplo, la normal acumulada en el caso del Probit o la logística acumulada en el caso del Logit ( <span class="math notranslate nohighlight">\(F(z)=[1+exp(-z)]^{-1}\)</span> ).</p>
-<p>Así, la <strong>función de verosimilitud</strong> a maximizar es:</p>
-<div class="math notranslate nohighlight">
-\[
- \mathcal{L}(\beta, a) = \prod_{i=1}^N \prod_{j=0}^J \left( Pr(Y_i = j) \right)^{d_{ij}}
-\]</div>
-<p>donde <span class="math notranslate nohighlight">\(d_{ij}\)</span> es una variable indicadora que toma valor 1 si <span class="math notranslate nohighlight">\(Y_i = j\)</span> y 0 en caso contrario.</p>
-<blockquote>
-<div><p>Observación: tanto el logit multinomial como el logit ordenado tienen una forma similar para la log-verosimilitud.</p>
-</div></blockquote>
-<p>Aunque la estructura de la log-verosimilitud es la misma, la <strong>elección de la función de probabilidad</strong> refleja las suposiciones del modelo sobre la naturaleza de las opciones (no ordenadas vs. ordenadas).</p>
-<p>La diferencia radica en la expresión para <span class="math notranslate nohighlight">\(P(Y_i = j)\)</span>:</p>
-<ul>
-<li><p><strong>Logit Multinomial</strong>: <span class="math notranslate nohighlight">\(P(Y_i = j)\)</span> se calcula <strong>usando la función</strong> logística multinomial:</p>
-<div class="math notranslate nohighlight">
-\[
-  P(Y_i = j) = \frac{\exp(X_i' \beta_j)}{\sum_{k=1}^J \exp(X_i' \beta_k)}
-  \]</div>
-</li>
-<li><p><strong>Logit Ordenado</strong>: <span class="math notranslate nohighlight">\(P(Y_i = j)\)</span> se basa en probabilidades acumuladas, típicamente <strong>usando la función de distribución logística acumulada</strong>:</p>
-<div class="math notranslate nohighlight">
-\[
-    P(Y_i = j) = F(a_j - X_i' \beta) - F(a_{j-1} - X_i' \beta)
-    \]</div>
-</li>
-</ul>
-<p>En el <strong>logit multinomial</strong>, los coeficientes <span class="math notranslate nohighlight">\(\beta_j\)</span> varían por opción, capturando la preferencia relativa para cada opción; en el <strong>logit ordenado</strong>, el coeficiente <span class="math notranslate nohighlight">\(\beta\)</span> es constante y las probabilidades de las categorías ordenadas dependen de los umbrales <span class="math notranslate nohighlight">\(a_j\)</span>, que segmentan la variable latente en categorías ordenadas.</p>
-<p><strong>Efectos Marginales:</strong></p>
-<p>En los modelos logit y probit ordenados, los <strong>coeficientes</strong> no representan cambios marginales directos en las probabilidades de cada categoría. En su lugar, indican el <strong>efecto de un cambio en las variables explicativas</strong> sobre la probabilidad de moverse a categorías superiores o inferiores.</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{\partial Pr(Y_i = j)}{\partial X_r} = \left[ F'(a_j - X_i'\beta) - F'(a_{j-1} - X_i'\beta) \right] \cdot \beta_r
-\]</div>
-<p>Notar que varían según el punto de evaluación, usualmente en la media de <span class="math notranslate nohighlight">\(X\)</span> o en valores específicos.</p>
-<p><strong>Software</strong>:</p>
-<ul class="simple">
-<li><p>Stata: <code class="docutils literal notranslate"><span class="pre">oprobit</span></code> para Probit Ordenado, <code class="docutils literal notranslate"><span class="pre">ologit</span></code> para Logit Ordenado.</p></li>
-<li><p>R: <code class="docutils literal notranslate"><span class="pre">polr</span></code> de la libreria MASS</p></li>
-</ul>
-</section>
-</section>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            name: "python3",
-            path: "./content\Ch4_LDV"
-        },
-        predefinedOutput: true
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
     }
-    </script>
-    <script>kernelName = 'python3'</script>
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
-                </article>
-              
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-              
-              
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="Binaria/pract_binaria_r.html"
-       title="página anterior">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Rincón de Práctica R</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Conteo.html"
-       title="siguiente página">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Modelo de Conteo</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/Ch3_MLE/Intro_MLE.html">B. MLE &amp; LDV</a></li><li class="breadcrumb-item"><a href="../../content/Ch4_LDV/Multinomial.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Modelos Multinomiales</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../"></a><a href="https://econometria.luischanci.com/">Econometrics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://econometria.luischanci.com/es/intro.html" title="Español" class="quarto-navigation-tool px-1" aria-label="Español"><i class="bi bi-globe"></i></a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenido
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bienvenida</span></span></a>
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-logit">Multinomial Logit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logit-condicional">Logit Condicional</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multinomial-probit">Multinomial Probit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#respuesta-multiple-ordenada">Respuesta Múltiple Ordenada</a></li>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">A. OLS</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/A_OLS/modelo_lineal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Modelo Lineal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/A_OLS/asintoticos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoría Asintótica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/A_OLS/computation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Métodos Computacionales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/A_OLS/extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">NLLS, LASSO, Ridge y Cuantílica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/A_OLS/review_OLS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Review</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">B. MLE &amp; LDV</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch3_MLE/Intro_MLE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introducción MLE</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch3_MLE/MLE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Teoría MLE</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch4_LDV/Intro_LDV.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Var. Dep. Limitadas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch4_LDV/Binaria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Modelos Binarios</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch4_LDV/Multinomial.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Modelos Multinomiales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch4_LDV/Conteo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modelos de Conteo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch4_LDV/CensuraTrunc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Censura y Truncamiento</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">C. IV &amp; GMM</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch5_IV/IV.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Variables Instrumentales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch6_GMM/GMM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">GMM</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">D. Series de Tiempo &amp; Panel</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch7_TS/Intro_TS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Series de Tiempo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch8_Panel/Intro_Panel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Datos en Panel</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch8_Panel/Panel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Teoría de Panel</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">E. Inferencia Causal</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch9_Causal/Intro_Causal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch9_Causal/DifinDif.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Diferencias en Diferencias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Ch9_Causal/RDD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Regresión Discontinua</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/appendix_linalg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Álgebra Lineal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/zbibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about"><span class="header-section-number">11.1</span> About</a></li>
+  <li><a href="#lecture-notes" id="toc-lecture-notes" class="nav-link" data-scroll-target="#lecture-notes"><span class="header-section-number">11.2</span> Lecture Notes</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">11.3</span> Overview</a></li>
+  <li><a href="#multinomial-logit-mnl" id="toc-multinomial-logit-mnl" class="nav-link" data-scroll-target="#multinomial-logit-mnl"><span class="header-section-number">11.4</span> Multinomial Logit (MNL)</a>
+  <ul class="collapse">
+  <li><a href="#estimation" id="toc-estimation" class="nav-link" data-scroll-target="#estimation">Estimation</a></li>
+  <li><a href="#marginal-effects" id="toc-marginal-effects" class="nav-link" data-scroll-target="#marginal-effects">Marginal effects</a></li>
+  </ul></li>
+  <li><a href="#independence-of-irrelevant-alternatives-iia" id="toc-independence-of-irrelevant-alternatives-iia" class="nav-link" data-scroll-target="#independence-of-irrelevant-alternatives-iia"><span class="header-section-number">11.5</span> Independence of Irrelevant Alternatives (IIA)</a></li>
+  <li><a href="#conditional-logit" id="toc-conditional-logit" class="nav-link" data-scroll-target="#conditional-logit"><span class="header-section-number">11.6</span> Conditional Logit</a></li>
+  <li><a href="#multinomial-probit" id="toc-multinomial-probit" class="nav-link" data-scroll-target="#multinomial-probit"><span class="header-section-number">11.7</span> Multinomial Probit</a></li>
+  <li><a href="#ordered-choice-models" id="toc-ordered-choice-models" class="nav-link" data-scroll-target="#ordered-choice-models"><span class="header-section-number">11.8</span> Ordered Choice Models</a>
+  <ul class="collapse">
+  <li><a href="#ordered-probit-ordered-logit" id="toc-ordered-probit-ordered-logit" class="nav-link" data-scroll-target="#ordered-probit-ordered-logit">Ordered Probit / Ordered Logit</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">11.9</span> References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/Ch3_MLE/Intro_MLE.html">B. MLE &amp; LDV</a></li><li class="breadcrumb-item"><a href="../../content/Ch4_LDV/Multinomial.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Modelos Multinomiales</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">B4. Multinomial Choice Models</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="about" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="about"><span class="header-section-number">11.1</span> About</h2>
+<p>Topics covered:</p>
+<ul>
+<li>Multinomial Logit (MNL): setup, MLE, and marginal effects</li>
+<li>Independence of Irrelevant Alternatives (IIA) property and Hausman-McFadden test</li>
+<li>Conditional Logit with alternative-specific attributes</li>
+<li>Multinomial Probit (simulation-based, relaxes IIA)</li>
+<li>Ordered Probit and Ordered Logit</li>
 </ul>
-  </nav></div>
+</section>
+<section id="lecture-notes" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="lecture-notes"><span class="header-section-number">11.2</span> Lecture Notes</h2>
+<ul>
+<li><a href="https://www.luischanci.com/documents/Econometrics/LDV.pdf" target="_blank">Download lecture notes (PDF)</a></li>
+</ul>
+<p>&nbsp;</p>
+<hr>
+</section>
+<section id="overview" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="overview"><span class="header-section-number">11.3</span> Overview</h2>
+<p>When the outcome <span class="math inline">\(y_i\)</span> takes more than two unordered values — e.g., transportation mode (car, bus, train), occupational choice, brand choice — we need <strong>multinomial choice models</strong>. These generalize binary Logit/Probit to <span class="math inline">\(J \geq 2\)</span> alternatives.</p>
+<hr>
+</section>
+<section id="multinomial-logit-mnl" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="multinomial-logit-mnl"><span class="header-section-number">11.4</span> Multinomial Logit (MNL)</h2>
+<p>The <strong>Multinomial Logit</strong> model (McFadden, 1974) specifies, for <span class="math inline">\(j = 0,1,\ldots,J-1\)</span>:</p>
+<p><span class="math display">\[P(y_i = j \mid x_i) = \frac{\exp(x_i'\beta_j)}{\sum_{k=0}^{J-1}\exp(x_i'\beta_k)}\]</span></p>
+<p>One category (typically <span class="math inline">\(j=0\)</span>) is the <strong>base/reference category</strong>, with <span class="math inline">\(\beta_0 = 0\)</span> for identification. So:</p>
+<p><span class="math display">\[P(y_i = j \mid x_i) = \frac{\exp(x_i'\beta_j)}{1 + \sum_{k=1}^{J-1}\exp(x_i'\beta_k)}, \quad j \geq 1\]</span></p>
+<p><span class="math display">\[P(y_i = 0 \mid x_i) = \frac{1}{1 + \sum_{k=1}^{J-1}\exp(x_i'\beta_k)}\]</span></p>
+<section id="estimation" class="level3">
+<h3 class="anchored" data-anchor-id="estimation">Estimation</h3>
+<p>MLE via maximizing: <span class="math display">\[\ell(\beta) = \sum_{i=1}^n \sum_{j=0}^{J-1} \mathbf{1}[y_i=j]\,\ln P(y_i=j\mid x_i)\]</span></p>
+</section>
+<section id="marginal-effects" class="level3">
+<h3 class="anchored" data-anchor-id="marginal-effects">Marginal effects</h3>
+<p><span class="math display">\[\frac{\partial P(y_i=j\mid x_i)}{\partial x_i} = P(y_i=j\mid x_i)\left[\beta_j - \sum_{k=0}^{J-1}P(y_i=k\mid x_i)\beta_k\right]\]</span></p>
+<p>Note: marginal effects sum to zero across alternatives.</p>
+<hr>
+</section>
+</section>
+<section id="independence-of-irrelevant-alternatives-iia" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="independence-of-irrelevant-alternatives-iia"><span class="header-section-number">11.5</span> Independence of Irrelevant Alternatives (IIA)</h2>
+<p>The MNL satisfies a key restriction: the <strong>ratio of probabilities</strong> for any two alternatives depends only on their respective utility parameters, not on other alternatives:</p>
+<p><span class="math display">\[\frac{P(y_i=j\mid x_i)}{P(y_i=k\mid x_i)} = \frac{\exp(x_i'\beta_j)}{\exp(x_i'\beta_k)} = \exp\left[x_i'(\beta_j-\beta_k)\right]\]</span></p>
+<p>This is the <strong>IIA property</strong> (Independence of Irrelevant Alternatives).</p>
+<p><strong>Implication:</strong> Adding or removing an alternative does not change the relative probabilities of the remaining alternatives. This is restrictive — the classic “red bus/blue bus” counter-example shows it can be implausible.</p>
+<p><strong>Testing IIA:</strong> Hausman-McFadden test (1984) — estimate the model on all <span class="math inline">\(J\)</span> alternatives vs.&nbsp;a subset, compare coefficients.</p>
+<hr>
+</section>
+<section id="conditional-logit" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="conditional-logit"><span class="header-section-number">11.6</span> Conditional Logit</h2>
+<p>In the <strong>Conditional Logit</strong> model (McFadden, 1974), covariates vary across <strong>alternatives</strong> rather than (or in addition to) across individuals. Let <span class="math inline">\(z_{ij}\)</span> be the attributes of alternative <span class="math inline">\(j\)</span> for individual <span class="math inline">\(i\)</span>:</p>
+<p><span class="math display">\[P(y_i = j \mid z_{i0},\ldots,z_{i,J-1}) = \frac{\exp(z_{ij}'\gamma)}{\sum_{k=0}^{J-1}\exp(z_{ik}'\gamma)}\]</span></p>
+<p><strong>Applications:</strong> travel demand (travel time, cost by mode), hedonic models.</p>
+<p>The conditional logit also satisfies IIA. A mixed or nested logit relaxes this.</p>
+<hr>
+</section>
+<section id="multinomial-probit" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="multinomial-probit"><span class="header-section-number">11.7</span> Multinomial Probit</h2>
+<p>The <strong>Multinomial Probit</strong> model assumes the utility errors <span class="math inline">\((\varepsilon_{i0},\ldots,\varepsilon_{i,J-1})\)</span> are jointly normally distributed with an unrestricted covariance matrix <span class="math inline">\(\Sigma\)</span>. This:</p>
+<ul>
+<li>Does <strong>not</strong> impose IIA</li>
+<li>Is much more flexible than MNL</li>
+<li>Requires numerical simulation (GHK simulator) for the likelihood, since it involves <span class="math inline">\(J\)</span>-dimensional normal integrals</li>
+</ul>
+<p>In practice, MNL or nested logit are often preferred for computational tractability.</p>
+<hr>
+</section>
+<section id="ordered-choice-models" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="ordered-choice-models"><span class="header-section-number">11.8</span> Ordered Choice Models</h2>
+<p>When alternatives have a natural ordering (e.g., education level, credit rating, survey scale) but the gaps between categories are unknown, <strong>ordered models</strong> are appropriate.</p>
+<p>Define a latent variable: <span class="math display">\[y_i^* = x_i'\beta + \varepsilon_i\]</span></p>
+<p>with cutpoints <span class="math inline">\(-\infty = \mu_0 &lt; \mu_1 &lt; \cdots &lt; \mu_{J-1} &lt; \mu_J = \infty\)</span>. The observed outcome is: <span class="math display">\[y_i = j \iff \mu_{j-1} &lt; y_i^* \leq \mu_j\]</span></p>
+<section id="ordered-probit-ordered-logit" class="level3">
+<h3 class="anchored" data-anchor-id="ordered-probit-ordered-logit">Ordered Probit / Ordered Logit</h3>
+<p><span class="math display">\[P(y_i = j \mid x_i) = F(\mu_j - x_i'\beta) - F(\mu_{j-1} - x_i'\beta)\]</span></p>
+<p>where <span class="math inline">\(F = \Phi\)</span> (Ordered Probit) or <span class="math inline">\(F = \Lambda\)</span> (Ordered Logit). Both <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\{\mu_j\}\)</span> are estimated jointly by MLE.</p>
+<p><strong>Key constraint:</strong> the sign of <span class="math inline">\(\beta_j\)</span> is the same for all outcome categories (a single index drives the probability of higher outcomes).</p>
+<hr>
+</section>
+</section>
+<section id="references" class="level2" data-number="11.9">
+<h2 data-number="11.9" class="anchored" data-anchor-id="references"><span class="header-section-number">11.9</span> References</h2>
+<p><span class="citation" data-cites="cameron2005">Cameron y Trivedi (<a href="../zbibliography.html#ref-cameron2005" role="doc-biblioref">2005</a>)</span>, chapters 15–16. <span class="citation" data-cites="davidson2004">Davidson y MacKinnon (<a href="../zbibliography.html#ref-davidson2004" role="doc-biblioref">2004</a>)</span>.</p>
 
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-Por Luis Chancí
-</p>
 
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-cameron2005" class="csl-entry" role="listitem">
+Cameron, A. Colin, y Pravin K. Trivedi. 2005. <em>Microeconometrics: Methods and Applications</em>. Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511811241">https://doi.org/10.1017/CBO9780511811241</a>.
 </div>
-          </footer>
-        
+<div id="ref-davidson2004" class="csl-entry" role="listitem">
+Davidson, Russell, y James MacKinnon. 2004. <em>Econometric Theory and Methods</em>. Oxford University Press. <a href="http://qed.econ.queensu.ca/ETM/">http://qed.econ.queensu.ca/ETM/</a>.
+</div>
+</div>
+</section>
 
-      </main>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/econometria\.luischanci\.com\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../content/Ch4_LDV/Binaria.html" class="pagination-link" aria-label="Modelos Binarios">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Modelos Binarios</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../content/Ch4_LDV/Conteo.html" class="pagination-link" aria-label="Modelos de Conteo">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modelos de Conteo</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2020–2026 Luis Chancí · CC BY-NC-SA 4.0</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.luischanci.com">
+<p>Website</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:luischanci@santotomas.cl">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/luischanci/econometria_luischanci_com">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+</footer>
 
-  <footer class="bd-footer">
-  </footer>
-  </body>
-</html>
+
+
+
+</body></html>
