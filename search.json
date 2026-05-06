@@ -1857,7 +1857,7 @@
     "href": "content/II_MLE/MLE.html",
     "title": "8  Teoría de MLE",
     "section": "",
-    "text": "8.1 Diapositivas\nEsta sección desarrolla la teoría formal de la Estimación por Máxima Verosimilitud (MLE). En particular, se estudian la función de verosimilitud, la función score, la información de Fisher y la distribución asintótica del estimador. También se presentan las principales pruebas de hipótesis asociadas a este enfoque: Razón de Verosimilitud (LR), Wald y Score (LM).\nA continuación se incluyen las diapositivas correspondientes a este bloque. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.\nNotas: (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.",
+    "text": "8.1 Diapositivas Teoría\nEsta sección desarrolla la teoría formal de la Estimación por Máxima Verosimilitud (MLE). En particular, se estudian la función de verosimilitud, la función score, la información de Fisher y la distribución asintótica del estimador. También se presentan las principales pruebas de hipótesis asociadas a este enfoque: Razón de Verosimilitud (LR), Wald y Score (LM).\nA continuación se incluyen las diapositivas correspondientes a este bloque. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.\nNotas: (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.",
     "crumbs": [
       "II. MLE & LDV",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
@@ -1868,7 +1868,7 @@
     "href": "content/II_MLE/MLE.html#diapositivas",
     "title": "8  Teoría de MLE",
     "section": "",
-    "text": "Links:   View slides (full screen)  ·  Download slides (PDF)",
+    "text": "Links:   View slides (full screen)  ·  Download slides (PDF)\n\n\n\n\n\n \n\n\n\n\n\n\n\n\nLinks:   View slides (full screen)  ·  Download slides (PDF)",
     "crumbs": [
       "II. MLE & LDV",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
@@ -2506,7 +2506,7 @@
     "href": "content/III_GMM/Intro_GMM.html#apuntes",
     "title": "10  IV & GMM",
     "section": "10.3 Apuntes",
-    "text": "10.3 Apuntes\n\nApuntes de clase: GMM (PDF)",
+    "text": "10.3 Apuntes\n\nApuntes de clase: IV (PDF)\nApuntes de clase: GMM (PDF)",
     "crumbs": [
       "III. IV & GMM",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Introducción</span>"
@@ -3089,7 +3089,7 @@
     "href": "content/I_OLS/COM.html",
     "title": "4  Intro a Métodos Computacionales para Econometría",
     "section": "",
-    "text": "4.1 Diapositivas\nA continuación se incluyen las diapositivas correspondientes a esta sección. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.\nNotas: (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.",
+    "text": "4.1 Diapositivas\nEsta sección introduce las herramientas computacionales fundamentales en la práctica econométrica moderna. En particular, se estudia cómo programar estimadores empíricos desde cero utilizando algoritmos de optimización numérica (para aquellos casos donde no existe una solución analítica), cómo evaluar el comportamiento y las propiedades de estos estimadores en muestras finitas a través de simulaciones de Monte Carlo, y cómo realizar inferencia estadística robusta empleando técnicas de remuestreo Bootstrap.\nA continuación se incluyen las diapositivas correspondientes a esta sección. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.\nNotas: (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.",
     "crumbs": [
       "I. OLS",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Métodos Computacionales</span>"
@@ -3599,6 +3599,61 @@
     "crumbs": [
       "I. OLS",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "content/II_MLE/MLE.html#diapositivas-teoría",
+    "href": "content/II_MLE/MLE.html#diapositivas-teoría",
+    "title": "8  Teoría de MLE",
+    "section": "",
+    "text": "Links:   View slides (full screen)  ·  Download slides (PDF)",
+    "crumbs": [
+      "II. MLE & LDV",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
+    ]
+  },
+  {
+    "objectID": "content/II_MLE/MLE.html#diapositivas-econometría-ii",
+    "href": "content/II_MLE/MLE.html#diapositivas-econometría-ii",
+    "title": "8  Teoría de MLE",
+    "section": "8.2 Diapositivas (Econometría II)",
+    "text": "8.2 Diapositivas (Econometría II)\n\n \n\n \n\n\n\n\n\n\nLinks:   View slides (full screen)  ·  Download slides (PDF)",
+    "crumbs": [
+      "II. MLE & LDV",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
+    ]
+  },
+  {
+    "objectID": "content/II_MLE/MLE.html#diapositivas-econometría-iipráctica",
+    "href": "content/II_MLE/MLE.html#diapositivas-econometría-iipráctica",
+    "title": "8  Teoría de MLE",
+    "section": "8.2 Diapositivas (Econometría II/Práctica)",
+    "text": "8.2 Diapositivas (Econometría II/Práctica)",
+    "crumbs": [
+      "II. MLE & LDV",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
+    ]
+  },
+  {
+    "objectID": "content/III_GMM/GMM.html#diapositivas-teoría",
+    "href": "content/III_GMM/GMM.html#diapositivas-teoría",
+    "title": "12  Método Generalizado de Momentos (GMM)",
+    "section": "",
+    "text": "Enlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
+    "crumbs": [
+      "III. IV & GMM",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>GMM</span>"
+    ]
+  },
+  {
+    "objectID": "content/III_GMM/GMM.html#diapositivas-econometría-iipráctica",
+    "href": "content/III_GMM/GMM.html#diapositivas-econometría-iipráctica",
+    "title": "12  Método Generalizado de Momentos (GMM)",
+    "section": "12.2 Diapositivas (Econometría II/Práctica)",
+    "text": "12.2 Diapositivas (Econometría II/Práctica)\n\n \n\n \n\n\n\n\n\n\nEnlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
+    "crumbs": [
+      "III. IV & GMM",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>GMM</span>"
     ]
   }
 ]
