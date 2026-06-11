@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Extensiones al modelo lineal – [](https://econometria.luischanci.com/)</title>
+<title>5&nbsp; Extensiones del Modelo Lineal: de OLS a métodos “modernos” – [](https://econometria.luischanci.com/)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -354,7 +354,8 @@ gtag('config', 'G-1PK9F28LTP', { 'anonymize_ip': true});
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#diapositivas" id="toc-diapositivas" class="nav-link active" data-scroll-target="#diapositivas"><span class="header-section-number">5.1</span> Diapositivas</a></li>
+  <li><a href="#apuntes" id="toc-apuntes" class="nav-link active" data-scroll-target="#apuntes"><span class="header-section-number">5.1</span> Apuntes</a></li>
+  <li><a href="#diapositivas" id="toc-diapositivas" class="nav-link" data-scroll-target="#diapositivas"><span class="header-section-number">5.2</span> Diapositivas</a></li>
   </ul>
 </nav>
     </div>
@@ -363,7 +364,7 @@ gtag('config', 'G-1PK9F28LTP', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/I_OLS/Intro_OLS.html">I. OLS</a></li><li class="breadcrumb-item"><a href="../../content/I_OLS/EXT.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extensiones: GLS, NLLS, LASSO, Ridge y Cuantílica</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-project-EXT" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extensiones al modelo lineal</span></span></h1>
+<h1 class="title"><span id="sec-project-EXT" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extensiones del Modelo Lineal: de OLS a métodos “modernos”</span></span></h1>
 </div>
 
 
@@ -380,32 +381,17 @@ gtag('config', 'G-1PK9F28LTP', { 'anonymize_ip': true});
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Próximamente (sección en preparación)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Esta sección introducirá algunas extensiones al marco de OLS, entre ellas:</p>
+<p>En esta sección revisamos cómo el modelo lineal clásico puede adaptarse para enfrentar problemas empíricos frecuentes sin abandonar su lógica central de estimación e inferencia. Partimos de OLS como referencia y mostramos varias extensiones que modifican, de manera disciplinada, algún componente del enfoque tradicional según el desafío aplicado: GLS y FGLS incorporan estructuras de varianza–covarianza no esféricas para recuperar eficiencia; NLLS permite funciones de regresión no lineales en parámetros y sirve como puente natural hacia redes neuronales estimadas como problemas de mínimos cuadrados; Ridge, LASSO y Elastic Net introducen penalización para estabilizar estimaciones bajo colinealidad o alta dimensionalidad, conectando con la noción de regularización ampliamente usada en aprendizaje automático; y la regresión cuantílica cambia el objeto de interés desde la media condicional hacia cuantiles condicionales, permitiendo estudiar heterogeneidad a lo largo de la distribución de resultados. La motivación unificadora es práctica: cada método conserva la intuición del enfoque lineal, pero la adapta para mejorar eficiencia, estabilidad, flexibilidad funcional o análisis distributivo, manteniendo al mismo tiempo claridad interpretativa y disciplina econométrica.</p>
+<p>&nbsp;</p>
+<section id="apuntes" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="apuntes"><span class="header-section-number">5.1</span> Apuntes</h2>
 <ul>
-<li>ponderación óptima y métodos <strong>GLS/FGLS</strong></li>
-<li><strong>Mínimos Cuadrados No Lineales (NLS)</strong>, con aplicaciones a modelos no lineales</li>
-<li>datos de alta dimensión y regresión penalizada: <strong>Ridge, LASSO y Elastic Net</strong></li>
-<li><strong>Regresión Cuantílica</strong></li>
+<li>Apuntes de clase: <a href="https://www.luischanci.com/documents/Econometrics/EXT.pdf" target="_blank">Extensiones del Modelo Lineal (PDF)</a></li>
 </ul>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../_images/under_construction.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-<section id="diapositivas" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="diapositivas"><span class="header-section-number">5.1</span> Diapositivas</h2>
+<p>&nbsp;</p>
+</section>
+<section id="diapositivas" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="diapositivas"><span class="header-section-number">5.2</span> Diapositivas</h2>
 <p>A continuación se incluyen las diapositivas correspondientes a esta sección. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.</p>
 <p><strong>Notas:</strong> (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.</p>
 <div class="slide-container">
