@@ -254,7 +254,7 @@
     "href": "content/II_MLE/Intro_MLE.html#apuntes",
     "title": "7  Estimación de Máxima Verosimilitud (MLE)",
     "section": "7.4 Apuntes",
-    "text": "7.4 Apuntes\n\nLecture Notes: MLE (PDF)",
+    "text": "7.4 Apuntes\n\nApuntes de Clase (para Econometría I): MLE (PDF)",
     "crumbs": [
       "II. MLE & LDV",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introducción</span>"
@@ -265,7 +265,18 @@
     "href": "content/II_MLE/MLE.html",
     "title": "8  Teoría de MLE",
     "section": "",
-    "text": "8.1 Diapositivas Teoría\nEsta sección desarrolla la teoría formal de la Estimación por Máxima Verosimilitud (MLE). En particular, se estudian la función de verosimilitud, la función score, la información de Fisher y la distribución asintótica del estimador. También se presentan las principales pruebas de hipótesis asociadas a este enfoque: Razón de Verosimilitud (LR), Wald y Score (LM).\nA continuación se incluyen las diapositivas correspondientes a este bloque. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.\nNotas: (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.",
+    "text": "8.1 Apuntes\nEsta sección desarrolla la teoría formal de la Estimación por Máxima Verosimilitud (MLE). En particular, se estudian la función de verosimilitud, la función score, la información de Fisher y la distribución asintótica del estimador. También se presentan las principales pruebas de hipótesis asociadas a este enfoque: Razón de Verosimilitud (LR), Wald y Score (LM).",
+    "crumbs": [
+      "II. MLE & LDV",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
+    ]
+  },
+  {
+    "objectID": "content/II_MLE/MLE.html#apuntes",
+    "href": "content/II_MLE/MLE.html#apuntes",
+    "title": "8  Teoría de MLE",
+    "section": "",
+    "text": "Apuntes de clase: Máxima Verosimilitud (PDF)",
     "crumbs": [
       "II. MLE & LDV",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
@@ -275,8 +286,8 @@
     "objectID": "content/II_MLE/MLE.html#diapositivas-teoría",
     "href": "content/II_MLE/MLE.html#diapositivas-teoría",
     "title": "8  Teoría de MLE",
-    "section": "",
-    "text": "Links:   View slides (full screen)  ·  Download slides (PDF)",
+    "section": "8.2 Diapositivas Teoría",
+    "text": "8.2 Diapositivas Teoría\nA continuación se incluyen las diapositivas correspondientes a este bloque. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.\nNotas: (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.\n\n \n\n \n\n\n\n\n\n\nLinks:   View slides (full screen)  ·  Download slides (PDF)",
     "crumbs": [
       "II. MLE & LDV",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
@@ -286,8 +297,8 @@
     "objectID": "content/II_MLE/MLE.html#diapositivas-econometría-iipráctica",
     "href": "content/II_MLE/MLE.html#diapositivas-econometría-iipráctica",
     "title": "8  Teoría de MLE",
-    "section": "8.2 Diapositivas (Econometría II/Práctica)",
-    "text": "8.2 Diapositivas (Econometría II/Práctica)",
+    "section": "8.3 Diapositivas (Econometría II/Práctica)",
+    "text": "8.3 Diapositivas (Econometría II/Práctica)",
     "crumbs": [
       "II. MLE & LDV",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Teoría MLE</span>"
