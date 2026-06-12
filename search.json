@@ -375,18 +375,40 @@
     "href": "content/III_GMM/IV.html",
     "title": "11  Variables Instrumentales",
     "section": "",
-    "text": "11.1 Diapositivas\nEsta sección introduce el método de Variables Instrumentales (IV) como respuesta al problema de la endogeneidad en modelos de regresión. El punto de partida es revisar por qué OLS falla cuando los regresores están correlacionados con el término de error y, a partir de ello, estudiar cómo un instrumento válido puede restaurar una condición de ortogonalidad útil para la identificación.\nLa sección cubre la intuición económica detrás de los instrumentos, las condiciones de relevancia y exogeneidad, la lógica de la estimación por Mínimos Cuadrados en Dos Etapas (2SLS) y la conexión conceptual entre IV y el marco más general de GMM.\nA continuación se incluyen las diapositivas. En la parte inferior se agregan enlaces para visualización en pantalla completa y descarga.\nNotas: (i) el material puede tardar unos segundos en cargar; (ii) para avanzar, haga clic sobre la diapositiva y luego use las flechas del teclado.",
+    "text": "11.1 Apuntes\nEsta sección introduce el método de Variables Instrumentales (IV) como respuesta al problema de la endogeneidad en modelos de regresión. El punto de partida es revisar por qué OLS falla cuando los regresores están correlacionados con el término de error y, a partir de ello, estudiar cómo un instrumento válido puede restaurar una condición de ortogonalidad útil para la identificación.\nLa sección cubre la intuición económica detrás de los instrumentos, las condiciones de relevancia y exogeneidad, la lógica de la estimación por Mínimos Cuadrados en Dos Etapas (2SLS) y la conexión conceptual entre IV y el marco más general de GMM.",
     "crumbs": [
       "III. IV & GMM",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Variables Instrumentales</span>"
     ]
   },
   {
-    "objectID": "content/III_GMM/IV.html#diapositivas",
-    "href": "content/III_GMM/IV.html#diapositivas",
+    "objectID": "content/III_GMM/IV.html#apuntes",
+    "href": "content/III_GMM/IV.html#apuntes",
     "title": "11  Variables Instrumentales",
     "section": "",
-    "text": "Enlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
+    "text": "Apuntes de clase: Variables Instrumentales (PDF)",
+    "crumbs": [
+      "III. IV & GMM",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Variables Instrumentales</span>"
+    ]
+  },
+  {
+    "objectID": "content/III_GMM/IV.html#diapositivas-teoría",
+    "href": "content/III_GMM/IV.html#diapositivas-teoría",
+    "title": "11  Variables Instrumentales",
+    "section": "11.2 Diapositivas Teoría",
+    "text": "11.2 Diapositivas Teoría\nA continuación se incluyen las diapositivas correspondientes a este bloque. En la parte inferior encontrará enlaces para visualizarlas en pantalla completa o descargarlas en formato PDF.\nNotas: (i) el material puede tardar unos segundos en cargarse; (ii) para avanzar, haga clic sobre la diapositiva y luego utilice las flechas del teclado.\n\n \n\n \n\n\n\n\n\n\nLinks:   View slides (full screen)  ·  Download slides (PDF)",
+    "crumbs": [
+      "III. IV & GMM",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Variables Instrumentales</span>"
+    ]
+  },
+  {
+    "objectID": "content/III_GMM/IV.html#diapositivas-econometría-iipráctica",
+    "href": "content/III_GMM/IV.html#diapositivas-econometría-iipráctica",
+    "title": "11  Variables Instrumentales",
+    "section": "11.3 Diapositivas (Econometría II/Práctica)",
+    "text": "11.3 Diapositivas (Econometría II/Práctica)\n\n \n\n \n\n\n\n\n\n\nEnlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
     "crumbs": [
       "III. IV & GMM",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Variables Instrumentales</span>"
@@ -397,7 +419,18 @@
     "href": "content/III_GMM/GMM.html",
     "title": "12  Método Generalizado de Momentos (GMM)",
     "section": "",
-    "text": "12.1 Diapositivas Teoría\n\\[\n\\hat{\\theta}_{GMM}\n=\n\\arg\\min_{\\theta}\\; g_N(\\theta)' W_N g_N(\\theta)\n\\]\nEsta sección desarrolla la teoría formal del Método Generalizado de Momentos (GMM). La idea principal consiste en estimar los parámetros eligiendo aquellos valores que hacen que un conjunto de momentos muestrales sea lo más cercano posible a cero, de acuerdo con las restricciones de ortogonalidad que impone el modelo. Este enfoque generaliza la intuición de IV y permite trabajar con modelos en los que la identificación surge de condiciones de momentos más amplias que las del caso lineal estándar.\nEntre los temas centrales se incluyen la construcción de la función objetivo, el papel de la matriz de ponderación, la distinción entre identificación exacta y sobreidentificación, y la lógica de la inferencia en este marco.\nA continuación se incluyen las diapositivas. En la parte inferior se agregan enlaces para visualización en pantalla completa y descarga.\nNotas: (i) el material puede tardar unos segundos en cargar; (ii) para avanzar, haga clic sobre la diapositiva y luego use las flechas del teclado.",
+    "text": "12.1 Apuntes\n\\[\n\\hat{\\theta}_{GMM}\n=\n\\arg\\min_{\\theta}\\; g_N(\\theta)' W_N g_N(\\theta)\n\\]\nEsta sección desarrolla la teoría formal del Método Generalizado de Momentos (GMM). La idea principal consiste en estimar los parámetros eligiendo aquellos valores que hacen que un conjunto de momentos muestrales sea lo más cercano posible a cero, de acuerdo con las restricciones de ortogonalidad que impone el modelo. Este enfoque generaliza la intuición de IV y permite trabajar con modelos en los que la identificación surge de condiciones de momentos más amplias que las del caso lineal estándar.\nEntre los temas centrales se incluyen la construcción de la función objetivo, el papel de la matriz de ponderación, la distinción entre identificación exacta y sobreidentificación, y la lógica de la inferencia en este marco.",
+    "crumbs": [
+      "III. IV & GMM",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>GMM</span>"
+    ]
+  },
+  {
+    "objectID": "content/III_GMM/GMM.html#apuntes",
+    "href": "content/III_GMM/GMM.html#apuntes",
+    "title": "12  Método Generalizado de Momentos (GMM)",
+    "section": "",
+    "text": "Apuntes de clase: Método Generalizado de Momentos (PDF)",
     "crumbs": [
       "III. IV & GMM",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>GMM</span>"
@@ -407,8 +440,8 @@
     "objectID": "content/III_GMM/GMM.html#diapositivas-teoría",
     "href": "content/III_GMM/GMM.html#diapositivas-teoría",
     "title": "12  Método Generalizado de Momentos (GMM)",
-    "section": "",
-    "text": "Enlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
+    "section": "12.2 Diapositivas Teoría",
+    "text": "12.2 Diapositivas Teoría\nA continuación se incluyen las diapositivas. En la parte inferior se agregan enlaces para visualización en pantalla completa y descarga.\nNotas: (i) el material puede tardar unos segundos en cargar; (ii) para avanzar, haga clic sobre la diapositiva y luego use las flechas del teclado.\n\n \n\n \n\n\n\n\n\n\nEnlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
     "crumbs": [
       "III. IV & GMM",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>GMM</span>"
@@ -418,8 +451,8 @@
     "objectID": "content/III_GMM/GMM.html#diapositivas-econometría-iipráctica",
     "href": "content/III_GMM/GMM.html#diapositivas-econometría-iipráctica",
     "title": "12  Método Generalizado de Momentos (GMM)",
-    "section": "12.2 Diapositivas (Econometría II/Práctica)",
-    "text": "12.2 Diapositivas (Econometría II/Práctica)\n\n \n\n \n\n\n\n\n\n\nEnlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
+    "section": "12.3 Diapositivas (Econometría II/Práctica)",
+    "text": "12.3 Diapositivas (Econometría II/Práctica)\n\n \n\n \n\n\n\n\n\n\nEnlaces:   Ver diapositivas (pantalla completa)  ·  Descargar diapositivas (PDF)",
     "crumbs": [
       "III. IV & GMM",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>GMM</span>"
